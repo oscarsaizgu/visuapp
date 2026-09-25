@@ -1,0 +1,4 @@
+{
+ "_leeme": "Correcciones y añadidos propios por ejemplar (clave = id). Se aplican encima de content/base. Campos admitidos: los del esquema Specimen (nombre, album, rasgos, notas...) y 'confusiones': [{ id, diferencia }].",
+ "ejemplares": {}
+}

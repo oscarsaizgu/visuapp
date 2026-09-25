@@ -1,0 +1,40 @@
+.header { padding-top: calc(env(safe-area-inset-top) + 14px); }
+.top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+.brand { display: flex; align-items: center; gap: 8px; }
+.mark {
+  display: grid; place-items: center; width: 32px; height: 32px; border-radius: 11px;
+  background: var(--ink); color: var(--paper);
+  font-family: var(--font-display); font-style: italic; font-size: 20px; font-weight: 600;
+}
+.word { font-weight: 800; font-size: 18px; letter-spacing: -0.02em; }
+.word em { font-style: normal; color: var(--bio); }
+@media (min-width: 900px) { .brand { visibility: hidden; } }
+
+.chips { display: flex; gap: 8px; align-items: center; }
+.chip {
+  display: inline-flex; align-items: center; gap: 4px; height: 36px; padding: 0 12px 0 10px;
+  border-radius: 999px; background: var(--card); box-shadow: var(--shadow-1);
+  font-weight: 800; font-variant-numeric: tabular-nums; color: var(--ink-3);
+}
+.chip .flame { color: var(--ink-3); }
+.hot { color: var(--ink); }
+.hot .flame { color: var(--flame); animation: flicker 2.4s ease-in-out infinite; transform-origin: 50% 90%; }
+@keyframes flicker { 0%, 100% { transform: scale(1) rotate(0); } 50% { transform: scale(1.08) rotate(-3deg); } }
+.level {
+  display: grid; place-items: center; width: 36px; height: 36px; border-radius: 12px;
+  background: var(--reward); color: var(--reward-ink); font-weight: 850; box-shadow: var(--shadow-1);
+}
+
+.hello { color: var(--ink-3); font-weight: 600; font-size: 15px; }
+.rank {
+  font-family: var(--font-display); font-weight: 600; font-size: clamp(30px, 8vw, 42px);
+  letter-spacing: -0.025em; line-height: 1.05; margin: 2px 0 14px;
+}
+.xpRow { display: grid; gap: 6px; }
+.xpBar { height: 10px; border-radius: 999px; background: var(--paper-2); overflow: hidden; }
+.xpFill {
+  height: 100%; background: linear-gradient(90deg, var(--reward), #ffcf6b);
+  border-radius: inherit; transform-origin: left; transition: transform 900ms var(--ease-out);
+}
+.xpText { font-size: 13px; color: var(--ink-3); font-weight: 550; }
+.xpText strong { color: var(--ink); font-weight: 800; }

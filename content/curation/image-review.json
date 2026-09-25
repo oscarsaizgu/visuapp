@@ -1,0 +1,27 @@
+{
+ "_leeme": "Decisiones manuales sobre fotos. Clave = id de imagen. El importador nunca pisa este archivo. marcas: da-pistas (muestra el nombre o lo delata), rotulada (letras/flechas/leyendas), ilustracion, calidad (recorte o toma poco útil). Por defecto, una foto con da-pistas, rotulada, ilustracion o calidad no se usa para jugar, pero sí en la ficha.",
+ "revisadas": ["piloto"],
+ "imagenes": {
+  "castanea-sativa-5": { "marcas": ["da-pistas"], "nota": "Nombre científico impreso abajo" },
+  "adiantum-capillus-veneris-5": { "marcas": ["da-pistas"], "nota": "Pliego de herbario con etiqueta" },
+  "asplenium-trichomanes-5": { "marcas": ["da-pistas"], "nota": "Pliego de herbario con etiqueta" },
+  "asplenium-trichomanes-6": { "marcas": ["da-pistas"], "nota": "Nombre científico impreso abajo" },
+  "bifurcaria-bifurcata-5": { "marcas": ["ilustracion"] },
+  "lucanus-cervus-2": { "marcas": ["rotulada"], "nota": "Larva con partes rotuladas" },
+  "lissotriton-boscai-3": { "marcas": ["calidad"], "nota": "Ejemplar conservado, poco reconocible" },
+  "sardina-pilchardus-6": { "marcas": ["ilustracion", "rotulada"] },
+  "micro-colenquima-1": { "marcas": ["da-pistas", "rotulada"], "nota": "Rótulo 'Colénquima angular'" },
+  "micro-colenquima-2": { "marcas": ["da-pistas", "rotulada"] },
+  "micro-colenquima-3": { "marcas": ["da-pistas", "rotulada"] },
+  "micro-colenquima-4": { "marcas": ["da-pistas", "rotulada"] },
+  "micro-colenquima-5": { "marcas": ["da-pistas", "rotulada"] },
+  "micro-higado-1": { "marcas": ["calidad", "rotulada"], "nota": "Página completa con texto" },
+  "micro-musculo-estriado-esqueletico-1": { "marcas": ["rotulada"], "nota": "Leyendas 'Estrías', 'Núcleos'" },
+  "roca-granodiorita-6": { "marcas": ["da-pistas"], "nota": "Cartel 'GRANODIORITA'" },
+  "roca-gneis-1": { "marcas": ["da-pistas"], "nota": "Cartel 'GNEIS'" },
+  "fosil-nummulites-2": { "marcas": ["calidad"], "nota": "Recorte estrecho" },
+  "fosil-nummulites-6": { "marcas": ["da-pistas"], "nota": "Título 'G. Nummulites'" },
+  "fosil-exogyra-1": { "marcas": ["da-pistas"], "nota": "Etiqueta de colección con el nombre" },
+  "geomorf-circo-glaciar-4": { "marcas": ["rotulada"], "nota": "Topónimos rotulados" }
+ }
+}

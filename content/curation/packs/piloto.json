@@ -1,0 +1,20 @@
+{
+ "id": "piloto",
+ "nombre": "Pack piloto",
+ "descripcion": "40 ejemplares de prioridad A, con fotos buenas y, cuando es posible, ya aparecidos en algún VISU. Incluye parejas que se confunden entre sí.",
+ "activo": true,
+ "ejemplares": [
+  "alnus-glutinosa", "betula-pendula", "castanea-sativa", "taxus-baccata",
+  "adiantum-capillus-veneris", "asplenium-trichomanes", "bifurcaria-bifurcata",
+  "paracentrotus-lividus", "lucanus-cervus", "rosalia-alpina", "chioglossa-lusitanica",
+  "lissotriton-boscai", "sardina-pilchardus", "mimachlamys-varia", "garrulus-glandarius",
+  "erinaceus-europaeus",
+  "fomes-fomentarius", "lobaria-pulmonaria", "usnea-florida",
+  "micro-haz-vascular", "micro-colenquima", "micro-higado", "micro-musculo-cardiaco",
+  "micro-musculo-estriado-esqueletico",
+  "mineral-galena", "mineral-fluorita", "mineral-baritina", "mineral-yeso", "mineral-marcasita",
+  "roca-granito", "roca-granodiorita", "roca-esquisto", "roca-gneis",
+  "fosil-nummulites", "fosil-lepidodendron", "fosil-sigillaria", "fosil-exogyra", "fosil-belemnites",
+  "geomorf-bloque-erratico", "geomorf-circo-glaciar"
+ ]
+}

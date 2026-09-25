@@ -1,0 +1,14 @@
+.label { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.kicker {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-3); margin-bottom: 4px;
+}
+.principal { font-weight: 750; letter-spacing: -0.015em; line-height: 1.1; color: var(--ink); }
+.principal:global(.sci) { font-weight: 500; letter-spacing: -0.01em; }
+.secundario { color: var(--ink-2); line-height: 1.2; }
+.md .principal { font-size: 19px; }
+.md .secundario { font-size: 15px; }
+.lg .principal { font-size: 30px; }
+.lg .secundario { font-size: 20px; }
+.invert .principal { color: #fff; }
+.invert .secundario, .invert .kicker { color: rgb(255 255 255 / 0.78); }

@@ -1,0 +1,3823 @@
+{
+ "version": 1,
+ "catalogo": {
+  "ejemplares": 3132,
+  "fotos": 9657,
+  "porCategoria": {
+   "botanica": 893,
+   "zoologia": 1587,
+   "hongos": 158,
+   "minerales": 91,
+   "rocas": 61,
+   "fosiles": 119,
+   "citologia": 17,
+   "histologia": 76,
+   "microorganismos": 23,
+   "geomorfologia": 107
+  }
+ },
+ "packs": [
+  {
+   "id": "piloto",
+   "nombre": "Pack piloto",
+   "descripcion": "40 ejemplares de prioridad A, con fotos buenas y, cuando es posible, ya aparecidos en algún VISU. Incluye parejas que se confunden entre sí.",
+   "ejemplares": 40
+  }
+ ],
+ "ejemplares": [
+  {
+   "id": "bifurcaria-bifurcata",
+   "dominio": "biologia",
+   "categoria": "botanica",
+   "album": "Algas pardas",
+   "nombre": {
+    "principal": "Bifurcaria bifurcata",
+    "cientifico": "Bifurcaria bifurcata",
+    "formato": "cientifico"
+   },
+   "aceptados": [
+    "Bifurcaria bifurcata"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2025
+    ],
+    "otros": []
+   },
+   "taxonomia": {
+    "reino": "Algas pardas y afines (Cromistas)",
+    "filo": "Ochrophyta",
+    "clase": "Phaeophyceae",
+    "orden": "Fucales",
+    "familia": "Sargassaceae",
+    "genero": "Bifurcaria"
+   },
+   "estatus": "Autóctona",
+   "referencia": "https://www.asturnatura.com/especie/bifurcaria-bifurcata",
+   "imagenes": [
+    {
+     "id": "bifurcaria-bifurcata-1",
+     "archivo": "/img/bifurcaria-bifurcata/1.webp",
+     "ancho": 900,
+     "alto": 600,
+     "marcas": [],
+     "juego": true,
+     "ficha": true
+    },
+    {
+     "id": "bifurcaria-bifurcata-2",
+     "archivo": "/img/bifurcaria-bifurcata/2.webp",
+     "ancho": 900,
+     "alto": 675,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "vista": "Hábito"
+    },
+    {
+     "id": "bifurcaria-bifurcata-3",
+     "archivo": "/img/bifurcaria-bifurcata/3.webp",
+     "ancho": 900,
+     "alto": 600,
+     "marcas": [],
+     "juego": true,
+     "ficha": true
+    },
+    {
+     "id": "bifurcaria-bifurcata-4",
+     "archivo": "/img/bifurcaria-bifurcata/4.webp",
+     "ancho": 600,
+     "alto": 800,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "bifurcaria-bifurcata-5",
+     "archivo": "/img/bifurcaria-bifurcata/5.webp",
+     "ancho": 483,
+     "alto": 741,
+     "marcas": [
+      "ilustracion"
+     ],
+     "juego": false,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "bifurcaria-bifurcata-1"
+  },
+  {
+   "id": "chioglossa-lusitanica",
+   "dominio": "biologia",
+   "categoria": "zoologia",
+   "album": "Anfibios",
+   "nombre": {
+    "principal": "Salamandra rabilarga",
+    "comun": "Salamandra rabilarga",
+    "cientifico": "Chioglossa lusitanica",
+    "formato": "comun"
+   },
+   "aceptados": [
+    "Chioglossa lusitanica",
+    "Salamandra rabilarga"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2025
+    ],
+    "otros": [
+     "Visu Galicia 2016"
+    ]
+   },
+   "taxonomia": {
+    "reino": "Animales",
+    "filo": "Chordata",
+    "clase": "Amphibia",
+    "orden": "Caudata",
+    "familia": "Salamandridae",
+    "genero": "Chioglossa"
+   },
+   "estatus": "Protegida",
+   "referencia": "https://www.asturnatura.com/especie/chioglossa-lusitanica",
+   "imagenes": [
+    {
+     "id": "chioglossa-lusitanica-1",
+     "archivo": "/img/chioglossa-lusitanica/1.webp",
+     "ancho": 800,
+     "alto": 536,
+     "marcas": [],
+     "juego": true,
+     "ficha": true
+    },
+    {
+     "id": "chioglossa-lusitanica-2",
+     "archivo": "/img/chioglossa-lusitanica/2.webp",
+     "ancho": 795,
+     "alto": 511,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "vista": "Adulto"
+    },
+    {
+     "id": "chioglossa-lusitanica-3",
+     "archivo": "/img/chioglossa-lusitanica/3.webp",
+     "ancho": 800,
+     "alto": 536,
+     "marcas": [],
+     "juego": true,
+     "ficha": true
+    },
+    {
+     "id": "chioglossa-lusitanica-4",
+     "archivo": "/img/chioglossa-lusitanica/4.webp",
+     "ancho": 800,
+     "alto": 520,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Galicia 2016",
+     "deExamen": true
+    },
+    {
+     "id": "chioglossa-lusitanica-5",
+     "archivo": "/img/chioglossa-lusitanica/5.webp",
+     "ancho": 450,
+     "alto": 296,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "chioglossa-lusitanica-6",
+     "archivo": "/img/chioglossa-lusitanica/6.webp",
+     "ancho": 462,
+     "alto": 306,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "chioglossa-lusitanica-1"
+  },
+  {
+   "id": "lissotriton-boscai",
+   "dominio": "biologia",
+   "categoria": "zoologia",
+   "album": "Anfibios",
+   "nombre": {
+    "principal": "Tritón ibérico",
+    "comun": "Tritón ibérico",
+    "cientifico": "Lissotriton boscai",
+    "formato": "comun"
+   },
+   "aceptados": [
+    "Lissotriton boscai",
+    "Tritón ibérico"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2016
+    ],
+    "otros": []
+   },
+   "taxonomia": {
+    "reino": "Animales",
+    "filo": "Chordata",
+    "clase": "Amphibia",
+    "orden": "Caudata",
+    "familia": "Salamandridae",
+    "genero": "Lissotriton"
+   },
+   "estatus": "Protegida",
+   "referencia": "https://www.asturnatura.com/especie/lissotriton-boscai",
+   "imagenes": [
+    {
+     "id": "lissotriton-boscai-1",
+     "archivo": "/img/lissotriton-boscai/1.webp",
+     "ancho": 800,
+     "alto": 292,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "vista": "Adulto"
+    },
+    {
+     "id": "lissotriton-boscai-2",
+     "archivo": "/img/lissotriton-boscai/2.webp",
+     "ancho": 700,
+     "alto": 525,
+     "marcas": [],
+     "juego": true,
+     "ficha": true
+    },
+    {
+     "id": "lissotriton-boscai-3",
+     "archivo": "/img/lissotriton-boscai/3.webp",
+     "ancho": 600,
+     "alto": 450,
+     "marcas": [
+      "calidad"
+     ],
+     "juego": false,
+     "ficha": true
+    },
+    {
+     "id": "lissotriton-boscai-4",
+     "archivo": "/img/lissotriton-boscai/4.webp",
+     "ancho": 563,
+     "alto": 394,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "lissotriton-boscai-5",
+     "archivo": "/img/lissotriton-boscai/5.webp",
+     "ancho": 567,
+     "alto": 339,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "lissotriton-boscai-6",
+     "archivo": "/img/lissotriton-boscai/6.webp",
+     "ancho": 660,
+     "alto": 440,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "lissotriton-boscai-1"
+  },
+  {
+   "id": "garrulus-glandarius",
+   "dominio": "biologia",
+   "categoria": "zoologia",
+   "album": "Aves",
+   "nombre": {
+    "principal": "Arrendajo común",
+    "comun": "Arrendajo común",
+    "cientifico": "Garrulus glandarius",
+    "formato": "comun"
+   },
+   "aceptados": [
+    "Garrulus glandarius",
+    "Arrendajo común"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2006
+    ],
+    "otros": []
+   },
+   "taxonomia": {
+    "reino": "Animales",
+    "filo": "Chordata",
+    "clase": "Aves",
+    "orden": "Passeriformes",
+    "familia": "Corvidae",
+    "genero": "Garrulus"
+   },
+   "estatus": "Autóctona",
+   "referencia": "https://www.asturnatura.com/especie/garrulus-glandarius",
+   "imagenes": [
+    {
+     "id": "garrulus-glandarius-1",
+     "archivo": "/img/garrulus-glandarius/1.webp",
+     "ancho": 900,
+     "alto": 649,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "vista": "Adulto"
+    },
+    {
+     "id": "garrulus-glandarius-2",
+     "archivo": "/img/garrulus-glandarius/2.webp",
+     "ancho": 615,
+     "alto": 412,
+     "marcas": [],
+     "juego": true,
+     "ficha": true
+    },
+    {
+     "id": "garrulus-glandarius-3",
+     "archivo": "/img/garrulus-glandarius/3.webp",
+     "ancho": 700,
+     "alto": 525,
+     "marcas": [],
+     "juego": true,
+     "ficha": true
+    },
+    {
+     "id": "garrulus-glandarius-4",
+     "archivo": "/img/garrulus-glandarius/4.webp",
+     "ancho": 600,
+     "alto": 400,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Cantabria 2006",
+     "deExamen": true
+    },
+    {
+     "id": "garrulus-glandarius-5",
+     "archivo": "/img/garrulus-glandarius/5.webp",
+     "ancho": 600,
+     "alto": 422,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "garrulus-glandarius-6",
+     "archivo": "/img/garrulus-glandarius/6.webp",
+     "ancho": 573,
+     "alto": 430,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "garrulus-glandarius-1"
+  },
+  {
+   "id": "mimachlamys-varia",
+   "dominio": "biologia",
+   "categoria": "zoologia",
+   "album": "Bivalvos",
+   "nombre": {
+    "principal": "Zamburiña",
+    "comun": "Zamburiña",
+    "cientifico": "Mimachlamys varia",
+    "formato": "comun"
+   },
+   "aceptados": [
+    "Mimachlamys varia",
+    "Zamburiña"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2006
+    ],
+    "otros": [
+     "Visu Galicia 2016"
+    ]
+   },
+   "taxonomia": {
+    "reino": "Animales",
+    "filo": "Mollusca",
+    "clase": "Bivalvia",
+    "orden": "Pectinida",
+    "familia": "Pectinidae",
+    "genero": "Mimachlamys"
+   },
+   "referencia": "https://www.asturnatura.com/especie/mimachlamys-varia",
+   "imagenes": [
+    {
+     "id": "mimachlamys-varia-1",
+     "archivo": "/img/mimachlamys-varia/1.webp",
+     "ancho": 800,
+     "alto": 533,
+     "marcas": [
+      "marca-agua"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "asturnatura.com"
+    },
+    {
+     "id": "mimachlamys-varia-2",
+     "archivo": "/img/mimachlamys-varia/2.webp",
+     "ancho": 800,
+     "alto": 679,
+     "marcas": [
+      "marca-agua"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "asturnatura.com"
+    },
+    {
+     "id": "mimachlamys-varia-3",
+     "archivo": "/img/mimachlamys-varia/3.webp",
+     "ancho": 691,
+     "alto": 800,
+     "marcas": [
+      "marca-agua"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "asturnatura.com"
+    },
+    {
+     "id": "mimachlamys-varia-4",
+     "archivo": "/img/mimachlamys-varia/4.webp",
+     "ancho": 900,
+     "alto": 666,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Cantabria 2006",
+     "deExamen": true
+    },
+    {
+     "id": "mimachlamys-varia-5",
+     "archivo": "/img/mimachlamys-varia/5.webp",
+     "ancho": 762,
+     "alto": 800,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Galicia 2016",
+     "deExamen": true
+    },
+    {
+     "id": "mimachlamys-varia-6",
+     "archivo": "/img/mimachlamys-varia/6.webp",
+     "ancho": 408,
+     "alto": 252,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "mimachlamys-varia-4"
+  },
+  {
+   "id": "paracentrotus-lividus",
+   "dominio": "biologia",
+   "categoria": "zoologia",
+   "album": "Erizos de mar",
+   "nombre": {
+    "principal": "Erizo de mar común",
+    "comun": "Erizo de mar común",
+    "cientifico": "Paracentrotus lividus",
+    "formato": "comun"
+   },
+   "aceptados": [
+    "Paracentrotus lividus",
+    "Erizo de mar común"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2006,
+     2023
+    ],
+    "otros": [
+     "Visu Burgos 1998",
+     "Visu Castilla y León 2014"
+    ]
+   },
+   "taxonomia": {
+    "reino": "Animales",
+    "filo": "Echinodermata",
+    "clase": "Echinoidea",
+    "orden": "Camarodonta",
+    "familia": "Parechinidae",
+    "genero": "Paracentrotus"
+   },
+   "estatus": "Protegida",
+   "referencia": "https://www.asturnatura.com/especie/paracentrotus-lividus",
+   "imagenes": [
+    {
+     "id": "paracentrotus-lividus-1",
+     "archivo": "/img/paracentrotus-lividus/1.webp",
+     "ancho": 700,
+     "alto": 525,
+     "marcas": [
+      "marca-agua"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "asturnatura.com"
+    },
+    {
+     "id": "paracentrotus-lividus-2",
+     "archivo": "/img/paracentrotus-lividus/2.webp",
+     "ancho": 600,
+     "alto": 450,
+     "marcas": [
+      "marca-agua"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "asturnatura.com"
+    },
+    {
+     "id": "paracentrotus-lividus-3",
+     "archivo": "/img/paracentrotus-lividus/3.webp",
+     "ancho": 900,
+     "alto": 788,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Cantabria 2006",
+     "deExamen": true
+    },
+    {
+     "id": "paracentrotus-lividus-4",
+     "archivo": "/img/paracentrotus-lividus/4.webp",
+     "ancho": 300,
+     "alto": 229,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Burgos 1998",
+     "deExamen": true
+    },
+    {
+     "id": "paracentrotus-lividus-5",
+     "archivo": "/img/paracentrotus-lividus/5.webp",
+     "ancho": 840,
+     "alto": 640,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "paracentrotus-lividus-3"
+  },
+  {
+   "id": "lucanus-cervus",
+   "dominio": "biologia",
+   "categoria": "zoologia",
+   "album": "Insectos",
+   "nombre": {
+    "principal": "Ciervo volante",
+    "comun": "Ciervo volante",
+    "cientifico": "Lucanus cervus",
+    "formato": "comun"
+   },
+   "aceptados": [
+    "Lucanus cervus",
+    "Ciervo volante"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2006,
+     2023
+    ],
+    "otros": []
+   },
+   "taxonomia": {
+    "reino": "Animales",
+    "filo": "Arthropoda",
+    "clase": "Insecta",
+    "orden": "Coleoptera",
+    "familia": "Lucanidae",
+    "genero": "Lucanus"
+   },
+   "estatus": "Autóctona",
+   "referencia": "https://www.asturnatura.com/especie/lucanus-cervus",
+   "imagenes": [
+    {
+     "id": "lucanus-cervus-1",
+     "archivo": "/img/lucanus-cervus/1.webp",
+     "ancho": 800,
+     "alto": 600,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "vista": "Adulto"
+    },
+    {
+     "id": "lucanus-cervus-2",
+     "archivo": "/img/lucanus-cervus/2.webp",
+     "ancho": 700,
+     "alto": 611,
+     "marcas": [
+      "rotulada"
+     ],
+     "juego": false,
+     "ficha": true,
+     "vista": "Larva"
+    },
+    {
+     "id": "lucanus-cervus-3",
+     "archivo": "/img/lucanus-cervus/3.webp",
+     "ancho": 800,
+     "alto": 583,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "pie": "Femenino"
+    },
+    {
+     "id": "lucanus-cervus-4",
+     "archivo": "/img/lucanus-cervus/4.webp",
+     "ancho": 600,
+     "alto": 400,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Cantabria 2006",
+     "deExamen": true
+    },
+    {
+     "id": "lucanus-cervus-5",
+     "archivo": "/img/lucanus-cervus/5.webp",
+     "ancho": 900,
+     "alto": 675,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "lucanus-cervus-6",
+     "archivo": "/img/lucanus-cervus/6.webp",
+     "ancho": 443,
+     "alto": 661,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "lucanus-cervus-5"
+  },
+  {
+   "id": "rosalia-alpina",
+   "dominio": "biologia",
+   "categoria": "zoologia",
+   "album": "Insectos",
+   "nombre": {
+    "principal": "Rosalia alpina",
+    "cientifico": "Rosalia alpina",
+    "formato": "cientifico"
+   },
+   "aceptados": [
+    "Rosalia alpina"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2016
+    ],
+    "otros": [
+     "Visu Castilla y León 2014"
+    ]
+   },
+   "taxonomia": {
+    "reino": "Animales",
+    "filo": "Arthropoda",
+    "clase": "Insecta",
+    "orden": "Coleoptera",
+    "familia": "Cerambycidae",
+    "genero": "Rosalia"
+   },
+   "estatus": "Autóctona",
+   "referencia": "https://www.asturnatura.com/especie/rosalia-alpina",
+   "imagenes": [
+    {
+     "id": "rosalia-alpina-1",
+     "archivo": "/img/rosalia-alpina/1.webp",
+     "ancho": 600,
+     "alto": 490,
+     "marcas": [
+      "marca-agua"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "asturnatura.com"
+    },
+    {
+     "id": "rosalia-alpina-2",
+     "archivo": "/img/rosalia-alpina/2.webp",
+     "ancho": 800,
+     "alto": 578,
+     "marcas": [
+      "marca-agua"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "asturnatura.com"
+    },
+    {
+     "id": "rosalia-alpina-3",
+     "archivo": "/img/rosalia-alpina/3.webp",
+     "ancho": 650,
+     "alto": 366,
+     "marcas": [
+      "marca-agua"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "asturnatura.com"
+    },
+    {
+     "id": "rosalia-alpina-4",
+     "archivo": "/img/rosalia-alpina/4.webp",
+     "ancho": 600,
+     "alto": 450,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Castilla y León 2014",
+     "deExamen": true
+    }
+   ],
+   "portada": "rosalia-alpina-2"
+  },
+  {
+   "id": "erinaceus-europaeus",
+   "dominio": "biologia",
+   "categoria": "zoologia",
+   "album": "Mamíferos",
+   "nombre": {
+    "principal": "Erizo común",
+    "comun": "Erizo común",
+    "cientifico": "Erinaceus europaeus",
+    "formato": "comun"
+   },
+   "aceptados": [
+    "Erinaceus europaeus",
+    "Erizo común"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2006
+    ],
+    "otros": [
+     "Visu Burgos 1998",
+     "Visu Castilla y León 2014"
+    ]
+   },
+   "taxonomia": {
+    "reino": "Animales",
+    "filo": "Chordata",
+    "clase": "Mammalia",
+    "orden": "Eulipotyphla",
+    "familia": "Erinaceidae",
+    "genero": "Erinaceus"
+   },
+   "estatus": "Autóctona",
+   "referencia": "https://www.asturnatura.com/especie/erinaceus-europaeus",
+   "imagenes": [
+    {
+     "id": "erinaceus-europaeus-1",
+     "archivo": "/img/erinaceus-europaeus/1.webp",
+     "ancho": 900,
+     "alto": 668,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "vista": "Adulto"
+    },
+    {
+     "id": "erinaceus-europaeus-2",
+     "archivo": "/img/erinaceus-europaeus/2.webp",
+     "ancho": 800,
+     "alto": 537,
+     "marcas": [],
+     "juego": true,
+     "ficha": true
+    },
+    {
+     "id": "erinaceus-europaeus-3",
+     "archivo": "/img/erinaceus-europaeus/3.webp",
+     "ancho": 800,
+     "alto": 600,
+     "marcas": [],
+     "juego": true,
+     "ficha": true
+    },
+    {
+     "id": "erinaceus-europaeus-4",
+     "archivo": "/img/erinaceus-europaeus/4.webp",
+     "ancho": 596,
+     "alto": 432,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Cantabria 2006",
+     "deExamen": true
+    },
+    {
+     "id": "erinaceus-europaeus-5",
+     "archivo": "/img/erinaceus-europaeus/5.webp",
+     "ancho": 450,
+     "alto": 337,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "erinaceus-europaeus-6",
+     "archivo": "/img/erinaceus-europaeus/6.webp",
+     "ancho": 567,
+     "alto": 374,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "erinaceus-europaeus-1"
+  },
+  {
+   "id": "sardina-pilchardus",
+   "dominio": "biologia",
+   "categoria": "zoologia",
+   "album": "Peces óseos",
+   "nombre": {
+    "principal": "Sardina",
+    "comun": "Sardina",
+    "cientifico": "Sardina pilchardus",
+    "formato": "comun"
+   },
+   "aceptados": [
+    "Sardina pilchardus",
+    "Sardina"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2006,
+     2023
+    ],
+    "otros": []
+   },
+   "taxonomia": {
+    "reino": "Animales",
+    "filo": "Chordata",
+    "clase": "Actinopterygii",
+    "orden": "Clupeiformes",
+    "familia": "Clupeidae",
+    "genero": "Sardina"
+   },
+   "estatus": "Autóctona",
+   "referencia": "https://www.asturnatura.com/especie/sardina-pilchardus",
+   "imagenes": [
+    {
+     "id": "sardina-pilchardus-1",
+     "archivo": "/img/sardina-pilchardus/1.webp",
+     "ancho": 900,
+     "alto": 675,
+     "marcas": [
+      "marca-agua"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "asturnatura.com"
+    },
+    {
+     "id": "sardina-pilchardus-2",
+     "archivo": "/img/sardina-pilchardus/2.webp",
+     "ancho": 900,
+     "alto": 675,
+     "marcas": [
+      "marca-agua"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "asturnatura.com"
+    },
+    {
+     "id": "sardina-pilchardus-3",
+     "archivo": "/img/sardina-pilchardus/3.webp",
+     "ancho": 900,
+     "alto": 675,
+     "marcas": [
+      "marca-agua"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "asturnatura.com"
+    },
+    {
+     "id": "sardina-pilchardus-4",
+     "archivo": "/img/sardina-pilchardus/4.webp",
+     "ancho": 900,
+     "alto": 570,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Cantabria 2006",
+     "deExamen": true
+    },
+    {
+     "id": "sardina-pilchardus-5",
+     "archivo": "/img/sardina-pilchardus/5.webp",
+     "ancho": 566,
+     "alto": 368,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "sardina-pilchardus-6",
+     "archivo": "/img/sardina-pilchardus/6.webp",
+     "ancho": 659,
+     "alto": 297,
+     "marcas": [
+      "ilustracion",
+      "rotulada"
+     ],
+     "juego": false,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "sardina-pilchardus-1"
+  },
+  {
+   "id": "usnea-florida",
+   "dominio": "biologia",
+   "categoria": "hongos",
+   "album": "Hongos / líquenes (sin clase en la web)",
+   "nombre": {
+    "principal": "Usnea florida",
+    "cientifico": "Usnea florida",
+    "formato": "cientifico"
+   },
+   "aceptados": [
+    "Usnea florida"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2016
+    ],
+    "otros": []
+   },
+   "taxonomia": {
+    "reino": "Hongos",
+    "filo": "Ascomycota",
+    "orden": "Lecanorales",
+    "familia": "Parmeliaceae",
+    "genero": "Usnea"
+   },
+   "estatus": "Autóctona",
+   "referencia": "https://www.asturnatura.com/especie/usnea-florida",
+   "imagenes": [
+    {
+     "id": "usnea-florida-1",
+     "archivo": "/img/usnea-florida/1.webp",
+     "ancho": 654,
+     "alto": 800,
+     "marcas": [],
+     "juego": true,
+     "ficha": true
+    },
+    {
+     "id": "usnea-florida-2",
+     "archivo": "/img/usnea-florida/2.webp",
+     "ancho": 800,
+     "alto": 536,
+     "marcas": [],
+     "juego": true,
+     "ficha": true
+    },
+    {
+     "id": "usnea-florida-3",
+     "archivo": "/img/usnea-florida/3.webp",
+     "ancho": 800,
+     "alto": 606,
+     "marcas": [],
+     "juego": true,
+     "ficha": true
+    }
+   ],
+   "portada": "usnea-florida-2"
+  },
+  {
+   "id": "lobaria-pulmonaria",
+   "dominio": "biologia",
+   "categoria": "hongos",
+   "album": "Líquenes (mayoría)",
+   "nombre": {
+    "principal": "Lobaria pulmonaria",
+    "cientifico": "Lobaria pulmonaria",
+    "formato": "cientifico"
+   },
+   "aceptados": [
+    "Lobaria pulmonaria"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2023
+    ],
+    "otros": []
+   },
+   "taxonomia": {
+    "reino": "Hongos",
+    "filo": "Ascomycota",
+    "clase": "Lecanoromycetes",
+    "orden": "Peltigerales",
+    "familia": "Lobariaceae",
+    "genero": "Lobaria"
+   },
+   "estatus": "Autóctona",
+   "referencia": "https://www.asturnatura.com/especie/lobaria-pulmonaria",
+   "imagenes": [
+    {
+     "id": "lobaria-pulmonaria-1",
+     "archivo": "/img/lobaria-pulmonaria/1.webp",
+     "ancho": 600,
+     "alto": 800,
+     "marcas": [],
+     "juego": true,
+     "ficha": true
+    },
+    {
+     "id": "lobaria-pulmonaria-2",
+     "archivo": "/img/lobaria-pulmonaria/2.webp",
+     "ancho": 700,
+     "alto": 525,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "vista": "Hábito"
+    },
+    {
+     "id": "lobaria-pulmonaria-3",
+     "archivo": "/img/lobaria-pulmonaria/3.webp",
+     "ancho": 600,
+     "alto": 800,
+     "marcas": [],
+     "juego": true,
+     "ficha": true
+    }
+   ],
+   "portada": "lobaria-pulmonaria-2"
+  },
+  {
+   "id": "fomes-fomentarius",
+   "dominio": "biologia",
+   "categoria": "hongos",
+   "album": "Setas y hongos superiores (Basidiomicetos)",
+   "nombre": {
+    "principal": "Fomes fomentarius",
+    "cientifico": "Fomes fomentarius",
+    "formato": "cientifico"
+   },
+   "aceptados": [
+    "Fomes fomentarius"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2006,
+     2023
+    ],
+    "otros": []
+   },
+   "taxonomia": {
+    "reino": "Hongos",
+    "filo": "Basidiomycota",
+    "clase": "Agaricomycetes",
+    "orden": "Polyporales",
+    "familia": "Polyporaceae",
+    "genero": "Fomes"
+   },
+   "referencia": "https://www.asturnatura.com/especie/fomes-fomentarius",
+   "imagenes": [
+    {
+     "id": "fomes-fomentarius-1",
+     "archivo": "/img/fomes-fomentarius/1.webp",
+     "ancho": 800,
+     "alto": 800,
+     "marcas": [
+      "marca-agua"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "asturnatura.com"
+    },
+    {
+     "id": "fomes-fomentarius-2",
+     "archivo": "/img/fomes-fomentarius/2.webp",
+     "ancho": 800,
+     "alto": 800,
+     "marcas": [
+      "marca-agua"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "asturnatura.com"
+    },
+    {
+     "id": "fomes-fomentarius-3",
+     "archivo": "/img/fomes-fomentarius/3.webp",
+     "ancho": 800,
+     "alto": 800,
+     "marcas": [
+      "marca-agua"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "asturnatura.com"
+    },
+    {
+     "id": "fomes-fomentarius-4",
+     "archivo": "/img/fomes-fomentarius/4.webp",
+     "ancho": 600,
+     "alto": 400,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Cantabria 2006",
+     "deExamen": true
+    },
+    {
+     "id": "fomes-fomentarius-5",
+     "archivo": "/img/fomes-fomentarius/5.webp",
+     "ancho": 653,
+     "alto": 549,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "fomes-fomentarius-1"
+  },
+  {
+   "id": "alnus-glutinosa",
+   "dominio": "biologia",
+   "categoria": "botanica",
+   "album": "Angiospermas",
+   "nombre": {
+    "principal": "Aliso",
+    "comun": "Aliso",
+    "cientifico": "Alnus glutinosa",
+    "formato": "comun"
+   },
+   "aceptados": [
+    "Alnus glutinosa",
+    "Aliso"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2006,
+     2023
+    ],
+    "otros": []
+   },
+   "taxonomia": {
+    "reino": "Plantas y algas verdes",
+    "filo": "Chloroplastida",
+    "clase": "Magnoliopsida",
+    "orden": "Fagales",
+    "familia": "Betulaceae",
+    "genero": "Alnus"
+   },
+   "estatus": "Autóctona",
+   "referencia": "https://www.asturnatura.com/especie/alnus-glutinosa",
+   "imagenes": [
+    {
+     "id": "alnus-glutinosa-1",
+     "archivo": "/img/alnus-glutinosa/1.webp",
+     "ancho": 900,
+     "alto": 541,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "vista": "Hábito"
+    },
+    {
+     "id": "alnus-glutinosa-2",
+     "archivo": "/img/alnus-glutinosa/2.webp",
+     "ancho": 900,
+     "alto": 506,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "vista": "Tallo"
+    },
+    {
+     "id": "alnus-glutinosa-3",
+     "archivo": "/img/alnus-glutinosa/3.webp",
+     "ancho": 647,
+     "alto": 900,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "vista": "Hojas"
+    },
+    {
+     "id": "alnus-glutinosa-4",
+     "archivo": "/img/alnus-glutinosa/4.webp",
+     "ancho": 600,
+     "alto": 432,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Cantabria 2006",
+     "deExamen": true
+    },
+    {
+     "id": "alnus-glutinosa-5",
+     "archivo": "/img/alnus-glutinosa/5.webp",
+     "ancho": 326,
+     "alto": 245,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "alnus-glutinosa-6",
+     "archivo": "/img/alnus-glutinosa/6.webp",
+     "ancho": 800,
+     "alto": 600,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "alnus-glutinosa-1"
+  },
+  {
+   "id": "betula-pendula",
+   "dominio": "biologia",
+   "categoria": "botanica",
+   "album": "Angiospermas",
+   "nombre": {
+    "principal": "Abedul",
+    "comun": "Abedul",
+    "cientifico": "Betula pendula",
+    "formato": "comun"
+   },
+   "aceptados": [
+    "Betula pendula",
+    "Abedul"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2023
+    ],
+    "otros": []
+   },
+   "taxonomia": {
+    "reino": "Plantas y algas verdes",
+    "filo": "Chloroplastida",
+    "clase": "Magnoliopsida",
+    "orden": "Fagales",
+    "familia": "Betulaceae",
+    "genero": "Betula"
+   },
+   "estatus": "Autóctona",
+   "referencia": "https://www.asturnatura.com/especie/betula-pendula",
+   "imagenes": [
+    {
+     "id": "betula-pendula-1",
+     "archivo": "/img/betula-pendula/1.webp",
+     "ancho": 675,
+     "alto": 900,
+     "marcas": [],
+     "juego": true,
+     "ficha": true
+    },
+    {
+     "id": "betula-pendula-2",
+     "archivo": "/img/betula-pendula/2.webp",
+     "ancho": 675,
+     "alto": 900,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "vista": "Hábito"
+    },
+    {
+     "id": "betula-pendula-3",
+     "archivo": "/img/betula-pendula/3.webp",
+     "ancho": 675,
+     "alto": 900,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "pie": "Tronco"
+    },
+    {
+     "id": "betula-pendula-4",
+     "archivo": "/img/betula-pendula/4.webp",
+     "ancho": 411,
+     "alto": 308,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "betula-pendula-1"
+  },
+  {
+   "id": "castanea-sativa",
+   "dominio": "biologia",
+   "categoria": "botanica",
+   "album": "Angiospermas",
+   "nombre": {
+    "principal": "Castaño",
+    "comun": "Castaño",
+    "cientifico": "Castanea sativa",
+    "formato": "comun"
+   },
+   "aceptados": [
+    "Castanea sativa",
+    "Castaño"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2006
+    ],
+    "otros": []
+   },
+   "taxonomia": {
+    "reino": "Plantas y algas verdes",
+    "filo": "Chloroplastida",
+    "clase": "Magnoliopsida",
+    "orden": "Fagales",
+    "familia": "Fagaceae",
+    "genero": "Castanea"
+   },
+   "estatus": "Autóctona",
+   "referencia": "https://www.asturnatura.com/especie/castanea-sativa",
+   "imagenes": [
+    {
+     "id": "castanea-sativa-1",
+     "archivo": "/img/castanea-sativa/1.webp",
+     "ancho": 520,
+     "alto": 900,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "vista": "Hábito"
+    },
+    {
+     "id": "castanea-sativa-2",
+     "archivo": "/img/castanea-sativa/2.webp",
+     "ancho": 600,
+     "alto": 900,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "pie": "Tronco"
+    },
+    {
+     "id": "castanea-sativa-3",
+     "archivo": "/img/castanea-sativa/3.webp",
+     "ancho": 900,
+     "alto": 600,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "vista": "Hojas"
+    },
+    {
+     "id": "castanea-sativa-4",
+     "archivo": "/img/castanea-sativa/4.webp",
+     "ancho": 300,
+     "alto": 400,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Cantabria 2006",
+     "deExamen": true
+    },
+    {
+     "id": "castanea-sativa-5",
+     "archivo": "/img/castanea-sativa/5.webp",
+     "ancho": 800,
+     "alto": 600,
+     "marcas": [
+      "da-pistas"
+     ],
+     "juego": false,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "castanea-sativa-6",
+     "archivo": "/img/castanea-sativa/6.webp",
+     "ancho": 792,
+     "alto": 528,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "castanea-sativa-3"
+  },
+  {
+   "id": "taxus-baccata",
+   "dominio": "biologia",
+   "categoria": "botanica",
+   "album": "Gimnospermas (coníferas)",
+   "nombre": {
+    "principal": "Tejo",
+    "comun": "Tejo",
+    "cientifico": "Taxus baccata",
+    "formato": "comun"
+   },
+   "aceptados": [
+    "Taxus baccata",
+    "Tejo"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2023
+    ],
+    "otros": [
+     "Visu Castilla y León 2014",
+     "Visu Madrid 2010"
+    ]
+   },
+   "taxonomia": {
+    "reino": "Plantas y algas verdes",
+    "filo": "Chloroplastida",
+    "clase": "Pinopsida",
+    "orden": "Cupressales",
+    "familia": "Taxaceae",
+    "genero": "Taxus"
+   },
+   "estatus": "Protegida",
+   "referencia": "https://www.asturnatura.com/especie/taxus-baccata",
+   "imagenes": [
+    {
+     "id": "taxus-baccata-1",
+     "archivo": "/img/taxus-baccata/1.webp",
+     "ancho": 800,
+     "alto": 600,
+     "marcas": [],
+     "juego": true,
+     "ficha": true
+    },
+    {
+     "id": "taxus-baccata-2",
+     "archivo": "/img/taxus-baccata/2.webp",
+     "ancho": 729,
+     "alto": 900,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "vista": "Hábito"
+    },
+    {
+     "id": "taxus-baccata-3",
+     "archivo": "/img/taxus-baccata/3.webp",
+     "ancho": 525,
+     "alto": 700,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "pie": "Tronco"
+    },
+    {
+     "id": "taxus-baccata-4",
+     "archivo": "/img/taxus-baccata/4.webp",
+     "ancho": 600,
+     "alto": 566,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Castilla y León 2014",
+     "deExamen": true
+    },
+    {
+     "id": "taxus-baccata-5",
+     "archivo": "/img/taxus-baccata/5.webp",
+     "ancho": 350,
+     "alto": 263,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Madrid 2010",
+     "deExamen": true
+    },
+    {
+     "id": "taxus-baccata-6",
+     "archivo": "/img/taxus-baccata/6.webp",
+     "ancho": 450,
+     "alto": 338,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "taxus-baccata-1"
+  },
+  {
+   "id": "asplenium-trichomanes",
+   "dominio": "biologia",
+   "categoria": "botanica",
+   "album": "Helechos",
+   "nombre": {
+    "principal": "Tricomanes",
+    "comun": "Tricomanes",
+    "cientifico": "Asplenium trichomanes",
+    "formato": "comun"
+   },
+   "aceptados": [
+    "Asplenium trichomanes",
+    "Tricomanes"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2006,
+     2023
+    ],
+    "otros": []
+   },
+   "taxonomia": {
+    "reino": "Plantas y algas verdes",
+    "filo": "Chloroplastida",
+    "clase": "Filicopsida",
+    "orden": "Aspidiales",
+    "familia": "Aspleniaceae",
+    "genero": "Asplenium"
+   },
+   "estatus": "Autóctona",
+   "referencia": "https://www.asturnatura.com/especie/asplenium-trichomanes",
+   "imagenes": [
+    {
+     "id": "asplenium-trichomanes-1",
+     "archivo": "/img/asplenium-trichomanes/1.webp",
+     "ancho": 900,
+     "alto": 600,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "vista": "Hábito"
+    },
+    {
+     "id": "asplenium-trichomanes-2",
+     "archivo": "/img/asplenium-trichomanes/2.webp",
+     "ancho": 500,
+     "alto": 368,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "vista": "Fronde"
+    },
+    {
+     "id": "asplenium-trichomanes-3",
+     "archivo": "/img/asplenium-trichomanes/3.webp",
+     "ancho": 900,
+     "alto": 506,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "vista": "Esporangio/Soro"
+    },
+    {
+     "id": "asplenium-trichomanes-4",
+     "archivo": "/img/asplenium-trichomanes/4.webp",
+     "ancho": 400,
+     "alto": 300,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Cantabria 2006",
+     "deExamen": true
+    },
+    {
+     "id": "asplenium-trichomanes-5",
+     "archivo": "/img/asplenium-trichomanes/5.webp",
+     "ancho": 649,
+     "alto": 840,
+     "marcas": [
+      "da-pistas"
+     ],
+     "juego": false,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "asplenium-trichomanes-6",
+     "archivo": "/img/asplenium-trichomanes/6.webp",
+     "ancho": 748,
+     "alto": 550,
+     "marcas": [
+      "da-pistas"
+     ],
+     "juego": false,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "asplenium-trichomanes-1"
+  },
+  {
+   "id": "adiantum-capillus-veneris",
+   "dominio": "biologia",
+   "categoria": "botanica",
+   "album": "Helechos",
+   "nombre": {
+    "principal": "Culantrillo de pozo",
+    "comun": "Culantrillo de pozo",
+    "cientifico": "Adiantum capillus-veneris",
+    "formato": "comun"
+   },
+   "aceptados": [
+    "Adiantum capillus-veneris",
+    "Culantrillo de pozo"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2006,
+     2025
+    ],
+    "otros": []
+   },
+   "taxonomia": {
+    "reino": "Plantas y algas verdes",
+    "filo": "Chloroplastida",
+    "clase": "Polypodiopsida",
+    "orden": "Polypodiales",
+    "familia": "Pteridaceae",
+    "genero": "Adiantum"
+   },
+   "estatus": "Autóctona",
+   "referencia": "https://www.asturnatura.com/especie/adiantum-capillus-veneris",
+   "imagenes": [
+    {
+     "id": "adiantum-capillus-veneris-1",
+     "archivo": "/img/adiantum-capillus-veneris/1.webp",
+     "ancho": 900,
+     "alto": 600,
+     "marcas": [],
+     "juego": true,
+     "ficha": true
+    },
+    {
+     "id": "adiantum-capillus-veneris-2",
+     "archivo": "/img/adiantum-capillus-veneris/2.webp",
+     "ancho": 900,
+     "alto": 600,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "vista": "Hábito"
+    },
+    {
+     "id": "adiantum-capillus-veneris-3",
+     "archivo": "/img/adiantum-capillus-veneris/3.webp",
+     "ancho": 900,
+     "alto": 601,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "vista": "Hojas"
+    },
+    {
+     "id": "adiantum-capillus-veneris-4",
+     "archivo": "/img/adiantum-capillus-veneris/4.webp",
+     "ancho": 640,
+     "alto": 480,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Cantabria 2006",
+     "deExamen": true
+    },
+    {
+     "id": "adiantum-capillus-veneris-5",
+     "archivo": "/img/adiantum-capillus-veneris/5.webp",
+     "ancho": 454,
+     "alto": 900,
+     "marcas": [
+      "da-pistas"
+     ],
+     "juego": false,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "adiantum-capillus-veneris-6",
+     "archivo": "/img/adiantum-capillus-veneris/6.webp",
+     "ancho": 466,
+     "alto": 683,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "adiantum-capillus-veneris-1"
+  },
+  {
+   "id": "mineral-galena",
+   "dominio": "geologia",
+   "categoria": "minerales",
+   "album": "Sulfuros",
+   "nombre": {
+    "principal": "Galena",
+    "formato": "comun",
+    "variantes": [
+     "galena argentífera"
+    ]
+   },
+   "aceptados": [
+    "Galena",
+    "galena argentífera"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2006
+    ],
+    "otros": []
+   },
+   "rasgos": "Gris plomo, brillo metálico, muy densa, exfoliación cúbica perfecta, raya gris",
+   "notas": "Minas de Pb-Zn de Cantabria (Reocín, Picos de Europa); salió en 2006",
+   "imagenes": [
+    {
+     "id": "mineral-galena-1",
+     "archivo": "/img/mineral-galena/1.webp",
+     "ancho": 700,
+     "alto": 525,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Cantabria 2006",
+     "deExamen": true
+    },
+    {
+     "id": "mineral-galena-2",
+     "archivo": "/img/mineral-galena/2.webp",
+     "ancho": 900,
+     "alto": 675,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "mineral-galena-3",
+     "archivo": "/img/mineral-galena/3.webp",
+     "ancho": 900,
+     "alto": 675,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "mineral-galena-4",
+     "archivo": "/img/mineral-galena/4.webp",
+     "ancho": 900,
+     "alto": 675,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "mineral-galena-5",
+     "archivo": "/img/mineral-galena/5.webp",
+     "ancho": 900,
+     "alto": 675,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "mineral-galena-2"
+  },
+  {
+   "id": "mineral-marcasita",
+   "dominio": "geologia",
+   "categoria": "minerales",
+   "album": "Sulfuros",
+   "nombre": {
+    "principal": "Marcasita",
+    "formato": "comun",
+    "variantes": [
+     "pirita en cresta",
+     "hierro de lanza",
+     "marcasita en cresta de gallo"
+    ]
+   },
+   "aceptados": [
+    "Marcasita",
+    "pirita en cresta",
+    "hierro de lanza",
+    "marcasita en cresta de gallo"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2021,
+     2025
+    ],
+    "otros": []
+   },
+   "rasgos": "Amarillo más pálido que la pirita, agregados en cresta de gallo o lanza, se altera a polvo blanco",
+   "notas": "Nódulos en margas y calizas; salió en 2021 y 2025",
+   "imagenes": [
+    {
+     "id": "mineral-marcasita-1",
+     "archivo": "/img/mineral-marcasita/1.webp",
+     "ancho": 838,
+     "alto": 900,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "mineral-marcasita-2",
+     "archivo": "/img/mineral-marcasita/2.webp",
+     "ancho": 843,
+     "alto": 900,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "mineral-marcasita-3",
+     "archivo": "/img/mineral-marcasita/3.webp",
+     "ancho": 590,
+     "alto": 407,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "mineral-marcasita-4",
+     "archivo": "/img/mineral-marcasita/4.webp",
+     "ancho": 609,
+     "alto": 404,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "mineral-marcasita-4"
+  },
+  {
+   "id": "mineral-fluorita",
+   "dominio": "geologia",
+   "categoria": "minerales",
+   "album": "Haluros",
+   "nombre": {
+    "principal": "Fluorita",
+    "formato": "comun",
+    "variantes": [
+     "espato de flúor"
+    ]
+   },
+   "aceptados": [
+    "Fluorita",
+    "espato de flúor"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2006,
+     2023
+    ],
+    "otros": []
+   },
+   "rasgos": "Cubos (octaedros por exfoliación), colores violeta, verde, amarillo; D 4; macla de penetración",
+   "notas": "Asturias (Villabona, La Collada, Berbes); salió en 2006 y 2023",
+   "imagenes": [
+    {
+     "id": "mineral-fluorita-1",
+     "archivo": "/img/mineral-fluorita/1.webp",
+     "ancho": 450,
+     "alto": 367,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Cantabria 2006",
+     "deExamen": true
+    },
+    {
+     "id": "mineral-fluorita-2",
+     "archivo": "/img/mineral-fluorita/2.webp",
+     "ancho": 638,
+     "alto": 407,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "mineral-fluorita-3",
+     "archivo": "/img/mineral-fluorita/3.webp",
+     "ancho": 632,
+     "alto": 402,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "mineral-fluorita-4",
+     "archivo": "/img/mineral-fluorita/4.webp",
+     "ancho": 615,
+     "alto": 388,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "mineral-fluorita-5",
+     "archivo": "/img/mineral-fluorita/5.webp",
+     "ancho": 845,
+     "alto": 900,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "mineral-fluorita-2"
+  },
+  {
+   "id": "mineral-yeso",
+   "dominio": "geologia",
+   "categoria": "minerales",
+   "album": "Sulfatos",
+   "nombre": {
+    "principal": "Yeso",
+    "formato": "comun",
+    "variantes": [
+     "selenita",
+     "alabastro",
+     "espejuelo",
+     "rosa del desierto",
+     "punta de flecha"
+    ]
+   },
+   "aceptados": [
+    "Yeso",
+    "selenita",
+    "alabastro",
+    "espejuelo",
+    "rosa del desierto",
+    "punta de flecha"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2016
+    ],
+    "otros": [
+     "Visu Galicia 2016",
+     "Visu Madrid 2010"
+    ]
+   },
+   "rasgos": "D 2 (se raya con la uña), exfoliación laminar, maclas en punta de flecha/cola de golondrina",
+   "notas": "Keuper de Cantabria; salió en 2016 (y Burgos 1998)",
+   "imagenes": [
+    {
+     "id": "mineral-yeso-1",
+     "archivo": "/img/mineral-yeso/1.webp",
+     "ancho": 878,
+     "alto": 572,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Burgos 1998",
+     "deExamen": true
+    },
+    {
+     "id": "mineral-yeso-2",
+     "archivo": "/img/mineral-yeso/2.webp",
+     "ancho": 618,
+     "alto": 418,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "mineral-yeso-3",
+     "archivo": "/img/mineral-yeso/3.webp",
+     "ancho": 606,
+     "alto": 391,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "mineral-yeso-4",
+     "archivo": "/img/mineral-yeso/4.webp",
+     "ancho": 615,
+     "alto": 398,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "mineral-yeso-5",
+     "archivo": "/img/mineral-yeso/5.webp",
+     "ancho": 845,
+     "alto": 900,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "mineral-yeso-6",
+     "archivo": "/img/mineral-yeso/6.webp",
+     "ancho": 430,
+     "alto": 300,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Madrid 2010",
+     "deExamen": true
+    },
+    {
+     "id": "mineral-yeso-7",
+     "archivo": "/img/mineral-yeso/7.webp",
+     "ancho": 720,
+     "alto": 540,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Galicia 2016",
+     "deExamen": true
+    }
+   ],
+   "portada": "mineral-yeso-1"
+  },
+  {
+   "id": "mineral-baritina",
+   "dominio": "geologia",
+   "categoria": "minerales",
+   "album": "Sulfatos",
+   "nombre": {
+    "principal": "Baritina",
+    "formato": "comun",
+    "variantes": [
+     "barita",
+     "espato pesado",
+     "baritina en cresta de gallo"
+    ]
+   },
+   "aceptados": [
+    "Baritina",
+    "barita",
+    "espato pesado",
+    "baritina en cresta de gallo"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2006,
+     2023
+    ],
+    "otros": []
+   },
+   "rasgos": "Muy densa para ser clara, cristales tabulares (en libro), rosa del desierto; no efervesce",
+   "notas": "Filones de Asturias y Cantabria; salió en 2006 y 2023",
+   "imagenes": [
+    {
+     "id": "mineral-baritina-1",
+     "archivo": "/img/mineral-baritina/1.webp",
+     "ancho": 600,
+     "alto": 437,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Cantabria 2006",
+     "deExamen": true
+    },
+    {
+     "id": "mineral-baritina-2",
+     "archivo": "/img/mineral-baritina/2.webp",
+     "ancho": 611,
+     "alto": 408,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "mineral-baritina-3",
+     "archivo": "/img/mineral-baritina/3.webp",
+     "ancho": 629,
+     "alto": 410,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "mineral-baritina-4",
+     "archivo": "/img/mineral-baritina/4.webp",
+     "ancho": 611,
+     "alto": 409,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "mineral-baritina-5",
+     "archivo": "/img/mineral-baritina/5.webp",
+     "ancho": 900,
+     "alto": 658,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "mineral-baritina-5"
+  },
+  {
+   "id": "roca-granito",
+   "dominio": "geologia",
+   "categoria": "rocas",
+   "album": "Ígneas plutónicas",
+   "nombre": {
+    "principal": "Granito",
+    "formato": "comun",
+    "variantes": [
+     "leucogranito",
+     "granito rosa",
+     "granito de dos micas"
+    ]
+   },
+   "aceptados": [
+    "Granito",
+    "leucogranito",
+    "granito rosa",
+    "granito de dos micas"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2006
+    ],
+    "otros": [
+     "Visu Madrid 2010"
+    ]
+   },
+   "rasgos": "Fanerítica (cristales visibles), clara: cuarzo gris + feldespato blanco/rosa + micas",
+   "notas": "Galicia, Sistema Central; salió en 2006",
+   "imagenes": [
+    {
+     "id": "roca-granito-1",
+     "archivo": "/img/roca-granito/1.webp",
+     "ancho": 300,
+     "alto": 300,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Cantabria 2006",
+     "deExamen": true
+    },
+    {
+     "id": "roca-granito-2",
+     "archivo": "/img/roca-granito/2.webp",
+     "ancho": 376,
+     "alto": 348,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "roca-granito-3",
+     "archivo": "/img/roca-granito/3.webp",
+     "ancho": 338,
+     "alto": 251,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "roca-granito-4",
+     "archivo": "/img/roca-granito/4.webp",
+     "ancho": 615,
+     "alto": 365,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "roca-granito-5",
+     "archivo": "/img/roca-granito/5.webp",
+     "ancho": 569,
+     "alto": 427,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "roca-granito-6",
+     "archivo": "/img/roca-granito/6.webp",
+     "ancho": 900,
+     "alto": 675,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Madrid 2010",
+     "deExamen": true
+    },
+    {
+     "id": "roca-granito-7",
+     "archivo": "/img/roca-granito/7.webp",
+     "ancho": 900,
+     "alto": 718,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (Visu 2018)"
+    },
+    {
+     "id": "roca-granito-8",
+     "archivo": "/img/roca-granito/8.webp",
+     "ancho": 600,
+     "alto": 600,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (Visu 2018)"
+    },
+    {
+     "id": "roca-granito-9",
+     "archivo": "/img/roca-granito/9.webp",
+     "ancho": 278,
+     "alto": 231,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (Visu 2018)"
+    }
+   ],
+   "portada": "roca-granito-6"
+  },
+  {
+   "id": "roca-granodiorita",
+   "dominio": "geologia",
+   "categoria": "rocas",
+   "album": "Ígneas plutónicas",
+   "nombre": {
+    "principal": "Granodiorita",
+    "formato": "comun"
+   },
+   "aceptados": [
+    "Granodiorita"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [],
+    "otros": []
+   },
+   "rasgos": "Como el granito pero más gris, más plagioclasa y biotita/hornblenda",
+   "imagenes": [
+    {
+     "id": "roca-granodiorita-1",
+     "archivo": "/img/roca-granodiorita/1.webp",
+     "ancho": 385,
+     "alto": 319,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "roca-granodiorita-2",
+     "archivo": "/img/roca-granodiorita/2.webp",
+     "ancho": 407,
+     "alto": 264,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "roca-granodiorita-3",
+     "archivo": "/img/roca-granodiorita/3.webp",
+     "ancho": 470,
+     "alto": 353,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "roca-granodiorita-4",
+     "archivo": "/img/roca-granodiorita/4.webp",
+     "ancho": 639,
+     "alto": 479,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "roca-granodiorita-5",
+     "archivo": "/img/roca-granodiorita/5.webp",
+     "ancho": 639,
+     "alto": 479,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "roca-granodiorita-6",
+     "archivo": "/img/roca-granodiorita/6.webp",
+     "ancho": 900,
+     "alto": 675,
+     "marcas": [
+      "da-pistas"
+     ],
+     "juego": false,
+     "ficha": true,
+     "fuente": "Lote (Visu 2018)"
+    }
+   ],
+   "portada": "roca-granodiorita-4"
+  },
+  {
+   "id": "roca-esquisto",
+   "dominio": "geologia",
+   "categoria": "rocas",
+   "album": "Metamórficas",
+   "nombre": {
+    "principal": "Esquisto",
+    "formato": "comun",
+    "variantes": [
+     "micaesquisto",
+     "esquisto moscovítico"
+    ]
+   },
+   "aceptados": [
+    "Esquisto",
+    "micaesquisto",
+    "esquisto moscovítico"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2016
+    ],
+    "otros": [
+     "Visu Madrid 2010"
+    ]
+   },
+   "rasgos": "Foliación (esquistosidad) marcada con micas visibles y brillantes",
+   "notas": "Salió en 2016",
+   "imagenes": [
+    {
+     "id": "roca-esquisto-1",
+     "archivo": "/img/roca-esquisto/1.webp",
+     "ancho": 416,
+     "alto": 357,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "roca-esquisto-2",
+     "archivo": "/img/roca-esquisto/2.webp",
+     "ancho": 461,
+     "alto": 346,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "roca-esquisto-3",
+     "archivo": "/img/roca-esquisto/3.webp",
+     "ancho": 422,
+     "alto": 359,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "roca-esquisto-4",
+     "archivo": "/img/roca-esquisto/4.webp",
+     "ancho": 331,
+     "alto": 322,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "roca-esquisto-5",
+     "archivo": "/img/roca-esquisto/5.webp",
+     "ancho": 482,
+     "alto": 362,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "roca-esquisto-6",
+     "archivo": "/img/roca-esquisto/6.webp",
+     "ancho": 900,
+     "alto": 675,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Madrid 2010",
+     "deExamen": true
+    },
+    {
+     "id": "roca-esquisto-7",
+     "archivo": "/img/roca-esquisto/7.webp",
+     "ancho": 720,
+     "alto": 263,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (Visu 2018)"
+    },
+    {
+     "id": "roca-esquisto-8",
+     "archivo": "/img/roca-esquisto/8.webp",
+     "ancho": 720,
+     "alto": 540,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (Visu 2018)"
+    },
+    {
+     "id": "roca-esquisto-9",
+     "archivo": "/img/roca-esquisto/9.webp",
+     "ancho": 736,
+     "alto": 773,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (Visu 2018)"
+    }
+   ],
+   "portada": "roca-esquisto-6"
+  },
+  {
+   "id": "roca-gneis",
+   "dominio": "geologia",
+   "categoria": "rocas",
+   "album": "Metamórficas",
+   "nombre": {
+    "principal": "Gneis",
+    "formato": "comun",
+    "variantes": [
+     "gneis glandular",
+     "ollo de sapo"
+    ]
+   },
+   "aceptados": [
+    "Gneis",
+    "gneis glandular",
+    "ollo de sapo"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2021
+    ],
+    "otros": [
+     "Visu Madrid 2010"
+    ]
+   },
+   "rasgos": "Bandeado claro-oscuro (cuarzo-feldespato / micas), grano grueso",
+   "notas": "Ollo de Sapo (Galicia-Sanabria); salió en 2021 (y Burgos 1998)",
+   "imagenes": [
+    {
+     "id": "roca-gneis-1",
+     "archivo": "/img/roca-gneis/1.webp",
+     "ancho": 900,
+     "alto": 799,
+     "marcas": [
+      "da-pistas"
+     ],
+     "juego": false,
+     "ficha": true,
+     "fuente": "Visu Burgos 1998",
+     "deExamen": true
+    },
+    {
+     "id": "roca-gneis-2",
+     "archivo": "/img/roca-gneis/2.webp",
+     "ancho": 526,
+     "alto": 335,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "roca-gneis-3",
+     "archivo": "/img/roca-gneis/3.webp",
+     "ancho": 452,
+     "alto": 273,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "roca-gneis-4",
+     "archivo": "/img/roca-gneis/4.webp",
+     "ancho": 461,
+     "alto": 346,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "roca-gneis-5",
+     "archivo": "/img/roca-gneis/5.webp",
+     "ancho": 829,
+     "alto": 900,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "roca-gneis-6",
+     "archivo": "/img/roca-gneis/6.webp",
+     "ancho": 900,
+     "alto": 675,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Madrid 2010",
+     "deExamen": true
+    },
+    {
+     "id": "roca-gneis-7",
+     "archivo": "/img/roca-gneis/7.webp",
+     "ancho": 500,
+     "alto": 378,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (Visu 2018)"
+    },
+    {
+     "id": "roca-gneis-8",
+     "archivo": "/img/roca-gneis/8.webp",
+     "ancho": 400,
+     "alto": 282,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (Visu 2018)"
+    }
+   ],
+   "portada": "roca-gneis-6"
+  },
+  {
+   "id": "fosil-exogyra",
+   "dominio": "geologia",
+   "categoria": "fosiles",
+   "album": "Bivalvos",
+   "nombre": {
+    "principal": "Exogyra",
+    "formato": "cientifico",
+    "cientifico": "Exogyra"
+   },
+   "aceptados": [
+    "Exogyra"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2006
+    ],
+    "otros": []
+   },
+   "rasgos": "Ostra de umbo enrollado en espiral hacia un lado",
+   "notas": "Cretácico; salió en 2006",
+   "imagenes": [
+    {
+     "id": "fosil-exogyra-1",
+     "archivo": "/img/fosil-exogyra/1.webp",
+     "ancho": 800,
+     "alto": 600,
+     "marcas": [
+      "da-pistas"
+     ],
+     "juego": false,
+     "ficha": true,
+     "fuente": "Visu Cantabria 2006",
+     "deExamen": true
+    },
+    {
+     "id": "fosil-exogyra-2",
+     "archivo": "/img/fosil-exogyra/2.webp",
+     "ancho": 642,
+     "alto": 378,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "fosil-exogyra-3",
+     "archivo": "/img/fosil-exogyra/3.webp",
+     "ancho": 642,
+     "alto": 382,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "fosil-exogyra-4",
+     "archivo": "/img/fosil-exogyra/4.webp",
+     "ancho": 507,
+     "alto": 381,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "fosil-exogyra-5",
+     "archivo": "/img/fosil-exogyra/5.webp",
+     "ancho": 368,
+     "alto": 276,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "fosil-exogyra-6",
+     "archivo": "/img/fosil-exogyra/6.webp",
+     "ancho": 682,
+     "alto": 358,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (Visu 2018)"
+    }
+   ],
+   "portada": "fosil-exogyra-6"
+  },
+  {
+   "id": "fosil-belemnites",
+   "dominio": "geologia",
+   "categoria": "fosiles",
+   "album": "Belemnites",
+   "nombre": {
+    "principal": "Belemnites",
+    "formato": "cientifico",
+    "cientifico": "Belemnites",
+    "variantes": [
+     "Passaloteuthis",
+     "belemnites"
+    ]
+   },
+   "aceptados": [
+    "Belemnites",
+    "Passaloteuthis",
+    "belemnites"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [],
+    "otros": []
+   },
+   "rasgos": "Rostro macizo cilíndrico-cónico con alvéolo (parte del cefalópodo)",
+   "notas": "Jurásico-Cretácico (Lías de Asturias y Cantabria)",
+   "imagenes": [
+    {
+     "id": "fosil-belemnites-1",
+     "archivo": "/img/fosil-belemnites/1.webp",
+     "ancho": 647,
+     "alto": 417,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "fosil-belemnites-2",
+     "archivo": "/img/fosil-belemnites/2.webp",
+     "ancho": 630,
+     "alto": 322,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "fosil-belemnites-3",
+     "archivo": "/img/fosil-belemnites/3.webp",
+     "ancho": 327,
+     "alto": 435,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "fosil-belemnites-4",
+     "archivo": "/img/fosil-belemnites/4.webp",
+     "ancho": 362,
+     "alto": 272,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "fosil-belemnites-5",
+     "archivo": "/img/fosil-belemnites/5.webp",
+     "ancho": 256,
+     "alto": 730,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "fosil-belemnites-6",
+     "archivo": "/img/fosil-belemnites/6.webp",
+     "ancho": 488,
+     "alto": 280,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (Visu 2018)"
+    }
+   ],
+   "portada": "fosil-belemnites-1"
+  },
+  {
+   "id": "fosil-nummulites",
+   "dominio": "geologia",
+   "categoria": "fosiles",
+   "album": "Foraminíferos",
+   "nombre": {
+    "principal": "Nummulites",
+    "formato": "cientifico",
+    "cientifico": "Nummulites"
+   },
+   "aceptados": [
+    "Nummulites"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2021
+    ],
+    "otros": [
+     "Visu Madrid 2010"
+    ]
+   },
+   "rasgos": "Disco lenticular (moneda) de mm-cm; en corte, espiral con muchas cámaras",
+   "notas": "Eoceno (costa cántabra y vasca); salió en 2021 (y Burgos 1998)",
+   "imagenes": [
+    {
+     "id": "fosil-nummulites-1",
+     "archivo": "/img/fosil-nummulites/1.webp",
+     "ancho": 800,
+     "alto": 551,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Burgos 1998",
+     "deExamen": true
+    },
+    {
+     "id": "fosil-nummulites-2",
+     "archivo": "/img/fosil-nummulites/2.webp",
+     "ancho": 253,
+     "alto": 900,
+     "marcas": [
+      "calidad"
+     ],
+     "juego": false,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "fosil-nummulites-3",
+     "archivo": "/img/fosil-nummulites/3.webp",
+     "ancho": 640,
+     "alto": 335,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "fosil-nummulites-4",
+     "archivo": "/img/fosil-nummulites/4.webp",
+     "ancho": 640,
+     "alto": 280,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "fosil-nummulites-5",
+     "archivo": "/img/fosil-nummulites/5.webp",
+     "ancho": 268,
+     "alto": 244,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Madrid 2010",
+     "deExamen": true
+    },
+    {
+     "id": "fosil-nummulites-6",
+     "archivo": "/img/fosil-nummulites/6.webp",
+     "ancho": 582,
+     "alto": 492,
+     "marcas": [
+      "da-pistas"
+     ],
+     "juego": false,
+     "ficha": true,
+     "fuente": "Lote (Visu 2018)"
+    }
+   ],
+   "portada": "fosil-nummulites-1"
+  },
+  {
+   "id": "fosil-lepidodendron",
+   "dominio": "geologia",
+   "categoria": "fosiles",
+   "album": "Plantas",
+   "nombre": {
+    "principal": "Lepidodendron",
+    "formato": "cientifico",
+    "cientifico": "Lepidodendron"
+   },
+   "aceptados": [
+    "Lepidodendron"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2006,
+     2021
+    ],
+    "otros": []
+   },
+   "rasgos": "Corteza con cicatrices foliares rómbicas en espiral (\"piel de serpiente\")",
+   "notas": "Carbonífero (cuencas hulleras de Palencia, León, Asturias); salió en 2006 y 2021",
+   "imagenes": [
+    {
+     "id": "fosil-lepidodendron-1",
+     "archivo": "/img/fosil-lepidodendron/1.webp",
+     "ancho": 300,
+     "alto": 192,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Cantabria 2006",
+     "deExamen": true
+    },
+    {
+     "id": "fosil-lepidodendron-2",
+     "archivo": "/img/fosil-lepidodendron/2.webp",
+     "ancho": 566,
+     "alto": 900,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "fosil-lepidodendron-3",
+     "archivo": "/img/fosil-lepidodendron/3.webp",
+     "ancho": 661,
+     "alto": 900,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "fosil-lepidodendron-4",
+     "archivo": "/img/fosil-lepidodendron/4.webp",
+     "ancho": 433,
+     "alto": 325,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "fosil-lepidodendron-5",
+     "archivo": "/img/fosil-lepidodendron/5.webp",
+     "ancho": 640,
+     "alto": 724,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (Visu 2018)"
+    }
+   ],
+   "portada": "fosil-lepidodendron-2"
+  },
+  {
+   "id": "fosil-sigillaria",
+   "dominio": "geologia",
+   "categoria": "fosiles",
+   "album": "Plantas",
+   "nombre": {
+    "principal": "Sigillaria",
+    "formato": "cientifico",
+    "cientifico": "Sigillaria"
+   },
+   "aceptados": [
+    "Sigillaria"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [],
+    "otros": [
+     "Visu Madrid 2010"
+    ]
+   },
+   "rasgos": "Cicatrices foliares hexagonales en filas verticales",
+   "notas": "Carbonífero",
+   "imagenes": [
+    {
+     "id": "fosil-sigillaria-1",
+     "archivo": "/img/fosil-sigillaria/1.webp",
+     "ancho": 602,
+     "alto": 900,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "fosil-sigillaria-2",
+     "archivo": "/img/fosil-sigillaria/2.webp",
+     "ancho": 900,
+     "alto": 858,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "fosil-sigillaria-3",
+     "archivo": "/img/fosil-sigillaria/3.webp",
+     "ancho": 326,
+     "alto": 321,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "fosil-sigillaria-4",
+     "archivo": "/img/fosil-sigillaria/4.webp",
+     "ancho": 400,
+     "alto": 417,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Visu Madrid 2010",
+     "deExamen": true
+    },
+    {
+     "id": "fosil-sigillaria-5",
+     "archivo": "/img/fosil-sigillaria/5.webp",
+     "ancho": 745,
+     "alto": 559,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (Visu 2018)"
+    }
+   ],
+   "portada": "fosil-sigillaria-2"
+  },
+  {
+   "id": "micro-musculo-estriado-esqueletico",
+   "dominio": "biologia",
+   "categoria": "histologia",
+   "album": "Histología animal",
+   "nombre": {
+    "principal": "Músculo estriado esquelético",
+    "formato": "comun",
+    "variantes": [
+     "tejido muscular estriado"
+    ]
+   },
+   "aceptados": [
+    "Músculo estriado esquelético",
+    "tejido muscular estriado"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [],
+    "otros": []
+   },
+   "rasgos": "Fibras largas multinucleadas con núcleos periféricos y estriación transversal",
+   "imagenes": [
+    {
+     "id": "micro-musculo-estriado-esqueletico-1",
+     "archivo": "/img/micro-musculo-estriado-esqueletico/1.webp",
+     "ancho": 414,
+     "alto": 411,
+     "marcas": [
+      "baja-resolucion",
+      "rotulada"
+     ],
+     "juego": false,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "micro-musculo-estriado-esqueletico-2",
+     "archivo": "/img/micro-musculo-estriado-esqueletico/2.webp",
+     "ancho": 900,
+     "alto": 633,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    },
+    {
+     "id": "micro-musculo-estriado-esqueletico-3",
+     "archivo": "/img/micro-musculo-estriado-esqueletico/3.webp",
+     "ancho": 541,
+     "alto": 773,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    },
+    {
+     "id": "micro-musculo-estriado-esqueletico-4",
+     "archivo": "/img/micro-musculo-estriado-esqueletico/4.webp",
+     "ancho": 545,
+     "alto": 777,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    }
+   ],
+   "portada": "micro-musculo-estriado-esqueletico-2"
+  },
+  {
+   "id": "micro-musculo-cardiaco",
+   "dominio": "biologia",
+   "categoria": "histologia",
+   "album": "Histología animal",
+   "nombre": {
+    "principal": "Músculo cardiaco",
+    "formato": "comun",
+    "variantes": [
+     "tejido muscular cardiaco"
+    ]
+   },
+   "aceptados": [
+    "Músculo cardiaco",
+    "tejido muscular cardiaco"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [],
+    "otros": []
+   },
+   "rasgos": "Fibras ramificadas, núcleo central, estriación y discos intercalares",
+   "imagenes": [
+    {
+     "id": "micro-musculo-cardiaco-1",
+     "archivo": "/img/micro-musculo-cardiaco/1.webp",
+     "ancho": 537,
+     "alto": 777,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    },
+    {
+     "id": "micro-musculo-cardiaco-2",
+     "archivo": "/img/micro-musculo-cardiaco/2.webp",
+     "ancho": 541,
+     "alto": 777,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    },
+    {
+     "id": "micro-musculo-cardiaco-3",
+     "archivo": "/img/micro-musculo-cardiaco/3.webp",
+     "ancho": 537,
+     "alto": 761,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    },
+    {
+     "id": "micro-musculo-cardiaco-4",
+     "archivo": "/img/micro-musculo-cardiaco/4.webp",
+     "ancho": 545,
+     "alto": 773,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    }
+   ],
+   "portada": "micro-musculo-cardiaco-1"
+  },
+  {
+   "id": "micro-higado",
+   "dominio": "biologia",
+   "categoria": "histologia",
+   "album": "Histología animal (órganos)",
+   "nombre": {
+    "principal": "Hígado",
+    "formato": "comun",
+    "variantes": [
+     "lobulillo hepático",
+     "hepatocito"
+    ]
+   },
+   "aceptados": [
+    "Hígado",
+    "lobulillo hepático",
+    "hepatocito"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2016
+    ],
+    "otros": []
+   },
+   "rasgos": "Cordones de hepatocitos radiales hacia la vena central, sinusoides",
+   "notas": "Hepatocito salió en 2016",
+   "imagenes": [
+    {
+     "id": "micro-higado-1",
+     "archivo": "/img/micro-higado/1.webp",
+     "ancho": 395,
+     "alto": 576,
+     "marcas": [
+      "calidad",
+      "rotulada"
+     ],
+     "juego": false,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "micro-higado-2",
+     "archivo": "/img/micro-higado/2.webp",
+     "ancho": 390,
+     "alto": 256,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "micro-higado-3",
+     "archivo": "/img/micro-higado/3.webp",
+     "ancho": 391,
+     "alto": 256,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "micro-higado-4",
+     "archivo": "/img/micro-higado/4.webp",
+     "ancho": 382,
+     "alto": 256,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "micro-higado-5",
+     "archivo": "/img/micro-higado/5.webp",
+     "ancho": 374,
+     "alto": 256,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "micro-higado-6",
+     "archivo": "/img/micro-higado/6.webp",
+     "ancho": 529,
+     "alto": 793,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    },
+    {
+     "id": "micro-higado-7",
+     "archivo": "/img/micro-higado/7.webp",
+     "ancho": 545,
+     "alto": 793,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    },
+    {
+     "id": "micro-higado-8",
+     "archivo": "/img/micro-higado/8.webp",
+     "ancho": 541,
+     "alto": 793,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    },
+    {
+     "id": "micro-higado-9",
+     "archivo": "/img/micro-higado/9.webp",
+     "ancho": 553,
+     "alto": 793,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    }
+   ],
+   "portada": "micro-higado-6"
+  },
+  {
+   "id": "micro-colenquima",
+   "dominio": "biologia",
+   "categoria": "histologia",
+   "album": "Histología vegetal",
+   "nombre": {
+    "principal": "Colénquima",
+    "formato": "comun"
+   },
+   "aceptados": [
+    "Colénquima"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2021
+    ],
+    "otros": []
+   },
+   "rasgos": "Células vivas con engrosamientos de celulosa en esquinas (angular), láminas o lagunas",
+   "notas": "Salió en 2021",
+   "imagenes": [
+    {
+     "id": "micro-colenquima-1",
+     "archivo": "/img/micro-colenquima/1.webp",
+     "ancho": 451,
+     "alto": 333,
+     "marcas": [
+      "baja-resolucion",
+      "da-pistas",
+      "rotulada"
+     ],
+     "juego": false,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "micro-colenquima-2",
+     "archivo": "/img/micro-colenquima/2.webp",
+     "ancho": 781,
+     "alto": 423,
+     "marcas": [
+      "da-pistas",
+      "rotulada"
+     ],
+     "juego": false,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "micro-colenquima-3",
+     "archivo": "/img/micro-colenquima/3.webp",
+     "ancho": 518,
+     "alto": 391,
+     "marcas": [
+      "da-pistas",
+      "rotulada"
+     ],
+     "juego": false,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "micro-colenquima-4",
+     "archivo": "/img/micro-colenquima/4.webp",
+     "ancho": 583,
+     "alto": 361,
+     "marcas": [
+      "da-pistas",
+      "rotulada"
+     ],
+     "juego": false,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "micro-colenquima-5",
+     "archivo": "/img/micro-colenquima/5.webp",
+     "ancho": 490,
+     "alto": 346,
+     "marcas": [
+      "baja-resolucion",
+      "da-pistas",
+      "rotulada"
+     ],
+     "juego": false,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "micro-colenquima-6",
+     "archivo": "/img/micro-colenquima/6.webp",
+     "ancho": 900,
+     "alto": 603,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    },
+    {
+     "id": "micro-colenquima-7",
+     "archivo": "/img/micro-colenquima/7.webp",
+     "ancho": 566,
+     "alto": 900,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    },
+    {
+     "id": "micro-colenquima-8",
+     "archivo": "/img/micro-colenquima/8.webp",
+     "ancho": 431,
+     "alto": 900,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    }
+   ],
+   "portada": "micro-colenquima-6"
+  },
+  {
+   "id": "micro-haz-vascular",
+   "dominio": "biologia",
+   "categoria": "histologia",
+   "album": "Histología vegetal",
+   "nombre": {
+    "principal": "Haz vascular",
+    "formato": "comun",
+    "variantes": [
+     "haz conductor",
+     "xilema + floema",
+     "sección de vasos conductores"
+    ]
+   },
+   "aceptados": [
+    "Haz vascular",
+    "haz conductor",
+    "xilema + floema",
+    "sección de vasos conductores"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2025
+    ],
+    "otros": []
+   },
+   "rasgos": "Xilema (hacia dentro) y floema (hacia fuera) juntos; colateral abierto (dicot.) o cerrado (monocot.)",
+   "notas": "Salió en 2025",
+   "imagenes": [
+    {
+     "id": "micro-haz-vascular-1",
+     "archivo": "/img/micro-haz-vascular/1.webp",
+     "ancho": 547,
+     "alto": 900,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    },
+    {
+     "id": "micro-haz-vascular-2",
+     "archivo": "/img/micro-haz-vascular/2.webp",
+     "ancho": 453,
+     "alto": 717,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    },
+    {
+     "id": "micro-haz-vascular-3",
+     "archivo": "/img/micro-haz-vascular/3.webp",
+     "ancho": 900,
+     "alto": 663,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    },
+    {
+     "id": "micro-haz-vascular-4",
+     "archivo": "/img/micro-haz-vascular/4.webp",
+     "ancho": 704,
+     "alto": 900,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    },
+    {
+     "id": "micro-haz-vascular-5",
+     "archivo": "/img/micro-haz-vascular/5.webp",
+     "ancho": 900,
+     "alto": 613,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    },
+    {
+     "id": "micro-haz-vascular-6",
+     "archivo": "/img/micro-haz-vascular/6.webp",
+     "ancho": 900,
+     "alto": 592,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote (presentaciones de histología)"
+    }
+   ],
+   "portada": "micro-haz-vascular-3"
+  },
+  {
+   "id": "geomorf-bloque-erratico",
+   "dominio": "geologia",
+   "categoria": "geomorfologia",
+   "album": "Modelado glaciar",
+   "nombre": {
+    "principal": "Bloque errático",
+    "formato": "comun"
+   },
+   "aceptados": [
+    "Bloque errático"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [
+     2025
+    ],
+    "otros": []
+   },
+   "rasgos": "Bloque transportado por el hielo y abandonado sobre un sustrato de litología distinta",
+   "imagenes": [
+    {
+     "id": "geomorf-bloque-erratico-1",
+     "archivo": "/img/geomorf-bloque-erratico/1.webp",
+     "ancho": 529,
+     "alto": 397,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "geomorf-bloque-erratico-2",
+     "archivo": "/img/geomorf-bloque-erratico/2.webp",
+     "ancho": 533,
+     "alto": 344,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "geomorf-bloque-erratico-3",
+     "archivo": "/img/geomorf-bloque-erratico/3.webp",
+     "ancho": 557,
+     "alto": 372,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "geomorf-bloque-erratico-4",
+     "archivo": "/img/geomorf-bloque-erratico/4.webp",
+     "ancho": 600,
+     "alto": 398,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "geomorf-bloque-erratico-5",
+     "archivo": "/img/geomorf-bloque-erratico/5.webp",
+     "ancho": 600,
+     "alto": 368,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "geomorf-bloque-erratico-6",
+     "archivo": "/img/geomorf-bloque-erratico/6.webp",
+     "ancho": 510,
+     "alto": 383,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "geomorf-bloque-erratico-4"
+  },
+  {
+   "id": "geomorf-circo-glaciar",
+   "dominio": "geologia",
+   "categoria": "geomorfologia",
+   "album": "Modelado glaciar",
+   "nombre": {
+    "principal": "Circo glaciar",
+    "formato": "comun",
+    "variantes": [
+     "ibón",
+     "lago de circo"
+    ]
+   },
+   "aceptados": [
+    "Circo glaciar",
+    "ibón",
+    "lago de circo"
+   ],
+   "prioridad": "A",
+   "visu": {
+    "anios": [],
+    "otros": []
+   },
+   "rasgos": "Depresión semicircular en cabecera donde se acumula el hielo; al fundirse puede alojar un lago (ibón)",
+   "imagenes": [
+    {
+     "id": "geomorf-circo-glaciar-1",
+     "archivo": "/img/geomorf-circo-glaciar/1.webp",
+     "ancho": 600,
+     "alto": 450,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "geomorf-circo-glaciar-2",
+     "archivo": "/img/geomorf-circo-glaciar/2.webp",
+     "ancho": 576,
+     "alto": 432,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "geomorf-circo-glaciar-3",
+     "archivo": "/img/geomorf-circo-glaciar/3.webp",
+     "ancho": 379,
+     "alto": 274,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "geomorf-circo-glaciar-4",
+     "archivo": "/img/geomorf-circo-glaciar/4.webp",
+     "ancho": 529,
+     "alto": 397,
+     "marcas": [
+      "rotulada"
+     ],
+     "juego": false,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "geomorf-circo-glaciar-5",
+     "archivo": "/img/geomorf-circo-glaciar/5.webp",
+     "ancho": 600,
+     "alto": 399,
+     "marcas": [],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    },
+    {
+     "id": "geomorf-circo-glaciar-6",
+     "archivo": "/img/geomorf-circo-glaciar/6.webp",
+     "ancho": 348,
+     "alto": 261,
+     "marcas": [
+      "baja-resolucion"
+     ],
+     "juego": true,
+     "ficha": true,
+     "fuente": "Lote MaterialVinted"
+    }
+   ],
+   "portada": "geomorf-circo-glaciar-1"
+  }
+ ]
+}

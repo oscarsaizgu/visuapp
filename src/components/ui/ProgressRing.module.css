@@ -1,0 +1,7 @@
+.ring { position: relative; flex: none; }
+.ring svg { display: block; }
+.value { transition: stroke-dashoffset 900ms var(--ease-out); }
+.center {
+  position: absolute; inset: 0;
+  display: grid; place-items: center; text-align: center;
+}

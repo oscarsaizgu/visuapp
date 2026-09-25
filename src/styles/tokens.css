@@ -1,0 +1,61 @@
+/* Sistema de diseño de visu-game: "cuaderno de campo" moderno.
+   Papel cálido + tinta verde bosque; ámbar reservado para recompensas. */
+:root {
+  --font-ui: 'Plus Jakarta Sans Variable', system-ui, sans-serif;
+  --font-display: 'Fraunces Variable', Georgia, serif;
+
+  --paper: #f5f0e6;
+  --paper-2: #ebe3d3;
+  --card: #fffdf8;
+  --ink: #17251f;
+  --ink-2: #44544c;
+  --ink-3: #7a857e;
+  --line: rgb(23 37 31 / 0.1);
+  --scrim: rgb(10 18 14 / 0.72);
+
+  --bio: #2f7d5b;
+  --geo: #b5652b;
+  --reward: #f4a531;
+  --reward-ink: #3b2400;
+  --flame: #ff6b2c;
+  --ok: #2f9e5b;
+  --bad: #d6453d;
+
+  /* Dominio: gris (nuevo) → naranja → amarillo → verde → azul */
+  --m-nuevo: #a7aea9;
+  --m-aprendiendo: #ef8a3c;
+  --m-familiar: #e2bd2f;
+  --m-dominado: #3aa05b;
+  --m-muy-dominado: #2f7fd0;
+
+  --r-sm: 12px;
+  --r-md: 18px;
+  --r-lg: 26px;
+  --r-xl: 34px;
+  --shadow-1: 0 1px 2px rgb(23 37 31 / 0.06), 0 4px 14px rgb(23 37 31 / 0.06);
+  --shadow-2: 0 2px 6px rgb(23 37 31 / 0.08), 0 18px 40px rgb(23 37 31 / 0.14);
+
+  --gutter: 16px;
+  --tabbar-h: 72px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #101613;
+    --paper-2: #18201c;
+    --card: #1b2521;
+    --ink: #eef2ea;
+    --ink-2: #b9c4bc;
+    --ink-3: #85918a;
+    --line: rgb(238 242 234 / 0.1);
+    --shadow-1: 0 1px 2px rgb(0 0 0 / 0.3), 0 4px 14px rgb(0 0 0 / 0.25);
+    --shadow-2: 0 2px 6px rgb(0 0 0 / 0.35), 0 18px 40px rgb(0 0 0 / 0.45);
+    --bio: #5fbf8f;
+    --geo: #e39a5e;
+    color-scheme: dark;
+  }
+}

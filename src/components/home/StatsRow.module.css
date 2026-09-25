@@ -1,0 +1,18 @@
+.row { display: grid; gap: 12px; }
+@media (min-width: 620px) { .row { grid-template-columns: 1fr 1fr; } }
+.card {
+  display: flex; align-items: center; gap: 16px;
+  background: var(--card); border-radius: var(--r-lg); padding: 16px 18px; box-shadow: var(--shadow-1);
+}
+.ringNum { font-weight: 850; font-size: 22px; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+.ringNum small { font-size: 13px; color: var(--ink-3); font-weight: 700; }
+.title {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);
+}
+.text { font-size: 14px; color: var(--ink-2); margin-top: 4px; }
+.big { font-weight: 850; font-size: 28px; letter-spacing: -0.03em; line-height: 1.1; margin-top: 2px; }
+.legend { display: flex; gap: 12px; font-size: 13px; font-weight: 700; color: var(--ink-2); margin-top: 2px; }
+.legend span { display: inline-flex; align-items: center; gap: 5px; }
+.legend i { width: 8px; height: 8px; border-radius: 50%; }
+.dual { flex: none; }

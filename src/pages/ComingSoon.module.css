@@ -1,0 +1,29 @@
+.page { padding-top: calc(env(safe-area-inset-top) + 20px); display: grid; gap: 0; }
+.collage {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px;
+  border-radius: var(--r-xl) var(--r-xl) 0 0; overflow: hidden; height: 240px;
+  mask-image: linear-gradient(180deg, #000 40%, transparent);
+  -webkit-mask-image: linear-gradient(180deg, #000 40%, transparent);
+}
+.cell { position: relative; overflow: hidden; }
+.cell > * { position: absolute; inset: 0; }
+.card {
+  position: relative; margin-top: -70px; background: var(--card); border-radius: var(--r-xl);
+  padding: 26px 22px 24px; box-shadow: var(--shadow-2); display: grid; gap: 10px; justify-items: start;
+}
+.icon {
+  display: grid; place-items: center; width: 56px; height: 56px; border-radius: 18px;
+  background: color-mix(in srgb, var(--bio) 14%, transparent); color: var(--bio);
+  margin-top: -54px; box-shadow: var(--shadow-1); background-color: var(--card);
+}
+.badge {
+  font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--reward-ink); background: var(--reward); padding: 4px 10px; border-radius: 999px;
+}
+.title { font-family: var(--font-display); font-weight: 600; font-size: 34px; letter-spacing: -0.025em; line-height: 1.05; }
+.text { color: var(--ink-2); max-width: 46ch; }
+.back {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 8px; min-height: 48px; padding: 0 18px;
+  border-radius: 16px; background: var(--ink); color: var(--paper); font-weight: 750;
+}
+@media (min-width: 900px) { .page { padding-top: 32px; max-width: 760px; } .collage { height: 300px; } }
