@@ -83,9 +83,11 @@ export function SessionSummary({ st, onOtra }: { st: EstadoPartida; onOtra: () =
             {st.descubiertos.map((id) => {
               const e = ejemplar(id); if (!e) return null;
               return (
-                <li key={id} className={styles.card}>
-                  <div className={styles.thumb}><SpecimenImage imagen={portada(e)} alt={e.nombre.principal} /></div>
-                  <SpecimenLabel nombre={e.nombre} />
+                <li key={id}>
+                  <Link to={`/ejemplar/${id}`} className={styles.card}>
+                    <div className={styles.thumb}><SpecimenImage imagen={portada(e)} alt={e.nombre.principal} /></div>
+                    <SpecimenLabel nombre={e.nombre} />
+                  </Link>
                 </li>
               );
             })}
@@ -96,14 +98,16 @@ export function SessionSummary({ st, onOtra }: { st: EstadoPartida; onOtra: () =
       {fallados.length > 0 && (
         <section className="rise" style={{ animationDelay: '240ms' }} aria-labelledby="repasar-t">
           <h2 id="repasar-t" className={styles.h2}>Para repasar · {fallados.length}</h2>
-          <p className={styles.note}>Volverán a salir en tus próximas sesiones hasta que los domines.</p>
+          <p className={styles.note}>Volverán a salir en tus próximas sesiones hasta que los domines. Toca uno para ver su ficha.</p>
           <ul className={styles.list}>
             {fallados.map((id) => {
               const e = ejemplar(id); if (!e) return null;
               return (
-                <li key={id} className={styles.row}>
-                  <div className={styles.rowThumb}><SpecimenImage imagen={portada(e)} alt={e.nombre.principal} /></div>
-                  <SpecimenLabel nombre={e.nombre} kicker={e.album} />
+                <li key={id}>
+                  <Link to={`/ejemplar/${id}`} className={styles.row}>
+                    <div className={styles.rowThumb}><SpecimenImage imagen={portada(e)} alt={e.nombre.principal} /></div>
+                    <SpecimenLabel nombre={e.nombre} kicker={e.album} />
+                  </Link>
                 </li>
               );
             })}

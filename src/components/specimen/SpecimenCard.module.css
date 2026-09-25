@@ -1,0 +1,16 @@
+.card {
+  display: grid; grid-template-rows: auto 1fr; overflow: hidden; border-radius: var(--r-md);
+  background: var(--card); box-shadow: var(--shadow-1); transition: transform 180ms var(--ease-spring), box-shadow 180ms;
+}
+@media (hover: hover) { .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); } }
+.card:active { transform: scale(0.98); }
+.photo { position: relative; aspect-ratio: 4 / 3; background: var(--paper-2); }
+.photo > img, .photo > div:first-child { position: absolute; inset: 0; }
+.nota {
+  position: absolute; left: 8px; top: 8px; padding: 3px 9px; border-radius: 999px;
+  font-size: 11.5px; font-weight: 800; background: rgb(15 24 19 / 0.75); color: #fff;
+}
+.body { padding: 10px 12px 12px; display: flex; flex-direction: column; justify-content: space-between; gap: 8px; }
+.body :global(.sci) { overflow-wrap: anywhere; }
+.nivel { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: var(--ink-3); }
+.nivel i { width: 8px; height: 8px; border-radius: 3px; }

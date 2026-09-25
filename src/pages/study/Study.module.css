@@ -1,0 +1,51 @@
+.page { display: grid; gap: 16px; padding-top: calc(env(safe-area-inset-top) + 14px); grid-template-columns: minmax(0, 1fr); }
+.title { font-family: var(--font-display); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; line-height: 1.05; }
+.lead { color: var(--ink-2); margin-top: 6px; max-width: 60ch; }
+.back { justify-self: start; display: inline-flex; align-items: center; gap: 6px; font-weight: 750; color: var(--ink-2); min-height: 36px; }
+.empty { padding: 24px 18px; border-radius: var(--r-lg); background: var(--card); color: var(--ink-2); box-shadow: var(--shadow-1); }
+.cta {
+  justify-self: start; display: inline-flex; align-items: center; gap: 8px; height: 50px; padding: 0 20px; border-radius: 16px;
+  background: var(--reward); color: var(--reward-ink); font-weight: 850; box-shadow: 0 4px 0 #c77f12;
+}
+.cta:active { transform: translateY(3px); box-shadow: 0 1px 0 #c77f12; }
+
+/* Tarjetas de modo (centro de Estudiar) */
+.modes { display: grid; gap: 12px; }
+@media (min-width: 900px) { .modes { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.mode { display: grid; overflow: hidden; border-radius: var(--r-lg); background: var(--card); box-shadow: var(--shadow-1); transition: transform 180ms var(--ease-spring), box-shadow 180ms; }
+@media (hover: hover) { .mode:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); } }
+.modeFotos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; height: 120px; background: var(--paper-2); }
+.modeFotos > div { position: relative; overflow: hidden; }
+.modeFotos > div > * { position: absolute; inset: 0; }
+.modeBody { display: flex; align-items: center; gap: 12px; padding: 14px 16px; }
+.modeIcon { flex: none; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 13px; background: color-mix(in srgb, var(--bio) 14%, transparent); color: var(--bio); }
+.modeTitle { font-family: var(--font-display); font-weight: 600; font-size: 22px; letter-spacing: -0.02em; }
+.modeText { font-size: 14px; color: var(--ink-2); }
+.modeCaret { margin-left: auto; color: var(--ink-3); flex: none; }
+.modeEmpty .modeFotos { filter: grayscale(1); opacity: 0.5; }
+
+/* Filtros de Elegir */
+.filters { display: grid; gap: 10px; }
+.segmented { display: inline-flex; justify-self: start; padding: 4px; border-radius: 14px; background: var(--paper-2); gap: 2px; }
+.segmented button { border: 0; background: none; padding: 8px 14px; border-radius: 10px; font-weight: 750; color: var(--ink-2); cursor: pointer; min-height: 38px; }
+.segmented .segOn { background: var(--card); color: var(--ink); box-shadow: var(--shadow-1); }
+.search { display: flex; align-items: center; gap: 8px; padding: 0 14px; height: 46px; border-radius: 14px; background: var(--card); box-shadow: var(--shadow-1); color: var(--ink-3); }
+.search input { flex: 1; min-width: 0; border: 0; background: none; font: inherit; color: var(--ink); outline: none; }
+.search:focus-within { outline: 3px solid var(--reward); outline-offset: 1px; }
+.catChips { list-style: none; margin: 0 calc(var(--gutter) * -1); padding: 2px var(--gutter) 4px; display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+.catChips::-webkit-scrollbar { display: none; }
+@media (min-width: 900px) { .catChips { margin: 0; padding: 0; flex-wrap: wrap; overflow: visible; } }
+.catChip {
+  display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; min-height: 40px; padding: 0 12px;
+  border-radius: 999px; border: 1.5px solid var(--line); background: var(--card); color: var(--ink); font-weight: 700; cursor: pointer;
+}
+.catChip svg { color: var(--cat); }
+.catChip span { font-size: 12px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.catOn { background: var(--cat); border-color: var(--cat); color: #fff; }
+.catOn svg, .catOn span { color: #fff; }
+
+.groupTitle { font-family: var(--font-display); font-weight: 600; font-size: 21px; letter-spacing: -0.015em; margin: 6px 0 10px; }
+.groupTitle span { font-family: var(--font-ui); font-size: 13px; color: var(--ink-3); font-weight: 700; margin-left: 4px; }
+.grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+@media (min-width: 700px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1200px) { .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }

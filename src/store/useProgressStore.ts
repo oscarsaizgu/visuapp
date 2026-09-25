@@ -2,7 +2,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import type { Perfil, ProgresoEjemplar } from '../types/progress';
-import { aplicarRespuesta } from '../logic/srs';
+import { aplicarRespuesta, progresoVacio } from '../logic/srs';
 import { claveDia, registrarActividad } from '../logic/daily';
 import { nivelDominio, pesoDominio } from '../logic/mastery';
 import { XP } from '../logic/xp';
@@ -27,6 +27,8 @@ export interface ProgressState {
   registrarRespuesta: (r: RespuestaJuego) => { xp: number; subioNivel: boolean };
   sumarXp: (n: number) => void;
   ocultarFoto: (imagenId: string) => void;
+  /** Abrir la ficha de un ejemplar lo añade a la colección (no da XP ni dominio). */
+  marcarDescubierto: (ejemplarId: string) => void;
   setObjetivoDiario: (n: number) => void;
   reiniciar: () => void;
 }
@@ -63,6 +65,9 @@ export const useProgressStore = create<ProgressState>()(
       },
       sumarXp: (n) => set((s) => ({ perfil: { ...s.perfil, xp: s.perfil.xp + n } })),
       ocultarFoto: (id) => set((s) => ({ fotosOcultas: s.fotosOcultas.includes(id) ? s.fotosOcultas : [...s.fotosOcultas, id] })),
+      marcarDescubierto: (id) => set((s) => (s.progreso[id]?.descubierto
+        ? s
+        : { progreso: { ...s.progreso, [id]: { ...(s.progreso[id] ?? progresoVacio()), descubierto: true } } })),
       setObjetivoDiario: (n) => set((s) => ({ perfil: { ...s.perfil, objetivoDiario: n } })),
       reiniciar: () => set({ perfil: PERFIL_INICIAL, progreso: {}, fotosOcultas: [] }),
     }),

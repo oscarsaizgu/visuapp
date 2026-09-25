@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Eye, Sparkle } from '@phosphor-icons/react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Eye, Sparkle } from '@phosphor-icons/react';
 import type { Ejemplar } from '../../types/content';
 import type { MotivoDelDia } from '../../logic/dailyPick';
 import { NOMBRE_NIVEL, type NivelDominio } from '../../logic/mastery';
@@ -84,10 +85,14 @@ export function SpecimenOfDay({ ejemplar: e, motivo, nivel, enSesion }: Props) {
           {enSesion && <span className={styles.enSesion}>En tu sesión de hoy</span>}
         </div>
 
-        {!visible && (
+        {!visible ? (
           <button type="button" className={styles.btn} onClick={() => setVisible(true)}>
             <Eye size={18} weight="bold" aria-hidden="true" /> Revelar
           </button>
+        ) : (
+          <Link to={`/ejemplar/${e.id}`} className={styles.btn}>
+            Ver ficha completa <ArrowRight size={18} weight="bold" aria-hidden="true" />
+          </Link>
         )}
       </div>
     </section>

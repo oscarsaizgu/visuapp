@@ -32,3 +32,20 @@ describe('registrar respuestas', () => {
     expect(useProgressStore.getState().fotosOcultas).toEqual(['a']);
   });
 });
+
+describe('descubrir desde la ficha', () => {
+  beforeEach(() => useProgressStore.getState().reiniciar());
+  it('marca descubierto sin tocar XP, dominio ni objetivo', () => {
+    useProgressStore.getState().marcarDescubierto('y');
+    const s = useProgressStore.getState();
+    expect(s.progreso.y).toMatchObject({ descubierto: true, vecesVisto: 0, caja: 0 });
+    expect(s.perfil.xp).toBe(0);
+    expect(Object.keys(s.perfil.actividad)).toHaveLength(0);
+  });
+  it('no pisa el progreso existente', () => {
+    useProgressStore.getState().registrarRespuesta(r({ ejemplarId: 'y' }));
+    const antes = useProgressStore.getState().progreso.y;
+    useProgressStore.getState().marcarDescubierto('y');
+    expect(useProgressStore.getState().progreso.y).toBe(antes);
+  });
+});

@@ -8,7 +8,8 @@ import { nivelDesdeXp } from '../logic/levels';
 import { crearRng } from '../logic/rng';
 import { crearPregunta, crearSesion, type Contexto } from '../logic/session';
 import { xpFinSesion, xpPorRespuesta } from '../logic/xp';
-import type { EntradaIndice, Pregunta, Respuesta } from '../types/game';
+import type { Pregunta, Respuesta } from '../types/game';
+import { cargarIndice } from './useNameIndex';
 
 export type Fase = 'cargando' | 'pregunta' | 'feedback' | 'fin' | 'vacia';
 
@@ -44,9 +45,8 @@ export function useGameSession() {
   useEffect(() => {
     let vivo = true;
     // El índice del catálogo completo (distractores) se carga aparte para no pesar en el inicio.
-    import('../content/generated/name-index.json').then((m) => {
+    cargarIndice().then((indice) => {
       if (!vivo) return;
-      const indice = m.default as EntradaIndice[];
       const s = useProgressStore.getState();
       ctx.current = {
         progreso: s.progreso,

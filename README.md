@@ -43,6 +43,13 @@ src/content/generated/ ← lo que carga la app (npm run content)
 - **XP** (`src/logic/xp.ts`): 10 por acierto pendiente, 5 en reintento, 2 si no tocaba; combo +2 por acierto seguido (máx. +10); +5 al subir el dominio; +20 al terminar (+10 si es perfecta).
 - **Da pistas:** marca una foto para que no se vuelva a usar al preguntar (se guarda en el dispositivo).
 
+## Estudiar
+
+- **Repasar:** repasos vencidos, luego lo que fallaste la última vez y luego lo que más te cuesta.
+- **Descubrir:** ejemplares activos que aún no has visto. Abrir su ficha los añade a la colección (sin XP ni dominio).
+- **Elegir:** Biología / Geología → categoría → grupo, con buscador (sin tildes ni mayúsculas). Los filtros viven en la URL.
+- **Ficha** (`/ejemplar/:id`): galería con todas las fotos de estudio (incluidas las rotuladas), nombres, prioridad, estatus, exámenes, tu progreso, rasgos, clasificación, notas y emparentados del catálogo completo. Solo muestra datos que existen en el catálogo; si faltan rasgos, lo dice.
+
 ## Código
 
 ```
