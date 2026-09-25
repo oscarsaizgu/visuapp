@@ -1,47 +1,67 @@
 import { Link } from 'react-router-dom';
 import { Play } from '@phosphor-icons/react';
 import { ejemplar, portada } from '../../content';
+import { CATEGORIA_POR_ID } from '../../content/categories';
 import { SpecimenImage } from '../specimen/SpecimenImage';
 import type { PlanSesion } from '../../logic/sessionPlan';
+import type { Ejemplar } from '../../types/content';
 import styles from './ContinueHero.module.css';
 
 interface Props { plan: PlanSesion; primeraVez: boolean }
 
-/** Tarjeta protagonista: qué toca ahora y un botón enorme para empezar. */
+const plural = (n: number, uno: string, varios: string) => `${n} ${n === 1 ? uno : varios}`;
+
+/**
+ * CTA principal. Las fotos son de los primeros ejemplares de la sesión que se va a jugar
+ * (sin nombre, para no desvelar la respuesta) y todas las cifras salen del plan real.
+ */
 export function ContinueHero({ plan, primeraVez }: Props) {
-  const fotos = plan.ejemplares.slice(0, 3).map((id) => ejemplar(id)).filter((e) => e !== undefined);
+  // La foto con más resolución ocupa la celda grande.
+  const area = (e: Ejemplar) => { const i = portada(e); return i ? i.ancho * i.alto : 0; };
+  const fotos = plan.ejemplares.slice(0, 3).map((id) => ejemplar(id))
+    .filter((e) => e !== undefined).sort((a, b) => area(b) - area(a));
   const n = plan.ejemplares.length;
   const titulo = n === 0 ? '¡Todo al día!' : primeraVez ? 'Empieza tu colección' : 'Tu sesión de hoy';
   const sub = n === 0
-    ? 'No hay repasos pendientes. Vuelve mañana o practica por tu cuenta.'
-    : `${n} identificaciones con fotos reales del VISU`;
+    ? 'No tienes repasos pendientes ni ejemplares nuevos en los packs activos.'
+    : `${plural(n, 'identificación', 'identificaciones')} con fotografías reales.`;
 
   return (
     <section className={`${styles.hero} rise`} style={{ animationDelay: '60ms' }} aria-labelledby="hero-title">
-      <div className={styles.mosaic} aria-hidden="true">
-        {fotos.map((e, i) => (
-          <div key={e.id} className={styles[`m${i}`]}>
-            <SpecimenImage imagen={portada(e)} alt="" prioritaria />
-          </div>
-        ))}
-      </div>
-      <div className={styles.scrim} />
+      {fotos.length > 0 && (
+        <div className={`${styles.mosaic} ${styles[`n${fotos.length}`]}`}>
+          {fotos.map((e) => {
+            const cat = CATEGORIA_POR_ID[e.categoria];
+            const Ico = cat.icono;
+            return (
+              <figure key={e.id} className={styles.photo}>
+                <SpecimenImage imagen={portada(e)} alt={`Ejemplar de ${cat.nombre} de tu próxima sesión`} prioritaria />
+                <figcaption className={styles.tag} style={{ ['--cat' as string]: cat.color }}>
+                  <Ico size={14} weight="fill" aria-hidden="true" /> {cat.nombre}
+                </figcaption>
+              </figure>
+            );
+          })}
+        </div>
+      )}
       <div className={styles.body}>
         <span className={styles.kicker}>Siguiente paso</span>
         <h2 id="hero-title" className={styles.title}>{titulo}</h2>
         <p className={styles.sub}>{sub}</p>
         {n > 0 && (
-          <ul className={styles.facts}>
-            {plan.repasos.length > 0 && <li>{plan.repasos.length} repasos</li>}
-            {plan.nuevos.length > 0 && <li>{plan.nuevos.length} nuevos</li>}
-            <li>{plan.categorias.length} categorías</li>
-            <li>≈ {Math.max(3, Math.round(n * 0.8))} min</li>
+          <ul className={styles.facts} aria-label="Contenido de la sesión">
+            {plan.repasos.length > 0 && <li>{plural(plan.repasos.length, 'repaso', 'repasos')}</li>}
+            {plan.nuevos.length > 0 && <li>{plural(plan.nuevos.length, 'nuevo', 'nuevos')}</li>}
+            <li>{plural(plan.categorias.length, 'categoría', 'categorías')}</li>
+            <li title="Estimación a partir del número de identificaciones">≈ {plan.minutos} min</li>
           </ul>
         )}
-        <Link to="/jugar" className={styles.cta}>
-          <Play size={22} weight="fill" aria-hidden="true" />
-          Continuar
-        </Link>
+        {n > 0 && (
+          <Link to="/jugar" className={styles.cta}>
+            <Play size={22} weight="fill" aria-hidden="true" />
+            {primeraVez ? 'Empezar' : 'Continuar'}
+          </Link>
+        )}
       </div>
     </section>
   );

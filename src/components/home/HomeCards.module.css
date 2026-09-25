@@ -1,0 +1,31 @@
+.card {
+  background: var(--card); border-radius: var(--r-lg); padding: 16px 18px; box-shadow: var(--shadow-1);
+}
+.title {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);
+}
+.text { font-size: 14px; color: var(--ink-2); margin-top: 4px; }
+
+.goal { display: flex; align-items: center; gap: 16px; }
+.ringNum { font-weight: 850; font-size: 21px; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+.ringNum small { font-size: 13px; color: var(--ink-3); font-weight: 700; }
+
+.mastery { display: grid; gap: 12px; }
+.masteryHead { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+.big { font-weight: 850; font-size: 40px; letter-spacing: -0.04em; line-height: 1; margin-top: 4px; font-variant-numeric: tabular-nums; }
+.big span { font-size: 22px; color: var(--ink-3); margin-left: 2px; }
+.masteryCount { text-align: right; font-size: 13px; color: var(--ink-3); font-weight: 600; line-height: 1.3; }
+.masteryCount strong { font-size: 20px; color: var(--ink); font-weight: 850; }
+.legend {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12.5px; font-weight: 650; color: var(--ink-2);
+}
+.legend li { display: inline-flex; align-items: center; gap: 5px; }
+.legend i, .domains i { width: 9px; height: 9px; border-radius: 3px; flex: none; }
+.legend b { font-weight: 850; color: var(--ink); font-variant-numeric: tabular-nums; }
+.legend .zero { opacity: 0.45; }
+.domains { display: flex; gap: 14px; font-size: 13px; font-weight: 700; color: var(--ink-2); }
+.domains span { display: inline-flex; align-items: center; gap: 6px; }
+.domains i { border-radius: 50%; }
+.note { font-size: 12.5px; color: var(--ink-3); border-top: 1px solid var(--line); padding-top: 10px; }

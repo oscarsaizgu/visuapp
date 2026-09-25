@@ -29,3 +29,11 @@ describe('dominio', () => {
     expect(dominioMedio(['x', 'y'], { x: p({ caja: 5, imagenesAcertadas: ['a', 'b'] }) })).toBe(0.5);
   });
 });
+
+import { distribucionDominio } from './mastery';
+describe('distribución de dominio', () => {
+  it('cuenta ejemplares por nivel', () => {
+    const d = distribucionDominio(['x', 'y', 'z'], { x: p({ caja: 2 }), y: p({ caja: 4 }) });
+    expect(d).toEqual({ nuevo: 1, aprendiendo: 0, familiar: 1, dominado: 1, 'muy-dominado': 0 });
+  });
+});

@@ -5,6 +5,14 @@ export type NivelDominio = 'nuevo' | 'aprendiendo' | 'familiar' | 'dominado' | '
 
 export const NIVELES_DOMINIO: NivelDominio[] = ['nuevo', 'aprendiendo', 'familiar', 'dominado', 'muy-dominado'];
 
+export const NOMBRE_NIVEL: Record<NivelDominio, string> = {
+  nuevo: 'Nuevo',
+  aprendiendo: 'Aprendiendo',
+  familiar: 'Familiar',
+  dominado: 'Dominado',
+  'muy-dominado': 'Muy dominado',
+};
+
 const PESO: Record<NivelDominio, number> = {
   nuevo: 0, aprendiendo: 0.25, familiar: 0.5, dominado: 0.8, 'muy-dominado': 1,
 };
@@ -30,4 +38,14 @@ export function pesoDominio(n: NivelDominio): number {
 export function dominioMedio(ids: string[], progreso: Record<string, ProgresoEjemplar>): number {
   if (!ids.length) return 0;
   return ids.reduce((acc, id) => acc + PESO[nivelDominio(progreso[id])], 0) / ids.length;
+}
+
+/** Cuántos ejemplares hay en cada nivel de dominio. */
+export function distribucionDominio(
+  ids: string[],
+  progreso: Record<string, ProgresoEjemplar>,
+): Record<NivelDominio, number> {
+  const d: Record<NivelDominio, number> = { nuevo: 0, aprendiendo: 0, familiar: 0, dominado: 0, 'muy-dominado': 0 };
+  for (const id of ids) d[nivelDominio(progreso[id])]++;
+  return d;
 }

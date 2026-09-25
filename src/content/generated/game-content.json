@@ -10,9 +10,7 @@
    "minerales": 91,
    "rocas": 61,
    "fosiles": 119,
-   "citologia": 17,
-   "histologia": 76,
-   "microorganismos": 23,
+   "microscopia": 116,
    "geomorfologia": 107
   }
  },
@@ -3162,7 +3160,7 @@
   {
    "id": "micro-musculo-estriado-esqueletico",
    "dominio": "biologia",
-   "categoria": "histologia",
+   "categoria": "microscopia",
    "album": "Histología animal",
    "nombre": {
     "principal": "Músculo estriado esquelético",
@@ -3231,7 +3229,7 @@
   {
    "id": "micro-musculo-cardiaco",
    "dominio": "biologia",
-   "categoria": "histologia",
+   "categoria": "microscopia",
    "album": "Histología animal",
    "nombre": {
     "principal": "Músculo cardiaco",
@@ -3297,7 +3295,7 @@
   {
    "id": "micro-higado",
    "dominio": "biologia",
-   "categoria": "histologia",
+   "categoria": "microscopia",
    "album": "Histología animal (órganos)",
    "nombre": {
     "principal": "Hígado",
@@ -3429,7 +3427,7 @@
   {
    "id": "micro-colenquima",
    "dominio": "biologia",
-   "categoria": "histologia",
+   "categoria": "microscopia",
    "album": "Histología vegetal",
    "nombre": {
     "principal": "Colénquima",
@@ -3551,7 +3549,7 @@
   {
    "id": "micro-haz-vascular",
    "dominio": "biologia",
-   "categoria": "histologia",
+   "categoria": "microscopia",
    "album": "Histología vegetal",
    "nombre": {
     "principal": "Haz vascular",

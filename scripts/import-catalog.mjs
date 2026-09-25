@@ -99,12 +99,10 @@ function categoria(e) {
     case 'roca': return 'rocas';
     case 'fosil': return 'fosiles';
     case 'geomorf': return 'geomorfologia';
-    case 'micro':
-      if (/Citolog/.test(e.grupo)) return 'citologia';
-      if (/Histolog/.test(e.grupo)) return 'histologia';
-      return 'microorganismos';
+    case 'micro': return 'microscopia';
     default:
       if (e.reino === 'Animales') return 'zoologia';
+      // Mixomicetos: el catálogo los clasifica como protistas; se estudian junto a los hongos.
       if (e.reino === 'Hongos' || /mixomicetos/i.test(e.reino)) return 'hongos';
       return 'botanica';
   }

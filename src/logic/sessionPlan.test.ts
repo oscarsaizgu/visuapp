@@ -37,3 +37,11 @@ describe('plan de sesión', () => {
     expect(planificarSesion(lista, prog, '2026-09-25').ejemplares).toEqual([]);
   });
 });
+
+describe('estimación de minutos', () => {
+  it('se calcula a partir del número de identificaciones', () => {
+    const lista = Array.from({ length: 10 }, (_, i) => e(`x${i}`, 'rocas'));
+    expect(planificarSesion(lista, {}, '2026-09-25').minutos).toBe(8); // 10 × 45 s = 7,5 → 8
+    expect(planificarSesion(lista.slice(0, 3), {}, '2026-09-25').minutos).toBe(3); // 135 s → 3
+  });
+});

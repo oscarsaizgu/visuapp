@@ -75196,7 +75196,7 @@
  {
   "id": "micro-nucleo-celular",
   "dominio": "biologia",
-  "categoria": "citologia",
+  "categoria": "microscopia",
   "album": "Citología (ultraestructura)",
   "nombre": {
    "principal": "Núcleo celular",
@@ -75234,7 +75234,7 @@
  {
   "id": "micro-nucleolo",
   "dominio": "biologia",
-  "categoria": "citologia",
+  "categoria": "microscopia",
   "album": "Citología (ultraestructura)",
   "nombre": {
    "principal": "Nucléolo",
@@ -75261,7 +75261,7 @@
  {
   "id": "micro-membrana-plasmatica",
   "dominio": "biologia",
-  "categoria": "citologia",
+  "categoria": "microscopia",
   "album": "Citología (ultraestructura)",
   "nombre": {
    "principal": "Membrana plasmática",
@@ -75294,7 +75294,7 @@
  {
   "id": "micro-reticulo-endoplasmatico-rugoso",
   "dominio": "biologia",
-  "categoria": "citologia",
+  "categoria": "microscopia",
   "album": "Citología (ultraestructura)",
   "nombre": {
    "principal": "Retículo endoplasmático rugoso",
@@ -75327,7 +75327,7 @@
  {
   "id": "micro-reticulo-endoplasmatico-liso",
   "dominio": "biologia",
-  "categoria": "citologia",
+  "categoria": "microscopia",
   "album": "Citología (ultraestructura)",
   "nombre": {
    "principal": "Retículo endoplasmático liso",
@@ -75358,7 +75358,7 @@
  {
   "id": "micro-aparato-de-golgi",
   "dominio": "biologia",
-  "categoria": "citologia",
+  "categoria": "microscopia",
   "album": "Citología (ultraestructura)",
   "nombre": {
    "principal": "Aparato de Golgi",
@@ -75391,7 +75391,7 @@
  {
   "id": "micro-mitocondria",
   "dominio": "biologia",
-  "categoria": "citologia",
+  "categoria": "microscopia",
   "album": "Citología (ultraestructura)",
   "nombre": {
    "principal": "Mitocondria",
@@ -75419,7 +75419,7 @@
  {
   "id": "micro-cloroplasto",
   "dominio": "biologia",
-  "categoria": "citologia",
+  "categoria": "microscopia",
   "album": "Citología (ultraestructura)",
   "nombre": {
    "principal": "Cloroplasto",
@@ -75447,7 +75447,7 @@
  {
   "id": "micro-lisosoma",
   "dominio": "biologia",
-  "categoria": "citologia",
+  "categoria": "microscopia",
   "album": "Citología (ultraestructura)",
   "nombre": {
    "principal": "Lisosoma",
@@ -75475,7 +75475,7 @@
  {
   "id": "micro-peroxisoma",
   "dominio": "biologia",
-  "categoria": "citologia",
+  "categoria": "microscopia",
   "album": "Citología (ultraestructura)",
   "nombre": {
    "principal": "Peroxisoma",
@@ -75502,7 +75502,7 @@
  {
   "id": "micro-centriolo",
   "dominio": "biologia",
-  "categoria": "citologia",
+  "categoria": "microscopia",
   "album": "Citología (ultraestructura)",
   "nombre": {
    "principal": "Centriolo",
@@ -75536,7 +75536,7 @@
  {
   "id": "micro-axonema",
   "dominio": "biologia",
-  "categoria": "citologia",
+  "categoria": "microscopia",
   "album": "Citología (ultraestructura)",
   "nombre": {
    "principal": "Axonema",
@@ -75576,7 +75576,7 @@
  {
   "id": "micro-microvellosidades",
   "dominio": "biologia",
-  "categoria": "citologia",
+  "categoria": "microscopia",
   "album": "Citología (ultraestructura)",
   "nombre": {
    "principal": "Microvellosidades",
@@ -75609,7 +75609,7 @@
  {
   "id": "micro-desmosoma",
   "dominio": "biologia",
-  "categoria": "citologia",
+  "categoria": "microscopia",
   "album": "Citología (ultraestructura)",
   "nombre": {
    "principal": "Desmosoma",
@@ -75641,7 +75641,7 @@
  {
   "id": "micro-microtubulos",
   "dominio": "biologia",
-  "categoria": "citologia",
+  "categoria": "microscopia",
   "album": "Citología (ultraestructura)",
   "nombre": {
    "principal": "Microtúbulos",
@@ -75675,7 +75675,7 @@
  {
   "id": "micro-cromosomas-politenicos",
   "dominio": "biologia",
-  "categoria": "citologia",
+  "categoria": "microscopia",
   "album": "Citología",
   "nombre": {
    "principal": "Cromosomas politénicos",
@@ -75702,7 +75702,7 @@
  {
   "id": "micro-celula-vegetal",
   "dominio": "biologia",
-  "categoria": "citologia",
+  "categoria": "microscopia",
   "album": "Citología",
   "nombre": {
    "principal": "Célula vegetal",
@@ -75730,7 +75730,7 @@
  {
   "id": "micro-epitelio-plano-simple",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Epitelio plano simple",
@@ -75766,7 +75766,7 @@
  {
   "id": "micro-epitelio-pseudoestratificado-ciliado",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Epitelio pseudoestratificado ciliado",
@@ -75805,7 +75805,7 @@
  {
   "id": "micro-tejido-conjuntivo-laxo",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Tejido conjuntivo laxo",
@@ -75833,7 +75833,7 @@
  {
   "id": "micro-tejido-conjuntivo-denso",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Tejido conjuntivo denso",
@@ -75869,7 +75869,7 @@
  {
   "id": "micro-tejido-adiposo",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Tejido adiposo",
@@ -75897,7 +75897,7 @@
  {
   "id": "micro-cartilago-hialino",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Cartílago hialino",
@@ -75936,7 +75936,7 @@
  {
   "id": "micro-hueso-compacto",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Hueso compacto",
@@ -75975,7 +75975,7 @@
  {
   "id": "micro-hueso-esponjoso",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Hueso esponjoso",
@@ -76007,7 +76007,7 @@
  {
   "id": "micro-musculo-estriado-esqueletico",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Músculo estriado esquelético",
@@ -76041,7 +76041,7 @@
  {
   "id": "micro-musculo-cardiaco",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Músculo cardiaco",
@@ -76075,7 +76075,7 @@
  {
   "id": "micro-musculo-liso",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Músculo liso",
@@ -76110,7 +76110,7 @@
  {
   "id": "micro-sarcomero",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (ultraestructura)",
   "nombre": {
    "principal": "Sarcómero",
@@ -76138,7 +76138,7 @@
  {
   "id": "micro-eritrocitos",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (sangre)",
   "nombre": {
    "principal": "Eritrocitos",
@@ -76172,7 +76172,7 @@
  {
   "id": "micro-sangre-nucleada",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (sangre)",
   "nombre": {
    "principal": "Sangre nucleada",
@@ -76205,7 +76205,7 @@
  {
   "id": "micro-neutrofilo",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (sangre)",
   "nombre": {
    "principal": "Neutrófilo",
@@ -76233,7 +76233,7 @@
  {
   "id": "micro-eosinofilo",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (sangre)",
   "nombre": {
    "principal": "Eosinófilo",
@@ -76261,7 +76261,7 @@
  {
   "id": "micro-basofilo",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (sangre)",
   "nombre": {
    "principal": "Basófilo",
@@ -76288,7 +76288,7 @@
  {
   "id": "micro-linfocito",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (sangre)",
   "nombre": {
    "principal": "Linfocito",
@@ -76315,7 +76315,7 @@
  {
   "id": "micro-monocito",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (sangre)",
   "nombre": {
    "principal": "Monocito",
@@ -76343,7 +76343,7 @@
  {
   "id": "micro-plaquetas",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (sangre)",
   "nombre": {
    "principal": "Plaquetas",
@@ -76374,7 +76374,7 @@
  {
   "id": "micro-neurona-multipolar",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (nervioso)",
   "nombre": {
    "principal": "Neurona multipolar",
@@ -76408,7 +76408,7 @@
  {
   "id": "micro-celula-de-purkinje",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (nervioso)",
   "nombre": {
    "principal": "Célula de Purkinje",
@@ -76443,7 +76443,7 @@
  {
   "id": "micro-neurona-piramidal",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (nervioso)",
   "nombre": {
    "principal": "Neurona piramidal",
@@ -76476,7 +76476,7 @@
  {
   "id": "micro-nodo-de-ranvier",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (nervioso)",
   "nombre": {
    "principal": "Nodo de Ranvier",
@@ -76505,7 +76505,7 @@
  {
   "id": "micro-nervio-periferico",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (nervioso)",
   "nombre": {
    "principal": "Nervio periférico",
@@ -76537,7 +76537,7 @@
  {
   "id": "micro-placa-motora",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (nervioso)",
   "nombre": {
    "principal": "Placa motora",
@@ -76572,7 +76572,7 @@
  {
   "id": "micro-medula-espinal",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (nervioso)",
   "nombre": {
    "principal": "Médula espinal",
@@ -76610,7 +76610,7 @@
  {
   "id": "micro-retina",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Retina",
@@ -76648,7 +76648,7 @@
  {
   "id": "micro-tubulo-seminifero",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Túbulo seminífero",
@@ -76685,7 +76685,7 @@
  {
   "id": "micro-ovario",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Ovario",
@@ -76722,7 +76722,7 @@
  {
   "id": "micro-higado",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Hígado",
@@ -76766,7 +76766,7 @@
  {
   "id": "micro-rinon",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Riñón",
@@ -76809,7 +76809,7 @@
  {
   "id": "micro-pulmon",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Pulmón",
@@ -76842,7 +76842,7 @@
  {
   "id": "micro-bronquio",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Bronquio",
@@ -76870,7 +76870,7 @@
  {
   "id": "micro-intestino-delgado",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Intestino delgado",
@@ -76909,7 +76909,7 @@
  {
   "id": "micro-estomago",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Estómago",
@@ -76937,7 +76937,7 @@
  {
   "id": "micro-esofago",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Esófago",
@@ -76966,7 +76966,7 @@
  {
   "id": "micro-piel",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Piel",
@@ -77007,7 +77007,7 @@
  {
   "id": "micro-pelo",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Pelo",
@@ -77038,7 +77038,7 @@
  {
   "id": "micro-arteria",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Arteria",
@@ -77066,7 +77066,7 @@
  {
   "id": "micro-vena",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Vena",
@@ -77093,7 +77093,7 @@
  {
   "id": "micro-pancreas",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Páncreas",
@@ -77132,7 +77132,7 @@
  {
   "id": "micro-glandula-tiroides",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Glándula tiroides",
@@ -77167,7 +77167,7 @@
  {
   "id": "micro-hipofisis",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Hipófisis",
@@ -77195,7 +77195,7 @@
  {
   "id": "micro-organo-de-corti",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Órgano de Corti",
@@ -77228,7 +77228,7 @@
  {
   "id": "micro-diente",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Diente",
@@ -77260,7 +77260,7 @@
  {
   "id": "micro-epidermis-con-estomas",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología vegetal",
   "nombre": {
    "principal": "Epidermis con estomas",
@@ -77292,7 +77292,7 @@
  {
   "id": "micro-parenquima-clorofilico",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología vegetal",
   "nombre": {
    "principal": "Parénquima clorofílico",
@@ -77329,7 +77329,7 @@
  {
   "id": "micro-colenquima",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología vegetal",
   "nombre": {
    "principal": "Colénquima",
@@ -77366,7 +77366,7 @@
  {
   "id": "micro-esclerenquima",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología vegetal",
   "nombre": {
    "principal": "Esclerénquima",
@@ -77406,7 +77406,7 @@
  {
   "id": "micro-xilema",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología vegetal",
   "nombre": {
    "principal": "Xilema",
@@ -77447,7 +77447,7 @@
  {
   "id": "micro-floema",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología vegetal",
   "nombre": {
    "principal": "Floema",
@@ -77491,7 +77491,7 @@
  {
   "id": "micro-haz-vascular",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología vegetal",
   "nombre": {
    "principal": "Haz vascular",
@@ -77534,7 +77534,7 @@
  {
   "id": "micro-tallo-de-dicotiledonea",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología vegetal",
   "nombre": {
    "principal": "Tallo de dicotiledónea",
@@ -77562,7 +77562,7 @@
  {
   "id": "micro-tallo-de-monocotiledonea",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología vegetal",
   "nombre": {
    "principal": "Tallo de monocotiledónea",
@@ -77589,7 +77589,7 @@
  {
   "id": "micro-raiz",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología vegetal",
   "nombre": {
    "principal": "Raíz",
@@ -77630,7 +77630,7 @@
  {
   "id": "micro-hoja",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología vegetal",
   "nombre": {
    "principal": "Hoja",
@@ -77665,7 +77665,7 @@
  {
   "id": "micro-suber",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología vegetal",
   "nombre": {
    "principal": "Súber",
@@ -77701,7 +77701,7 @@
  {
   "id": "micro-canal-resinifero",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología vegetal",
   "nombre": {
    "principal": "Canal resinífero",
@@ -77728,7 +77728,7 @@
  {
   "id": "micro-nostoc",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Microbiología (cianobacterias)",
   "nombre": {
    "principal": "Nostoc",
@@ -77757,7 +77757,7 @@
  {
   "id": "micro-anabaena",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Microbiología (cianobacterias)",
   "nombre": {
    "principal": "Anabaena",
@@ -77784,7 +77784,7 @@
  {
   "id": "micro-oscillatoria",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Microbiología (cianobacterias)",
   "nombre": {
    "principal": "Oscillatoria",
@@ -77813,7 +77813,7 @@
  {
   "id": "micro-gloeocapsa",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Microbiología (cianobacterias)",
   "nombre": {
    "principal": "Gloeocapsa",
@@ -77842,7 +77842,7 @@
  {
   "id": "micro-plasmodium",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Protistas (parásitos)",
   "nombre": {
    "principal": "Plasmodium",
@@ -77870,7 +77870,7 @@
  {
   "id": "micro-trypanosoma",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Protistas (parásitos)",
   "nombre": {
    "principal": "Trypanosoma",
@@ -77898,7 +77898,7 @@
  {
   "id": "micro-amoeba",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Protistas (vida libre)",
   "nombre": {
    "principal": "Amoeba",
@@ -77929,7 +77929,7 @@
  {
   "id": "micro-arcella",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Protistas (vida libre)",
   "nombre": {
    "principal": "Arcella",
@@ -77959,7 +77959,7 @@
  {
   "id": "micro-paramecium",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Protistas (vida libre)",
   "nombre": {
    "principal": "Paramecium",
@@ -77990,7 +77990,7 @@
  {
   "id": "micro-vorticella",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Protistas (vida libre)",
   "nombre": {
    "principal": "Vorticella",
@@ -78020,7 +78020,7 @@
  {
   "id": "micro-stentor",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Protistas (vida libre)",
   "nombre": {
    "principal": "Stentor",
@@ -78047,7 +78047,7 @@
  {
   "id": "micro-euplotes",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Protistas (vida libre)",
   "nombre": {
    "principal": "Euplotes",
@@ -78078,7 +78078,7 @@
  {
   "id": "micro-euglena",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Protistas (algas)",
   "nombre": {
    "principal": "Euglena",
@@ -78108,7 +78108,7 @@
  {
   "id": "micro-volvox",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Protistas (algas)",
   "nombre": {
    "principal": "Volvox",
@@ -78136,7 +78136,7 @@
  {
   "id": "micro-spirogyra",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Protistas (algas)",
   "nombre": {
    "principal": "Spirogyra",
@@ -78164,7 +78164,7 @@
  {
   "id": "micro-closterium",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Protistas (algas)",
   "nombre": {
    "principal": "Closterium",
@@ -78195,7 +78195,7 @@
  {
   "id": "micro-micrasterias",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Protistas (algas)",
   "nombre": {
    "principal": "Micrasterias",
@@ -78224,7 +78224,7 @@
  {
   "id": "micro-pediastrum",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Protistas (algas)",
   "nombre": {
    "principal": "Pediastrum",
@@ -78253,7 +78253,7 @@
  {
   "id": "micro-diatomeas",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Protistas (algas)",
   "nombre": {
    "principal": "Diatomeas",
@@ -78292,7 +78292,7 @@
  {
   "id": "micro-ceratium",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Protistas (algas)",
   "nombre": {
    "principal": "Ceratium",
@@ -78326,7 +78326,7 @@
  {
   "id": "micro-noctiluca",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Protistas (algas)",
   "nombre": {
    "principal": "Noctiluca",
@@ -78354,7 +78354,7 @@
  {
   "id": "micro-foraminiferos",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Protistas (otros)",
   "nombre": {
    "principal": "Foraminíferos",
@@ -78388,7 +78388,7 @@
  {
   "id": "micro-radiolarios",
   "dominio": "biologia",
-  "categoria": "microorganismos",
+  "categoria": "microscopia",
   "album": "Protistas (otros)",
   "nombre": {
    "principal": "Radiolarios",
@@ -78416,7 +78416,7 @@
  {
   "id": "micro-cartilago-elastico",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Cartílago elástico",
@@ -78445,7 +78445,7 @@
  {
   "id": "micro-fibrocartilago",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Fibrocartílago",
@@ -78472,7 +78472,7 @@
  {
   "id": "micro-celulas-caliciformes",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Células caliciformes",
@@ -78499,7 +78499,7 @@
  {
   "id": "micro-glandula-sebacea",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Glándula sebácea",
@@ -78526,7 +78526,7 @@
  {
   "id": "micro-glandula-sudoripara",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Glándula sudorípara",
@@ -78553,7 +78553,7 @@
  {
   "id": "micro-epitelio-cubico-simple",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Epitelio cúbico simple",
@@ -78580,7 +78580,7 @@
  {
   "id": "micro-epitelio-cilindrico-simple",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Epitelio cilíndrico simple",
@@ -78607,7 +78607,7 @@
  {
   "id": "micro-epitelio-plano-estratificado-no-queratinizado",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Epitelio plano estratificado no queratinizado",
@@ -78634,7 +78634,7 @@
  {
   "id": "micro-epitelio-plano-estratificado-queratinizado",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Epitelio plano estratificado queratinizado",
@@ -78661,7 +78661,7 @@
  {
   "id": "micro-epitelio-de-transicion",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Epitelio de transición",
@@ -78688,7 +78688,7 @@
  {
   "id": "micro-tejido-conectivo-reticular",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Tejido conectivo reticular",
@@ -78715,7 +78715,7 @@
  {
   "id": "micro-intestino-grueso",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal (órganos)",
   "nombre": {
    "principal": "Intestino grueso",
@@ -78743,7 +78743,7 @@
  {
   "id": "micro-osificacion-endocondral",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Osificación endocondral",
@@ -78775,7 +78775,7 @@
  {
   "id": "micro-osificacion-intramembranosa",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología animal",
   "nombre": {
    "principal": "Osificación intramembranosa",
@@ -78804,7 +78804,7 @@
  {
   "id": "micro-parenquima-de-reserva",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología vegetal",
   "nombre": {
    "principal": "Parénquima de reserva",
@@ -78832,7 +78832,7 @@
  {
   "id": "micro-parenquima-aerifero",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología vegetal",
   "nombre": {
    "principal": "Parénquima aerífero",
@@ -78861,7 +78861,7 @@
  {
   "id": "micro-epidermis-vegetal",
   "dominio": "biologia",
-  "categoria": "histologia",
+  "categoria": "microscopia",
   "album": "Histología vegetal",
   "nombre": {
    "principal": "Epidermis vegetal",

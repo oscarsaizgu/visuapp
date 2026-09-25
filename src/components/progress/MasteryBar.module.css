@@ -1,0 +1,4 @@
+.bar { display: flex; gap: 2px; width: 100%; border-radius: 999px; overflow: hidden; background: var(--paper-2); }
+.seg { background: var(--c); flex-basis: 0; min-width: 4px; transition: flex-grow 700ms var(--ease-out); }
+.onPhoto { background: rgb(255 255 255 / 0.25); }
+.onPhoto .nuevo { background: rgb(255 255 255 / 0.5); }

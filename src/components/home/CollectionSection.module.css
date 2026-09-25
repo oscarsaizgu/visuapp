@@ -1,0 +1,52 @@
+.section { display: grid; gap: 14px; }
+.head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+.title { font-family: var(--font-display); font-weight: 600; font-size: 26px; letter-spacing: -0.02em; line-height: 1.1; }
+.sub { font-size: 13.5px; color: var(--ink-3); font-weight: 600; margin-top: 2px; }
+.more { display: inline-flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 700; color: var(--bio); white-space: nowrap; }
+
+.group { display: grid; gap: 8px; }
+.domain {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2);
+}
+.domain i { width: 10px; height: 10px; border-radius: 50%; }
+.biologia { background: var(--bio); }
+.geologia { background: var(--geo); }
+
+/* Móvil: carril deslizable */
+.rail {
+  list-style: none; margin: 0 calc(var(--gutter) * -1); padding: 2px var(--gutter) 8px;
+  display: grid; grid-auto-flow: column; grid-auto-columns: 156px; gap: 10px;
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter); scrollbar-width: none;
+}
+.rail::-webkit-scrollbar { display: none; }
+.rail li { scroll-snap-align: start; }
+
+.tile {
+  position: relative; display: block; aspect-ratio: 4 / 5; border-radius: var(--r-lg); overflow: hidden;
+  isolation: isolate; box-shadow: var(--shadow-1); background: var(--cat);
+  transition: transform 200ms var(--ease-spring), box-shadow 200ms;
+}
+.tile:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); }
+.tile:active { transform: scale(0.97); }
+.photo { position: absolute; inset: 0; z-index: -2; }
+.photo > * { position: absolute; inset: 0; }
+/* Velo solo en la franja inferior, para leer el texto sin tapar la foto */
+.tile::after {
+  content: ''; position: absolute; inset: 45% 0 0; z-index: -1;
+  background: linear-gradient(180deg, rgb(0 0 0 / 0), color-mix(in srgb, var(--cat) 45%, rgb(0 0 0 / 0.85)));
+}
+.icon {
+  position: absolute; top: 10px; left: 10px; display: grid; place-items: center;
+  width: 32px; height: 32px; border-radius: 11px; background: var(--cat); color: #fff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.25);
+}
+.info { position: absolute; left: 12px; right: 12px; bottom: 12px; display: grid; gap: 6px; color: #fff; }
+.name { font-weight: 800; font-size: 16px; line-height: 1.15; letter-spacing: -0.01em; text-shadow: 0 1px 8px rgb(0 0 0 / 0.4); }
+.count { font-size: 12.5px; font-weight: 650; opacity: 0.9; margin-top: -4px; font-variant-numeric: tabular-nums; }
+
+/* Tableta y escritorio: cuadrícula de 4, tarjetas más anchas */
+@media (min-width: 760px) {
+  .rail { margin: 0; padding: 0; grid-auto-flow: row; grid-template-columns: repeat(4, minmax(0, 1fr)); overflow: visible; gap: 12px; }
+  .tile { aspect-ratio: 4 / 3; }
+}

@@ -3,19 +3,20 @@
 // ya han salido en algún VISU, e intercalando categorías para que la sesión sea variada.
 import type { Ejemplar } from '../types/content';
 import type { ProgresoEjemplar } from '../types/progress';
+import { haSalidoEnExamen } from './dailyPick';
 
 export interface PlanSesion {
   repasos: string[];
   nuevos: string[];
   ejemplares: string[];
   categorias: string[];
+  /** Estimación: TAMANO × SEGUNDOS_POR_IDENTIFICACION, redondeado hacia arriba. */
+  minutos: number;
 }
 
 export const TAMANO_SESION = 10;
-
-function haSalido(e: Ejemplar): boolean {
-  return e.visu.anios.length > 0 || e.visu.otros.length > 0;
-}
+/** Tiempo medio supuesto por identificación (mirar, responder y leer el feedback). */
+export const SEGUNDOS_POR_IDENTIFICACION = 45;
 
 /** Reparte en turno rotatorio por categoría, respetando el orden de cada una. */
 function intercalar(lista: Ejemplar[]): Ejemplar[] {
@@ -42,7 +43,7 @@ export function planificarSesion(
     ejemplares
       .filter((e) => !progreso[e.id] || progreso[e.id].vecesVisto === 0)
       .sort((a, b) => (a.prioridad < b.prioridad ? -1 : a.prioridad > b.prioridad ? 1 : 0)
-        || Number(haSalido(b)) - Number(haSalido(a))),
+        || Number(haSalidoEnExamen(b)) - Number(haSalidoEnExamen(a))),
   ).slice(0, Math.max(0, tamano - repasos.length));
 
   const elegidos = [...repasos, ...nuevos];
@@ -51,5 +52,6 @@ export function planificarSesion(
     nuevos: nuevos.map((e) => e.id),
     ejemplares: elegidos.map((e) => e.id),
     categorias: [...new Set(elegidos.map((e) => e.categoria))],
+    minutos: Math.ceil((elegidos.length * SEGUNDOS_POR_IDENTIFICACION) / 60),
   };
 }

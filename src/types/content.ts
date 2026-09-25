@@ -3,7 +3,7 @@
 export type Dominio = 'biologia' | 'geologia';
 
 export type CategoriaId =
-  | 'botanica' | 'zoologia' | 'hongos' | 'microorganismos' | 'citologia' | 'histologia'
+  | 'botanica' | 'zoologia' | 'hongos' | 'microscopia'
   | 'minerales' | 'rocas' | 'fosiles' | 'geomorfologia';
 
 export interface Nombre {

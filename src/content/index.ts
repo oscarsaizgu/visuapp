@@ -2,6 +2,7 @@
 import data from './generated/game-content.json';
 import type { CategoriaId, Ejemplar, GameContent, Imagen } from '../types/content';
 import { CATEGORIAS, type Categoria } from './categories';
+import { indiceDelDia } from '../logic/dailyPick';
 
 const content = data as GameContent;
 
@@ -30,4 +31,10 @@ export function portada(e: Ejemplar): Imagen | undefined {
 
 export function fotosJugables(e: Ejemplar): Imagen[] {
   return e.imagenes.filter((i) => i.juego);
+}
+
+/** Una foto jugable distinta de la portada (si la hay), estable durante el día. */
+export function fotoAlternativa(e: Ejemplar, dia: string): Imagen | undefined {
+  const opciones = fotosJugables(e).filter((i) => i.id !== e.portada);
+  return opciones.length ? opciones[indiceDelDia(`${dia}:${e.id}`, opciones.length)] : portada(e);
 }
