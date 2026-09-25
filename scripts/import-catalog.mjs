@@ -9,6 +9,7 @@
 // - Solo regenera content/base. Nunca toca content/curation.
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const args = process.argv.slice(2);
 const SRC = args.find((a) => !a.startsWith('--'));
@@ -17,7 +18,7 @@ if (!SRC) {
   console.error('Uso: node scripts/import-catalog.mjs <ruta a Visu-Oposicion> [--sin-fotos]');
   process.exit(1);
 }
-const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = (rel) => fs.readFileSync(path.join(SRC, rel), 'utf8');
 
 // ---------- Extracción de literales JSON desde texto ----------
