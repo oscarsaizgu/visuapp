@@ -1,6 +1,6 @@
 // Secciones pendientes de construir. Cada una se sustituirá por su página real en su fase.
 import { useParams } from 'react-router-dom';
-import { BookOpenText, Play, SquaresFour, ChartLineUp, Compass } from '@phosphor-icons/react';
+import { BookOpenText, SquaresFour, ChartLineUp, Compass } from '@phosphor-icons/react';
 import { CATEGORIA_POR_ID } from '../content/categories';
 import type { CategoriaId } from '../types/content';
 import { ComingSoon } from './ComingSoon';
@@ -8,11 +8,6 @@ import { ComingSoon } from './ComingSoon';
 export const StudyPage = () => (
   <ComingSoon semilla="estudiar" fase={2} icono={BookOpenText} titulo="Estudiar"
     descripcion="Elegir, repasar y descubrir ejemplares con fichas visuales: foto grande, nombre, rasgos de identificación y posibles confusiones." />
-);
-
-export const PlayPage = () => (
-  <ComingSoon semilla="jugar" fase={3} icono={Play} titulo="¿Qué estás viendo?"
-    descripcion="Aparece una foto real y tienes que identificarla. Opción múltiple, escribir el nombre, elegir entre imágenes y modo veloz." />
 );
 
 export const CollectionPage = () => (

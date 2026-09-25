@@ -24,3 +24,13 @@ export function rachaVigente(perfil: Perfil, hoy: string): number {
   if (!perfil.ultimoDiaConObjetivo) return 0;
   return diasEntre(perfil.ultimoDiaConObjetivo, hoy) <= 1 ? perfil.rachaActual : 0;
 }
+
+/** Suma identificaciones de hoy y actualiza la racha al cumplir el objetivo diario. */
+export function registrarActividad(perfil: Perfil, hoy: string, n = 1): Perfil {
+  const hechas = (perfil.actividad[hoy] ?? 0) + n;
+  const actividad = { ...perfil.actividad, [hoy]: hechas };
+  if (hechas < perfil.objetivoDiario || perfil.ultimoDiaConObjetivo === hoy) return { ...perfil, actividad };
+  const seguida = perfil.ultimoDiaConObjetivo !== null && diasEntre(perfil.ultimoDiaConObjetivo, hoy) === 1;
+  const rachaActual = seguida ? perfil.rachaActual + 1 : 1;
+  return { ...perfil, actividad, rachaActual, mejorRacha: Math.max(perfil.mejorRacha, rachaActual), ultimoDiaConObjetivo: hoy };
+}

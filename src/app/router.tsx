@@ -1,9 +1,13 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { AppLayout } from '../components/layout/AppLayout';
 import { HomePage } from '../pages/HomePage';
-import { StudyPage, PlayPage, CollectionPage, CategoryPage, ProgressPage, NotFoundPage } from '../pages/sections';
+import { StudyPage, CollectionPage, CategoryPage, ProgressPage, NotFoundPage } from '../pages/sections';
+import { PlayPage } from '../pages/PlayPage';
+import { SessionPage } from '../pages/SessionPage';
 
 export const router = createBrowserRouter([
+  // Partida a pantalla completa, sin barra de navegación.
+  { path: '/jugar/sesion', element: <SessionPage /> },
   {
     element: <AppLayout />,
     children: [

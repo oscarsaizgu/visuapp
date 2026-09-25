@@ -21,3 +21,11 @@ describe('niveles', () => {
     expect(rangoDeNivel(40)).toBe('Catedrático');
   });
 });
+
+import { siguienteRango } from './levels';
+describe('siguiente rango', () => {
+  it('devuelve el próximo o nada al final', () => {
+    expect(siguienteRango(2)).toEqual({ desde: 3, nombre: 'Recolector' });
+    expect(siguienteRango(30)).toBeUndefined();
+  });
+});

@@ -34,6 +34,15 @@ src/content/generated/ ← lo que carga la app (npm run content)
 - `npm run content`: combina base + curación + packs activos. Avisa si un pack o una revisión apunta a algo que no existe.
 - Una foto marcada `da-pistas`, `rotulada`, `ilustracion` o `calidad` se muestra en la ficha, pero **nunca se usa para preguntar**.
 
+## Cómo funciona el juego
+
+- **Sesión:** 10 identificaciones. Primero los repasos que tocan hoy y después ejemplares nuevos (prioridad A y los que han salido en examen, intercalando categorías).
+- **Opciones:** 4 respuestas. En biología se pregunta por el nombre científico. Los distractores salen del catálogo completo por cercanía taxonómica (género → familia → grupo → categoría) y son más parecidos cuanto más dominas el ejemplar.
+- **Fallos:** el feedback muestra cuál era, qué marcaste y en qué se diferencian (según el catálogo). El ejemplar vuelve al final de la sesión, con otra foto si la hay.
+- **Dominio:** cajas Leitner 0–5 (`src/logic/srs.ts`). Acierto = sube una caja (repaso en 1, 3, 7, 16 o 35 días); fallo = baja dos y vuelve hoy.
+- **XP** (`src/logic/xp.ts`): 10 por acierto pendiente, 5 en reintento, 2 si no tocaba; combo +2 por acierto seguido (máx. +10); +5 al subir el dominio; +20 al terminar (+10 si es perfecta).
+- **Da pistas:** marca una foto para que no se vuelva a usar al preguntar (se guarda en el dispositivo).
+
 ## Código
 
 ```

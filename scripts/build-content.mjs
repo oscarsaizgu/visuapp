@@ -97,6 +97,8 @@ const nameIndex = specimens.map((s) => {
   if (s.nombre.cientifico && s.nombre.cientifico !== s.nombre.principal) x.sci = s.nombre.cientifico;
   if (s.taxonomia?.familia) x.fam = s.taxonomia.familia;
   if (s.taxonomia?.genero) x.gen = s.taxonomia.genero;
+  if (s.nombre.formato === 'cientifico') x.f = 1;
+  if (s.prioridad === 'A') x.p = 1;
   return x;
 });
 fs.writeFileSync(path.join(outDir, 'name-index.json'), JSON.stringify(nameIndex) + '\n');

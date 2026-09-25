@@ -23,7 +23,7 @@ export function ContinueHero({ plan, primeraVez }: Props) {
   const n = plan.ejemplares.length;
   const titulo = n === 0 ? '¡Todo al día!' : primeraVez ? 'Empieza tu colección' : 'Tu sesión de hoy';
   const sub = n === 0
-    ? 'No tienes repasos pendientes ni ejemplares nuevos en los packs activos.'
+    ? 'No tienes repasos pendientes ni ejemplares nuevos. Puedes practicar igualmente (da menos XP).'
     : `${plural(n, 'identificación', 'identificaciones')} con fotografías reales.`;
 
   return (
@@ -56,12 +56,10 @@ export function ContinueHero({ plan, primeraVez }: Props) {
             <li title="Estimación a partir del número de identificaciones">≈ {plan.minutos} min</li>
           </ul>
         )}
-        {n > 0 && (
-          <Link to="/jugar" className={styles.cta}>
-            <Play size={22} weight="fill" aria-hidden="true" />
-            {primeraVez ? 'Empezar' : 'Continuar'}
-          </Link>
-        )}
+        <Link to="/jugar/sesion" className={styles.cta}>
+          <Play size={22} weight="fill" aria-hidden="true" />
+          {n === 0 ? 'Práctica libre' : primeraVez ? 'Empezar' : 'Continuar'}
+        </Link>
       </div>
     </section>
   );

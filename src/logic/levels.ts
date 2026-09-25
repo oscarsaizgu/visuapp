@@ -37,3 +37,8 @@ export function rangoDeNivel(nivel: number): string {
   for (const x of RANGOS) if (nivel >= x.desde) r = x.nombre;
   return r;
 }
+
+/** Próximo rango a partir de `nivel` (undefined si ya es el último). */
+export function siguienteRango(nivel: number): { desde: number; nombre: string } | undefined {
+  return RANGOS.find((r) => r.desde > nivel);
+}

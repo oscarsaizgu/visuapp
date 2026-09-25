@@ -1,0 +1,17 @@
+.bar { display: flex; align-items: center; gap: 12px; padding: calc(env(safe-area-inset-top) + 10px) 0 10px; }
+.close {
+  flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; color: var(--ink-3);
+}
+.close:hover { background: var(--paper-2); color: var(--ink); }
+.track { flex: 1; height: 14px; border-radius: 999px; background: var(--paper-2); overflow: hidden; }
+.fill {
+  height: 100%; border-radius: inherit; transform-origin: left;
+  background: linear-gradient(90deg, var(--bio), color-mix(in srgb, var(--bio) 60%, #9be3b8));
+  transition: transform 500ms var(--ease-out);
+}
+.combo {
+  flex: none; min-width: 40px; display: inline-flex; align-items: center; justify-content: center; gap: 2px;
+  font-weight: 850; font-variant-numeric: tabular-nums; color: var(--ink-3); opacity: 0.35;
+  transition: opacity 200ms, color 200ms, transform 200ms var(--ease-spring);
+}
+.on { opacity: 1; color: var(--flame); transform: scale(1.1); }

@@ -1,0 +1,27 @@
+.list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+@media (min-width: 700px) { .list { grid-template-columns: 1fr 1fr; } }
+.opt {
+  width: 100%; min-height: 58px; display: flex; align-items: center; gap: 12px; text-align: left;
+  padding: 10px 14px; border-radius: 18px; cursor: pointer;
+  background: var(--card); border: 2px solid var(--line); box-shadow: 0 3px 0 var(--line);
+  transition: transform 110ms var(--ease-out), box-shadow 110ms var(--ease-out), background 200ms, border-color 200ms, opacity 200ms;
+}
+@media (hover: hover) {
+  .opt:hover:not(:disabled) { border-color: color-mix(in srgb, var(--bio) 45%, var(--line)); }
+}
+.opt:active:not(:disabled) { transform: translateY(3px); box-shadow: 0 0 0 var(--line); }
+.opt:disabled { cursor: default; }
+.key {
+  flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 9px;
+  background: var(--paper-2); color: var(--ink-3); font-size: 13px; font-weight: 800;
+}
+.text { font-size: 17px; font-weight: 650; line-height: 1.2; color: var(--ink); }
+.text:global(.sci) { font-size: 18px; font-weight: 500; }
+
+.ok { background: color-mix(in srgb, var(--ok) 14%, var(--card)); border-color: var(--ok); box-shadow: 0 3px 0 var(--ok); animation: bump 320ms var(--ease-spring); }
+.ok .key { background: var(--ok); color: #fff; }
+.bad { background: color-mix(in srgb, var(--bad) 12%, var(--card)); border-color: var(--bad); box-shadow: 0 3px 0 var(--bad); animation: shake 360ms ease-in-out; }
+.bad .key { background: var(--bad); color: #fff; }
+.dim { opacity: 0.45; }
+@keyframes bump { 40% { transform: scale(1.03); } }
+@keyframes shake { 20%, 60% { transform: translateX(-5px); } 40%, 80% { transform: translateX(5px); } }
