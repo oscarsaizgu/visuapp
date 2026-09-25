@@ -9,6 +9,7 @@ import { nivelDesdeXp, rangoDeNivel, siguienteRango } from '../../logic/levels';
 import { SpecimenImage } from '../specimen/SpecimenImage';
 import { SpecimenLabel } from '../specimen/SpecimenLabel';
 import { ProgressRing } from '../ui/ProgressRing';
+import { SEGUNDOS_VELOZ } from '../../logic/session';
 import styles from './SessionSummary.module.css';
 
 /** Contador que sube hasta `hasta` (sin animación si se prefiere movimiento reducido). */
@@ -31,6 +32,7 @@ function useCuenta(hasta: number) {
 
 export function SessionSummary({ st, onOtra }: { st: EstadoPartida; onOtra: () => void }) {
   const perfil = useProgressStore((s) => s.perfil);
+  const velozMejor = useProgressStore((s) => s.estadisticas.velozMejor);
   const xp = useCuenta(st.xpSesion);
   const hoy = claveDia();
   const nivel = nivelDesdeXp(perfil.xp);
@@ -45,10 +47,14 @@ export function SessionSummary({ st, onOtra }: { st: EstadoPartida; onOtra: () =
     <div className={styles.page}>
       <header className={`${styles.hero} rise`}>
         <Trophy size={44} weight="duotone" className={styles.trophy} aria-hidden="true" />
-        <h1 className={styles.title}>{st.practica ? 'Práctica completada' : perfecta ? '¡Sesión perfecta!' : '¡Sesión completada!'}</h1>
+        <h1 className={styles.title}>
+          {st.modo === 'veloz' ? '¡Tiempo!' : st.modo === 'repaso' ? 'Repaso completado' : st.practica ? 'Práctica completada' : perfecta ? '¡Sesión perfecta!' : '¡Sesión completada!'}
+        </h1>
         <p className={styles.xp} aria-label={`${st.xpSesion} XP ganados`}>+{xp} <span>XP</span></p>
         <ul className={styles.stats}>
-          <li><strong>{aciertos}/{primeras.length}</strong> a la primera</li>
+          {st.modo === 'veloz'
+            ? <li><strong>{aciertos}</strong> aciertos en {SEGUNDOS_VELOZ} s{aciertos >= velozMejor && aciertos > 0 ? ' · ¡récord!' : ` · récord ${velozMejor}`}</li>
+            : <li><strong>{aciertos}/{primeras.length}</strong> a la primera</li>}
           <li><strong>×{st.comboMax}</strong> mejor combo</li>
           <li><strong>+{st.xpFin}</strong> por terminar{perfecta ? ' (perfecta)' : ''}</li>
         </ul>

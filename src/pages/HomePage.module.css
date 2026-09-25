@@ -3,28 +3,29 @@
 /* Móvil: una columna en orden de uso */
 .grid {
   display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px;
-  grid-template-areas: 'hero' 'goal' 'mastery' 'sod';
+  grid-template-areas: 'hero' 'goal' 'retos' 'mastery' 'sod';
 }
 .hero { grid-area: hero; }
 .goal { grid-area: goal; }
+.retos { grid-area: retos; }
 .mastery { grid-area: mastery; }
 .sod { grid-area: sod; }
 
-/* Tableta: objetivo y dominio lado a lado */
+/* Tableta */
 @media (min-width: 620px) {
   .grid {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    grid-template-areas: 'hero hero' 'goal mastery' 'sod sod';
+    grid-template-areas: 'hero hero' 'goal mastery' 'retos mastery' 'sod sod';
   }
   .goal { display: grid; }
 }
 
-/* Escritorio: la tarjeta de sesión ocupa toda la altura de la columna derecha */
+/* Escritorio: la tarjeta de sesión ocupa la altura de la columna derecha */
 @media (min-width: 1100px) {
   .grid {
     grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-    grid-template-rows: auto auto 1fr;
-    grid-template-areas: 'hero goal' 'hero mastery' 'hero sod';
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 'hero goal' 'hero retos' 'hero mastery' 'sod sod';
     align-items: start;
   }
   .hero { align-self: stretch; }

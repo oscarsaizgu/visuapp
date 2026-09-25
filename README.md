@@ -43,6 +43,25 @@ src/content/generated/ ← lo que carga la app (npm run content)
 - **XP** (`src/logic/xp.ts`): 10 por acierto pendiente, 5 en reintento, 2 si no tocaba; combo +2 por acierto seguido (máx. +10); +5 al subir el dominio; +20 al terminar (+10 si es perfecta).
 - **Da pistas:** marca una foto para que no se vuelva a usar al preguntar (se guarda en el dispositivo).
 
+## Modos de juego (`/jugar/sesion?modo=…`)
+
+| Modo | Qué es | Dominio |
+|---|---|---|
+| `opcion-multiple` | Foto + 4 nombres (sesión recomendada) | Sí |
+| `escribir` | Foto + escribir el nombre (sin tildes/mayúsculas, se admite 1–2 erratas según longitud) | Sí, +15 XP |
+| `elegir-foto` | Nombre + 4 fotos de ejemplares activos | Sí |
+| `veloz` | Todas las posibles en 90 s, avanza solo | No (5 XP por acierto) |
+| `repaso` | Solo vencidos, fallados y difíciles | Sí |
+
+## Colección, progreso, insignias y retos
+
+- **Colección:** por categoría y grupo; lo no descubierto aparece como «???» con la foto velada.
+- **Progreso:** racha, identificaciones, % de aciertos a la primera, tiempo de estudio, practicados, dominados, sesiones, gráfica de 14 días, categorías más fuerte y más débil, «Necesitas repasar», insignias y ajustes (objetivo diario, exportar/importar/borrar progreso).
+- **Insignias** (`src/content/achievements.ts`): cada una es un dato con su forma de medir el progreso. Se comprueban tras cada acción y al abrir la app.
+- **Retos diarios** (`src/logic/challenges.ts`): 3 al día, estables por fecha, +30 XP cada uno.
+- **Plan de repaso:** prioriza el retraso relativo al intervalo de la caja y los olvidos; como mucho 20 ejemplares nuevos al día.
+- El progreso se guarda con versión (`version: 2`) y migra automáticamente desde la versión anterior.
+
 ## Estudiar
 
 - **Repasar:** repasos vencidos, luego lo que fallaste la última vez y luego lo que más te cuesta.

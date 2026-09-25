@@ -8,7 +8,8 @@ import styles from './ComingSoon.module.css';
 
 interface Props {
   titulo: string;
-  fase: number;
+  /** Fase del plan en la que llegará (sin fase = página informativa). */
+  fase?: number;
   descripcion: string;
   icono: Icon;
   /** Semilla para variar las fotos de fondo entre secciones. */
@@ -28,7 +29,7 @@ export function ComingSoon({ titulo, fase, descripcion, icono: Ico, semilla }: P
       </div>
       <div className={styles.card}>
         <span className={styles.icon}><Ico size={28} weight="duotone" aria-hidden="true" /></span>
-        <span className={styles.badge}>Fase {fase}</span>
+        {fase ? <span className={styles.badge}>Fase {fase}</span> : null}
         <h1 className={styles.title}>{titulo}</h1>
         <p className={styles.text}>{descripcion}</p>
         <Link to="/" className={styles.back}><ArrowLeft size={18} weight="bold" aria-hidden="true" /> Volver al inicio</Link>

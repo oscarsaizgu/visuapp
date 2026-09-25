@@ -5,6 +5,7 @@ import { DailyGoalCard } from '../components/home/DailyGoalCard';
 import { MasteryCard } from '../components/home/MasteryCard';
 import { SpecimenOfDay } from '../components/home/SpecimenOfDay';
 import { CollectionSection } from '../components/home/CollectionSection';
+import { ChallengesCard } from '../components/progress/ChallengesCard';
 import styles from './HomePage.module.css';
 
 export function HomePage() {
@@ -18,6 +19,9 @@ export function HomePage() {
         </div>
         <div className={styles.goal}>
           <DailyGoalCard hechas={r.hechasHoy} objetivo={r.objetivo} racha={r.racha} />
+        </div>
+        <div className={styles.retos}>
+          <ChallengesCard compacta />
         </div>
         <div className={styles.mastery}>
           <MasteryCard medio={r.dominio.medio} distribucion={r.dominio.distribucion} dominados={r.dominio.dominados}

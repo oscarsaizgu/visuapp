@@ -1,6 +1,9 @@
 // Experiencia. Premia recordar, no pulsar: lo que no tocaba estudiar da poco.
 export const XP = {
   acierto: 10,
+  /** Escribir el nombre sin opciones es más difícil que reconocerlo. */
+  aciertoEscribir: 15,
+  aciertoVeloz: 5,
   aciertoNoPendiente: 2,
   aciertoReintento: 5,
   comboPorAcierto: 2,
@@ -11,9 +14,11 @@ export const XP = {
 } as const;
 
 /** @param combo aciertos seguidos contando este. */
-export function xpPorRespuesta(r: { ok: boolean; reintento: boolean; pendiente: boolean; combo: number }): number {
+export function xpPorRespuesta(r: { ok: boolean; reintento: boolean; pendiente: boolean; combo: number; modo?: string }): number {
   if (!r.ok) return 0;
-  const base = r.reintento ? XP.aciertoReintento : r.pendiente ? XP.acierto : XP.aciertoNoPendiente;
+  if (r.modo === 'veloz') return XP.aciertoVeloz; // sin combo: en Veloz se encadenan muchos
+  const completa = r.modo === 'escribir' ? XP.aciertoEscribir : XP.acierto;
+  const base = r.reintento ? XP.aciertoReintento : r.pendiente ? completa : XP.aciertoNoPendiente;
   return base + bonusCombo(r.combo);
 }
 

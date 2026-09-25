@@ -18,6 +18,10 @@ interface Props {
   subioNivel: boolean;
   primerDescubrimiento: boolean;
   reintento: boolean;
+  /** "Marcaste" o "Escribiste". */
+  etiquetaElegida?: string;
+  /** Aviso extra (p. ej. acierto con errata en "escribir"). */
+  nota?: string;
   onSiguiente: () => void;
   onOcultarFoto: () => void;
 }
@@ -49,10 +53,12 @@ export function FeedbackSheet(p: Props) {
           <SpecimenLabel nombre={e.nombre} kicker={`${cat.nombre} · ${e.album}`} />
         </div>
 
+        {p.nota && <p className={styles.nota}>{p.nota}</p>}
+
         <dl className={styles.why}>
           {!p.ok && p.elegida && (
             <div>
-              <dt>Marcaste</dt>
+              <dt>{p.etiquetaElegida ?? 'Marcaste'}</dt>
               <dd>
                 <span className={p.elegida.cursiva ? 'sci' : undefined}>{p.elegida.texto}</span>
                 {p.entradaElegida && <> — {comparacion(e, p.entradaElegida)}</>}

@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, it } from 'vitest';
 import { useProgressStore } from './useProgressStore';
 import { claveDia } from '../logic/daily';
 
-const r = (over = {}) => ({ ejemplarId: 'x', ok: true, imagenId: 'x-1', ms: 1000, reintento: false, xp: 10, fotosJugables: 3, ...over });
+const r = (over = {}) => ({ ejemplarId: 'x', ok: true, imagenId: 'x-1', ms: 1000, reintento: false, xp: 10, fotosJugables: 3, modo: 'opcion-multiple', combo: 1, ...over });
 
 describe('registrar respuestas', () => {
   beforeEach(() => useProgressStore.getState().reiniciar());

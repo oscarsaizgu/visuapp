@@ -20,20 +20,23 @@ interface Props {
   descubiertos: number;
   total: number;
   packs: string[];
+  /** En la propia página de Colección no hace falta el enlace "Ver todo". */
+  sinEnlace?: boolean;
+  titulo?: string;
 }
 
 /** Colección agrupada por Biología / Geología. Cada categoría muestra descubiertos y reparto de dominio. */
-export function CollectionSection({ categorias, descubiertos, total, packs }: Props) {
+export function CollectionSection({ categorias, descubiertos, total, packs, sinEnlace, titulo = 'Tu colección' }: Props) {
   return (
     <section className={`${styles.section} rise`} style={{ animationDelay: '240ms' }} aria-labelledby="col-title">
       <div className={styles.head}>
         <div>
-          <h2 id="col-title" className={styles.title}>Tu colección</h2>
+          <h2 id="col-title" className={styles.title}>{titulo}</h2>
           <p className={styles.sub}>
             {descubiertos} de {total} ejemplares descubiertos{packs.length ? ` · ${packs.join(', ')}` : ''}
           </p>
         </div>
-        <Link to="/coleccion" className={styles.more}>Ver todo <CaretRight size={14} weight="bold" aria-hidden="true" /></Link>
+        {!sinEnlace && <Link to="/coleccion" className={styles.more}>Ver todo <CaretRight size={14} weight="bold" aria-hidden="true" /></Link>}
       </div>
 
       {DOMINIOS.map((d) => {

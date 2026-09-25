@@ -4,6 +4,8 @@
 import type { Ejemplar } from '../types/content';
 import type { ProgresoEjemplar } from '../types/progress';
 import { haSalidoEnExamen } from './dailyPick';
+import { diasEntre } from './daily';
+import { INTERVALOS } from './srs';
 
 export interface PlanSesion {
   repasos: string[];
@@ -15,6 +17,8 @@ export interface PlanSesion {
 }
 
 export const TAMANO_SESION = 10;
+/** Máximo de ejemplares nuevos al día: evita acumular más repasos de los que se pueden llevar. */
+export const MAX_NUEVOS_DIA = 20;
 /** Tiempo medio supuesto por identificación (mirar, responder y leer el feedback). */
 export const SEGUNDOS_POR_IDENTIFICACION = 45;
 
@@ -33,18 +37,26 @@ export function planificarSesion(
   progreso: Record<string, ProgresoEjemplar>,
   hoy: string,
   tamano = TAMANO_SESION,
+  nuevosHoy = 0,
 ): PlanSesion {
+  // Repasos: primero los más retrasados en proporción a su intervalo (un día tarde en la caja 1
+  // pesa más que un día tarde en la caja 5); a igualdad, los que más se han olvidado (lapsos).
+  const retraso = (id: string) => {
+    const p = progreso[id];
+    return diasEntre(p.proximaRevision!, hoy) / Math.max(1, INTERVALOS[p.caja] ?? 1) + 0.01 * p.lapsos;
+  };
   const repasos = ejemplares
     .filter((e) => { const p = progreso[e.id]; return p?.proximaRevision != null && p.proximaRevision <= hoy; })
-    .sort((a, b) => (progreso[a.id].proximaRevision! < progreso[b.id].proximaRevision! ? -1 : 1))
+    .sort((a, b) => retraso(b.id) - retraso(a.id) || (progreso[a.id].proximaRevision! < progreso[b.id].proximaRevision! ? -1 : 1))
     .slice(0, tamano);
+  const huecoNuevos = Math.max(0, Math.min(tamano - repasos.length, MAX_NUEVOS_DIA - nuevosHoy));
 
   const nuevos = intercalar(
     ejemplares
       .filter((e) => !progreso[e.id] || progreso[e.id].vecesVisto === 0)
       .sort((a, b) => (a.prioridad < b.prioridad ? -1 : a.prioridad > b.prioridad ? 1 : 0)
         || Number(haSalidoEnExamen(b)) - Number(haSalidoEnExamen(a))),
-  ).slice(0, Math.max(0, tamano - repasos.length));
+  ).slice(0, huecoNuevos);
 
   const elegidos = [...repasos, ...nuevos];
   return {

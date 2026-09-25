@@ -47,3 +47,4 @@
 .okSheet .next { background: var(--ok); color: #fff; }
 .badSheet .next { background: var(--ink); color: var(--paper); }
 .next:active { transform: translateY(4px); box-shadow: 0 1px 0 rgb(0 0 0 / 0.2); }
+.nota { font-size: 14px; font-weight: 700; color: var(--ink); padding: 8px 12px; border-radius: 12px; background: color-mix(in srgb, var(--reward) 20%, transparent); }

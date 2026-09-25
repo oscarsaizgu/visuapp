@@ -2,9 +2,12 @@
 .title { font-family: var(--font-display); font-weight: 600; font-size: 36px; letter-spacing: -0.025em; }
 .h2 { font-family: var(--font-display); font-weight: 600; font-size: 22px; margin-bottom: 10px; }
 .modes { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.mode { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: var(--r-lg); background: var(--card); box-shadow: var(--shadow-1); }
+.mode { width: 100%; display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: var(--r-lg); background: var(--card); box-shadow: var(--shadow-1); }
 .mode p { font-size: 14px; color: var(--ink-2); }
 .icon { flex: none; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 14px; background: color-mix(in srgb, var(--bio) 14%, transparent); color: var(--bio); }
-.badge { margin-left: auto; flex: none; font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 9px; border-radius: 999px; background: color-mix(in srgb, var(--ok) 16%, transparent); color: var(--ok); }
-.soon { opacity: 0.6; }
+.badge { margin-left: auto; flex: none; font-size: 12px; font-weight: 800; padding: 4px 9px; border-radius: 999px; background: color-mix(in srgb, var(--reward) 22%, transparent); color: var(--ink); white-space: nowrap; }
+.caret { flex: none; color: var(--ink-3); }
+.mode:not(.soon) .caret { margin-left: 4px; }
+@media (hover: hover) { .mode:not(.soon):hover { box-shadow: var(--shadow-2); } }
+.soon { opacity: 0.55; cursor: default; }
 .soon .badge { background: var(--paper-2); color: var(--ink-3); }

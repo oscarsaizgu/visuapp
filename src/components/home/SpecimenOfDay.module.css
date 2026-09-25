@@ -48,8 +48,8 @@
 }
 .btn:active { transform: scale(0.96); }
 
-/* Tableta: foto a la izquierda */
-@media (min-width: 620px) and (max-width: 1099px) {
+/* Tableta y escritorio: foto a la izquierda */
+@media (min-width: 620px) {
   .card { grid-template-columns: 44% 1fr; grid-template-rows: none; }
   .photo { aspect-ratio: auto; min-height: 280px; }
 }

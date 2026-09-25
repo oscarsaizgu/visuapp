@@ -18,3 +18,8 @@
 @keyframes spin { to { transform: rotate(360deg); } }
 .back { padding: 12px 18px; border-radius: 14px; background: var(--ink); color: var(--paper); font-weight: 750; }
 @media (min-width: 900px) { .photo { height: min(56dvh, 600px); } .prompt { font-size: 28px; } }
+.target { display: grid; gap: 6px; padding: 16px 18px; border-radius: var(--r-lg); background: var(--card); box-shadow: var(--shadow-1); }
+.ask { font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+.flash { text-align: center; font-weight: 850; font-size: 18px; padding: 10px; border-radius: 14px; animation: rise 200ms var(--ease-out) both; }
+.flashOk { background: color-mix(in srgb, var(--ok) 16%, transparent); color: var(--ok); }
+.flashBad { background: color-mix(in srgb, var(--bad) 12%, transparent); color: var(--bad); }

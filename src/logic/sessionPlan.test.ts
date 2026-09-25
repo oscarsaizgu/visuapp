@@ -45,3 +45,19 @@ describe('estimación de minutos', () => {
     expect(planificarSesion(lista.slice(0, 3), {}, '2026-09-25').minutos).toBe(3); // 135 s → 3
   });
 });
+
+describe('límites e inteligencia del plan', () => {
+  it('no pasa de MAX_NUEVOS_DIA nuevos al día', () => {
+    const lista = Array.from({ length: 10 }, (_, i) => e(`n${i}`, 'rocas'));
+    expect(planificarSesion(lista, {}, '2026-09-25', 10, 17).nuevos).toHaveLength(3);
+    expect(planificarSesion(lista, {}, '2026-09-25', 10, 25).nuevos).toHaveLength(0);
+  });
+  it('prioriza el retraso relativo al intervalo', () => {
+    const lista = [e('caja5', 'rocas'), e('caja1', 'rocas')];
+    const prog = {
+      caja5: { ...visto('2026-09-20'), caja: 5 }, // 5 días tarde de 35 → 0,14
+      caja1: { ...visto('2026-09-23'), caja: 1 }, // 2 días tarde de 1 → 2
+    };
+    expect(planificarSesion(lista, prog, '2026-09-25').repasos).toEqual(['caja1', 'caja5']);
+  });
+});
