@@ -1,6 +1,6 @@
 // Foto fija del progreso del jugador sobre el contenido activo; alimenta insignias y estadísticas.
 import type { CategoriaId, Ejemplar } from '../types/content';
-import type { Estadisticas, Perfil, ProgresoEjemplar } from '../types/progress';
+import type { Estadisticas, Perfil, ProgresoEjemplar, ProgresoRuta } from '../types/progress';
 import { nivelDominio, pesoDominio } from './mastery';
 import { nivelDesdeXp } from './levels';
 import { haSalidoEnExamen } from './dailyPick';
@@ -24,6 +24,8 @@ export interface Snapshot {
   comboMax: number;
   velozMejor: number;
   nivel: number;
+  leccionesCompletadas: number;
+  mundosSuperados: number;
 }
 
 export function construirSnapshot(
@@ -31,6 +33,7 @@ export function construirSnapshot(
   progreso: Record<string, ProgresoEjemplar>,
   perfil: Perfil,
   est: Estadisticas,
+  ruta?: ProgresoRuta,
 ): Snapshot {
   const s: Snapshot = {
     totalActivos: ejemplares.length, totalPorCategoria: {}, descubiertos: 0, estudiados: 0, dominados: 0,
@@ -39,6 +42,8 @@ export function construirSnapshot(
     aciertos: est.aciertos, respuestas: est.respuestas, mejorRacha: perfil.mejorRacha,
     sesionesPerfectas: est.sesionesPerfectas, comboMax: est.comboMax, velozMejor: est.velozMejor,
     nivel: nivelDesdeXp(perfil.xp).nivel,
+    leccionesCompletadas: ruta ? Object.values(ruta.lecciones).filter((l) => l.completada).length : 0,
+    mundosSuperados: ruta ? Object.values(ruta.examenes).filter((x) => x.superado).length : 0,
   };
   const inc = (m: Partial<Record<CategoriaId, number>>, c: CategoriaId, n = 1) => { m[c] = (m[c] ?? 0) + n; };
   for (const e of ejemplares) {

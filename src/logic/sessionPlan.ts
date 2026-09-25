@@ -17,8 +17,6 @@ export interface PlanSesion {
 }
 
 export const TAMANO_SESION = 10;
-/** Máximo de ejemplares nuevos al día: evita acumular más repasos de los que se pueden llevar. */
-export const MAX_NUEVOS_DIA = 20;
 /** Tiempo medio supuesto por identificación (mirar, responder y leer el feedback). */
 export const SEGUNDOS_POR_IDENTIFICACION = 45;
 
@@ -37,7 +35,6 @@ export function planificarSesion(
   progreso: Record<string, ProgresoEjemplar>,
   hoy: string,
   tamano = TAMANO_SESION,
-  nuevosHoy = 0,
 ): PlanSesion {
   // Repasos: primero los más retrasados en proporción a su intervalo (un día tarde en la caja 1
   // pesa más que un día tarde en la caja 5); a igualdad, los que más se han olvidado (lapsos).
@@ -49,7 +46,8 @@ export function planificarSesion(
     .filter((e) => { const p = progreso[e.id]; return p?.proximaRevision != null && p.proximaRevision <= hoy; })
     .sort((a, b) => retraso(b.id) - retraso(a.id) || (progreso[a.id].proximaRevision! < progreso[b.id].proximaRevision! ? -1 : 1))
     .slice(0, tamano);
-  const huecoNuevos = Math.max(0, Math.min(tamano - repasos.length, MAX_NUEVOS_DIA - nuevosHoy));
+  // Sin límite diario de nuevos: el jugador avanza tanto como quiera cada día.
+  const huecoNuevos = Math.max(0, tamano - repasos.length);
 
   const nuevos = intercalar(
     ejemplares

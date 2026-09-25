@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from '@phosphor-icons/react';
 import type { Icon } from '@phosphor-icons/react';
-import { EJEMPLARES, portada } from '../content';
+import { RUTA, ejemplaresPorIds, idsDeMundo, portada } from '../content';
 import { indiceDelDia } from '../logic/dailyPick';
 import { SpecimenImage } from '../components/specimen/SpecimenImage';
 import styles from './ComingSoon.module.css';
@@ -18,8 +18,9 @@ interface Props {
 
 /** Pantalla de sección aún no construida, con la misma identidad visual que el resto. */
 export function ComingSoon({ titulo, fase, descripcion, icono: Ico, semilla }: Props) {
-  const start = indiceDelDia(semilla, EJEMPLARES.length);
-  const fotos = Array.from({ length: 6 }, (_, i) => EJEMPLARES[(start + i * 7) % EJEMPLARES.length]);
+  const base = ejemplaresPorIds(idsDeMundo(RUTA.mundos[0]));
+  const start = indiceDelDia(semilla, base.length);
+  const fotos = Array.from({ length: 6 }, (_, i) => base[(start + i * 7) % base.length]);
   return (
     <div className={`${styles.page} rise`}>
       <div className={styles.collage} aria-hidden="true">

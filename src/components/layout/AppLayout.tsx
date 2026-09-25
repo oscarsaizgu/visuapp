@@ -1,12 +1,12 @@
 import { NavLink, Outlet } from 'react-router-dom';
-import { House, BookOpenText, Play, SquaresFour, ChartLineUp } from '@phosphor-icons/react';
+import { House, BookOpenText, MapTrifold, SquaresFour, ChartLineUp } from '@phosphor-icons/react';
 import type { Icon } from '@phosphor-icons/react';
 import styles from './AppLayout.module.css';
 
 const TABS: { to: string; label: string; icon: Icon; end?: boolean }[] = [
   { to: '/', label: 'Inicio', icon: House, end: true },
-  { to: '/estudiar', label: 'Estudiar', icon: BookOpenText },
-  { to: '/jugar', label: 'Jugar', icon: Play },
+  { to: '/ruta', label: 'Ruta', icon: MapTrifold },
+  { to: '/estudiar', label: 'Libre', icon: BookOpenText },
   { to: '/coleccion', label: 'Colección', icon: SquaresFour },
   { to: '/progreso', label: 'Progreso', icon: ChartLineUp },
 ];

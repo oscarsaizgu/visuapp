@@ -1,6 +1,6 @@
 // SOLO DESARROLLO: rellena progreso ficticio para revisar la interfaz con datos (abrir con ?demo).
 // ?demo=reset vuelve al estado inicial. No se incluye en la versión de producción.
-import { EJEMPLARES } from '../content';
+import { RUTA, ejemplaresPorIds, idsDeMundo } from '../content';
 import { claveDia } from '../logic/daily';
 import { diaVacio, estadisticasVacias } from '../logic/stats';
 import type { ProgresoEjemplar } from '../types/progress';
@@ -12,7 +12,7 @@ export function aplicarDemoSiProcede() {
   if (q === 'reset') { useProgressStore.getState().reiniciar(); return; }
   const hoy = claveDia();
   const progreso: Record<string, ProgresoEjemplar> = {};
-  EJEMPLARES.slice(0, 22).forEach((e, i) => {
+  ejemplaresPorIds(idsDeMundo(RUTA.mundos[0])).slice(0, 22).forEach((e, i) => {
     progreso[e.id] = {
       descubierto: true, vecesVisto: 3 + (i % 4), aciertos: 2 + (i % 3), errores: i % 2,
       aciertosSeguidos: i % 4, lapsos: 0, caja: i % 6, ultimoIntento: hoy,

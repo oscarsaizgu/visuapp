@@ -47,10 +47,9 @@ describe('estimación de minutos', () => {
 });
 
 describe('límites e inteligencia del plan', () => {
-  it('no pasa de MAX_NUEVOS_DIA nuevos al día', () => {
+  it('no hay límite diario de ejemplares nuevos', () => {
     const lista = Array.from({ length: 10 }, (_, i) => e(`n${i}`, 'rocas'));
-    expect(planificarSesion(lista, {}, '2026-09-25', 10, 17).nuevos).toHaveLength(3);
-    expect(planificarSesion(lista, {}, '2026-09-25', 10, 25).nuevos).toHaveLength(0);
+    expect(planificarSesion(lista, {}, '2026-09-25', 10).nuevos).toHaveLength(10);
   });
   it('prioriza el retraso relativo al intervalo', () => {
     const lista = [e('caja5', 'rocas'), e('caja1', 'rocas')];

@@ -13,6 +13,8 @@ import { CollectionPage } from '../pages/collection/CollectionPage';
 import { CategoryCollectionPage } from '../pages/collection/CategoryCollectionPage';
 import { ProgressPage } from '../pages/ProgressPage';
 import { NotFoundPage } from '../pages/sections';
+import { LessonPage } from '../pages/route/LessonPage';
+import { RoutePage, WorldPage, SubworldPage } from '../pages/route/RoutePages';
 
 export const router = createBrowserRouter([
   {
@@ -21,10 +23,15 @@ export const router = createBrowserRouter([
     children: [
       // Partida a pantalla completa, sin barra de navegación.
       { path: '/jugar/sesion', element: <SessionPage /> },
+      // Lección (Aprender) a pantalla completa.
+      { path: '/leccion/:id', element: <LessonPage /> },
       {
         element: <AppLayout />,
         children: [
           { path: '/', element: <HomePage /> },
+          { path: '/ruta', element: <RoutePage /> },
+          { path: '/ruta/:mundo', element: <WorldPage /> },
+          { path: '/ruta/:mundo/:categoria', element: <SubworldPage /> },
           { path: '/estudiar', element: <StudyHubPage /> },
           { path: '/estudiar/elegir', element: <ChoosePage /> },
           { path: '/estudiar/repasar', element: <ReviewPage /> },

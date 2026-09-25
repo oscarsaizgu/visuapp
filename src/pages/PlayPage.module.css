@@ -11,3 +11,4 @@
 @media (hover: hover) { .mode:not(.soon):hover { box-shadow: var(--shadow-2); } }
 .soon { opacity: 0.55; cursor: default; }
 .soon .badge { background: var(--paper-2); color: var(--ink-3); }
+.lead { color: var(--ink-2); margin-top: -10px; }

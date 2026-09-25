@@ -1,0 +1,9 @@
+{
+ "_leeme": "Cómo se construye la ruta de aprendizaje a partir del catálogo. El Mundo 1 es el pack indicado en 'primerMundo'. Los siguientes mundos se generan con el resto del catálogo, ordenado por importancia: primero lo que ha salido en examen, luego prioridad A, luego el resto (dentro de cada nivel, en el orden natural de grupos del catálogo). Cada mundo reparte su tamaño entre disciplinas en proporción a lo que queda de cada una, con un mínimo por disciplina mientras quede contenido.",
+ "primerMundo": "piloto",
+ "tamanoMundo": 50,
+ "minPorDisciplina": 3,
+ "leccion": { "min": 3, "max": 6 },
+ "repasoCada": 2,
+ "examen": { "preguntas": 20, "aprobado": 0.75 }
+}

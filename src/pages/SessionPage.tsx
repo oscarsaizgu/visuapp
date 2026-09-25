@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { ArrowCounterClockwise, CircleNotch } from '@phosphor-icons/react';
-import { useGameSession } from '../hooks/useGameSession';
+import { useGameSession, type OrigenSesion } from '../hooks/useGameSession';
 import { ejemplar } from '../content';
 import { CATEGORIA_POR_ID } from '../content/categories';
 import { opcionDesdeEjemplar } from '../logic/optionText';
@@ -20,8 +20,9 @@ import styles from './SessionPage.module.css';
 
 const MODOS: ModoJuego[] = ['opcion-multiple', 'escribir', 'elegir-foto', 'veloz', 'repaso'];
 
-function Partida({ modo, onOtra }: { modo: ModoJuego; onOtra: () => void }) {
-  const { st, pregunta, responder, siguiente, terminar, ocultarFotoActual, entrada } = useGameSession(modo);
+function Partida({ origen, onOtra }: { origen: OrigenSesion; onOtra: () => void }) {
+  const { st, pregunta, responder, siguiente, terminar, ocultarFotoActual, entrada } = useGameSession(origen);
+  const modo = st.modo;
 
   // Atajos de teclado: 1–4 para responder (no en "escribir").
   useEffect(() => {
@@ -49,8 +50,8 @@ function Partida({ modo, onOtra }: { modo: ModoJuego; onOtra: () => void }) {
   if (st.fase === 'vacia') {
     return (
       <div className={styles.center}>
-        <p>{modo === 'repaso' ? 'No tienes nada que repasar ahora mismo. ¡Buen trabajo!' : 'No hay ejemplares con fotos disponibles para este modo.'}</p>
-        <Link to="/jugar" className={styles.back}>Volver a Jugar</Link>
+        <p>{modo === 'repaso' ? 'No tienes nada que repasar ahora mismo. ¡Buen trabajo!' : 'No hay ejemplares con fotos disponibles para esta sesión.'}</p>
+        <Link to={origen.tipo === 'libre' ? '/jugar' : '/'} className={styles.back}>Volver</Link>
       </div>
     );
   }
@@ -133,11 +134,24 @@ function Partida({ modo, onOtra }: { modo: ModoJuego; onOtra: () => void }) {
   );
 }
 
-/** Pantalla de juego a pantalla completa (sin barra de navegación). ?modo= elige el modo. */
-export function SessionPage() {
-  const [params] = useSearchParams();
+/** Lee de la URL de dónde viene la sesión: ruta (lección, repaso, examen), Estudio libre (bloque), refuerzo o modo libre. */
+function origenDesdeUrl(params: URLSearchParams): OrigenSesion {
   const pedido = params.get('modo') as ModoJuego | null;
   const modo = pedido && MODOS.includes(pedido) ? pedido : 'opcion-multiple';
+  const leccion = params.get('leccion'), nodo = params.get('nodo'), examen = params.get('examen');
+  const bloque = params.get('bloque'), refuerzo = params.get('refuerzo');
+  if (leccion) return { tipo: 'leccion', id: leccion };
+  if (nodo) return { tipo: 'repaso-ruta', id: nodo };
+  if (examen) return { tipo: 'examen', mundo: examen };
+  if (bloque) return { tipo: 'bloque', clave: bloque, modo: modo === 'veloz' || modo === 'repaso' ? 'opcion-multiple' : modo };
+  if (refuerzo) return { tipo: 'refuerzo', ids: refuerzo.split(',').filter(Boolean) };
+  return { tipo: 'libre', modo };
+}
+
+/** Pantalla de juego a pantalla completa (sin barra de navegación). */
+export function SessionPage() {
+  const [params] = useSearchParams();
+  const origen = origenDesdeUrl(params);
   const [n, setN] = useState(0);
-  return <div className={styles.shell}><Partida key={`${modo}-${n}`} modo={modo} onOtra={() => setN((x) => x + 1)} /></div>;
+  return <div className={styles.shell}><Partida key={`${JSON.stringify(origen)}-${n}`} origen={origen} onOtra={() => setN((x) => x + 1)} /></div>;
 }

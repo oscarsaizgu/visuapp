@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { BackLink } from './study/BackLink';
 import { ArrowsClockwise, CaretRight, ImagesSquare, Keyboard, ListChecks, Timer } from '@phosphor-icons/react';
 import type { Icon } from '@phosphor-icons/react';
 import { useResumen } from '../hooks/useResumen';
@@ -27,7 +28,9 @@ export function PlayPage() {
   ];
   return (
     <div className={styles.page}>
+      <BackLink />
       <h1 className={`${styles.title} rise`}>Jugar</h1>
+      <p className={styles.lead}>Práctica libre con lo que tienes desbloqueado en la ruta.</p>
       <ContinueHero plan={r.plan} primeraVez={r.coleccion.descubiertos === 0} />
       <section className="rise" style={{ animationDelay: '120ms' }} aria-labelledby="modos-t">
         <h2 id="modos-t" className={styles.h2}>Modos de juego</h2>

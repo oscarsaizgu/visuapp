@@ -10,6 +10,7 @@ import { SpecimenImage } from '../specimen/SpecimenImage';
 import { SpecimenLabel } from '../specimen/SpecimenLabel';
 import { ProgressRing } from '../ui/ProgressRing';
 import { SEGUNDOS_VELOZ } from '../../logic/session';
+import { RouteResult } from './RouteResult';
 import styles from './SessionSummary.module.css';
 
 /** Contador que sube hasta `hasta` (sin animación si se prefiere movimiento reducido). */
@@ -48,7 +49,7 @@ export function SessionSummary({ st, onOtra }: { st: EstadoPartida; onOtra: () =
       <header className={`${styles.hero} rise`}>
         <Trophy size={44} weight="duotone" className={styles.trophy} aria-hidden="true" />
         <h1 className={styles.title}>
-          {st.modo === 'veloz' ? '¡Tiempo!' : st.modo === 'repaso' ? 'Repaso completado' : st.practica ? 'Práctica completada' : perfecta ? '¡Sesión perfecta!' : '¡Sesión completada!'}
+          {st.origen.tipo === 'examen' ? 'Examen terminado' : st.origen.tipo === 'leccion' ? '¡Lección terminada!' : st.modo === 'veloz' ? '¡Tiempo!' : st.modo === 'repaso' || st.origen.tipo === 'repaso-ruta' ? 'Repaso completado' : st.practica ? 'Práctica completada' : perfecta ? '¡Sesión perfecta!' : '¡Sesión completada!'}
         </h1>
         <p className={styles.xp} aria-label={`${st.xpSesion} XP ganados`}>+{xp} <span>XP</span></p>
         <ul className={styles.stats}>
@@ -59,6 +60,8 @@ export function SessionSummary({ st, onOtra }: { st: EstadoPartida; onOtra: () =
           <li><strong>+{st.xpFin}</strong> por terminar{perfecta ? ' (perfecta)' : ''}</li>
         </ul>
       </header>
+
+      <RouteResult st={st} />
 
       {nivel.nivel > st.nivelInicial && (
         <div className={`${styles.levelUp} rise`} style={{ animationDelay: '120ms' }}>
@@ -122,7 +125,7 @@ export function SessionSummary({ st, onOtra }: { st: EstadoPartida; onOtra: () =
       )}
 
       <div className={styles.actions}>
-        <button type="button" className={styles.primary} onClick={onOtra}><ArrowCounterClockwise size={20} weight="bold" aria-hidden="true" /> Otra sesión</button>
+        <button type="button" className={styles.primary} onClick={onOtra}><ArrowCounterClockwise size={20} weight="bold" aria-hidden="true" /> {st.origen.tipo === 'libre' || st.origen.tipo === 'bloque' ? 'Otra sesión' : 'Repetir'}</button>
         <Link to="/" className={styles.secondary}><House size={20} weight="bold" aria-hidden="true" /> Volver al inicio</Link>
       </div>
     </div>

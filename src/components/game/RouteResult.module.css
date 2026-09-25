@@ -1,0 +1,12 @@
+.box { display: grid; justify-items: center; gap: 6px; text-align: center; padding: 20px 18px; border-radius: var(--r-xl); box-shadow: var(--shadow-1); }
+.ok { background: color-mix(in srgb, var(--ok) 12%, var(--card)); }
+.pending { background: color-mix(in srgb, var(--reward) 18%, var(--card)); }
+.box h2 { font-family: var(--font-display); font-weight: 600; font-size: 28px; letter-spacing: -0.02em; }
+.box p { color: var(--ink-2); }
+.note { max-width: 46ch; font-size: 14px; }
+.stars { display: flex; gap: 4px; color: var(--reward); animation: pop 520ms var(--ease-spring) both; }
+@keyframes pop { from { transform: scale(0.4); opacity: 0; } to { transform: none; opacity: 1; } }
+.actions { display: grid; gap: 8px; width: 100%; max-width: 420px; margin-top: 8px; }
+.primary, .secondary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 0 16px; border-radius: 16px; font-weight: 850; }
+.primary { background: var(--reward); color: var(--reward-ink); box-shadow: 0 4px 0 #c77f12; }
+.secondary { background: var(--card); color: var(--ink); box-shadow: var(--shadow-1); }

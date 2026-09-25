@@ -1,7 +1,8 @@
 import { useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CaretRight, DownloadSimple, Flame, Lock, Trash, UploadSimple } from '@phosphor-icons/react';
-import { EJEMPLARES, categoriasActivas, ejemplaresDe } from '../content';
+import { CATALOGO, categoriasCon, ejemplaresDe } from '../content';
+import { useActivos } from '../hooks/useActivos';
 import { insigniasVisibles } from '../content/achievements';
 import { useProgressStore } from '../store/useProgressStore';
 import { claveDia, rachaVigente } from '../logic/daily';
@@ -25,15 +26,16 @@ function ultimosDias(n: number): string[] {
 
 export function ProgressPage() {
   const s = useProgressStore();
+  const activos = useActivos();
   const [confirmar, setConfirmar] = useState(false);
   const [aviso, setAviso] = useState<string | null>(null);
   const fichero = useRef<HTMLInputElement>(null);
   const hoy = claveDia();
 
   const d = useMemo(() => {
-    const snap = construirSnapshot(EJEMPLARES, s.progreso, s.perfil, s.estadisticas);
-    const categorias = categoriasActivas().map((c) => {
-      const lista = ejemplaresDe(c.id);
+    const snap = construirSnapshot(activos, s.progreso, s.perfil, s.estadisticas, s.ruta);
+    const categorias = categoriasCon(activos).map((c) => {
+      const lista = ejemplaresDe(c.id, activos);
       const ids = lista.map((e) => e.id);
       const aciertos = lista.reduce((n, e) => n + (s.progreso[e.id]?.aciertos ?? 0), 0);
       const errores = lista.reduce((n, e) => n + (s.progreso[e.id]?.errores ?? 0), 0);
@@ -46,10 +48,10 @@ export function ProgressPage() {
       fuerte: conDatos[0]?.id,
       debil: conDatos.length > 1 ? conDatos.at(-1)!.id : undefined,
       dias: ultimosDias(14).map((dia) => ({ dia, datos: s.estadisticas.porDia[dia] })),
-      repaso: listaRepaso(EJEMPLARES, s.progreso, hoy),
+      repaso: listaRepaso(CATALOGO.filter((e) => s.progreso[e.id]), s.progreso, hoy),
       insignias: insigniasVisibles(snap),
     };
-  }, [s.progreso, s.perfil, s.estadisticas, hoy]);
+  }, [s.progreso, s.perfil, s.estadisticas, s.ruta, activos, hoy]);
 
   const nivel = nivelDesdeXp(s.perfil.xp);
   const e = s.estadisticas;
@@ -82,7 +84,7 @@ export function ProgressPage() {
         <li><strong>{e.respuestas}</strong><span>identificaciones</span></li>
         <li><strong>{precision === null ? '—' : `${precision}%`}</strong><span>de aciertos a la primera</span></li>
         <li><strong>{formatoTiempo(e.tiempoMs)}</strong><span>de estudio en el juego</span></li>
-        <li><strong>{d.snap.estudiados}<small>/{d.snap.totalActivos}</small></strong><span>ejemplares practicados</span></li>
+        <li><strong>{d.snap.estudiados}<small>/{d.snap.totalActivos}</small></strong><span>practicados (de lo desbloqueado)</span></li>
         <li><strong>{d.snap.dominados}</strong><span>dominados</span></li>
         <li><strong>{e.sesiones}</strong><span>sesiones · {e.sesionesPerfectas} perfectas</span></li>
         <li><strong>×{e.comboMax}</strong><span>mejor combo · Veloz {e.velozMejor}</span></li>
@@ -97,7 +99,7 @@ export function ProgressPage() {
       </div>
 
       <section className={styles.card} aria-labelledby="cat-t">
-        <h2 id="cat-t" className={styles.h2}>Por categoría</h2>
+        <h2 id="cat-t" className={styles.h2}>Por categoría · mundos abiertos</h2>
         <ul className={styles.cats}>
           {d.categorias.map((c) => {
             const Ico = c.icono;

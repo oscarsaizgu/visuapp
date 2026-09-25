@@ -24,7 +24,7 @@ export function MasteryCard({ medio, distribucion, dominados, total, porDominio 
           <h2 id="mastery-title" className={styles.title}>Dominio</h2>
           <p className={styles.big}>{pct(medio)}<span>%</span></p>
         </div>
-        <p className={styles.masteryCount}><strong>{dominados}</strong> de {total}<br />dominados</p>
+        <p className={styles.masteryCount}><strong>{dominados}</strong> de {total}<br />desbloqueados dominados</p>
       </div>
       <MasteryBar distribucion={distribucion} alto={12} />
       <ul className={styles.legend}>

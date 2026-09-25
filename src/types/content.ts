@@ -67,3 +67,34 @@ export interface GameContent {
   packs: PackActivo[];
   ejemplares: Ejemplar[];
 }
+
+// ---------- Ruta de aprendizaje ----------
+
+export interface NodoRuta {
+  id: string;
+  tipo: 'leccion' | 'repaso';
+  titulo: string;
+  ejemplares: string[];
+}
+
+export interface Submundo {
+  id: string;
+  categoria: CategoriaId;
+  total: number;
+  nodos: NodoRuta[];
+}
+
+export interface Mundo {
+  id: string;
+  numero: number;
+  total: number;
+  submundos: Submundo[];
+  examen: { preguntas: number };
+}
+
+export interface Ruta {
+  version: number;
+  config: { aprobado: number };
+  catalogo: { ejemplares: number; fotos: number; enRuta: number; fueraDeRuta: number };
+  mundos: Mundo[];
+}

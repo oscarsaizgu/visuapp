@@ -65,3 +65,15 @@ export interface Logros {
   /** día → ids de los retos completados ese día. */
   retos: Record<string, string[]>;
 }
+
+/** Progreso en la ruta de aprendizaje. */
+export interface ProgresoRuta {
+  /** Lecciones: cuándo se estudiaron (Aprender) y resultado de la práctica (Identifica). */
+  lecciones: Record<string, { aprendida?: string; completada?: string; mejor: number }>;
+  /** Repasos hechos (no hace falta aprobarlos para seguir). */
+  repasos: Record<string, { fecha: string; mejor: number }>;
+  /** Exámenes de mundo: el siguiente mundo se abre al superarlo. */
+  examenes: Record<string, { intentos: number; mejor: number; superado?: string }>;
+  /** Último submundo en el que se trabajó (para "Continuar"). */
+  ultimoSubmundo: string | null;
+}

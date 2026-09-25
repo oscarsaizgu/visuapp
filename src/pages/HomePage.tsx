@@ -1,6 +1,6 @@
 import { useResumen } from '../hooks/useResumen';
 import { HomeHeader } from '../components/home/HomeHeader';
-import { ContinueHero } from '../components/home/ContinueHero';
+import { RouteHero } from '../components/home/RouteHero';
 import { DailyGoalCard } from '../components/home/DailyGoalCard';
 import { MasteryCard } from '../components/home/MasteryCard';
 import { SpecimenOfDay } from '../components/home/SpecimenOfDay';
@@ -15,7 +15,7 @@ export function HomePage() {
       <HomeHeader nivel={r.nivel} rango={r.rango} xp={r.xp} racha={r.racha} />
       <div className={styles.grid}>
         <div className={styles.hero}>
-          <ContinueHero plan={r.plan} primeraVez={r.coleccion.descubiertos === 0} />
+          <RouteHero siguiente={r.siguiente} repasos={r.plan.repasos.length} />
         </div>
         <div className={styles.goal}>
           <DailyGoalCard hechas={r.hechasHoy} objetivo={r.objetivo} racha={r.racha} />
@@ -25,7 +25,7 @@ export function HomePage() {
         </div>
         <div className={styles.mastery}>
           <MasteryCard medio={r.dominio.medio} distribucion={r.dominio.distribucion} dominados={r.dominio.dominados}
-            total={r.coleccion.total} porDominio={r.dominio.porDominio} />
+            total={r.dominio.total} porDominio={r.dominio.porDominio} />
         </div>
         {r.delDia && (
           <div className={styles.sod}>
@@ -33,7 +33,7 @@ export function HomePage() {
           </div>
         )}
       </div>
-      <CollectionSection categorias={r.categorias} descubiertos={r.coleccion.descubiertos} total={r.coleccion.total} packs={r.coleccion.packs} />
+      <CollectionSection categorias={r.categorias} descubiertos={r.coleccion.descubiertos} total={r.coleccion.total} packs={['catálogo completo']} />
     </div>
   );
 }

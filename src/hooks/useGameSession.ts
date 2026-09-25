@@ -1,21 +1,39 @@
 // Estado de una partida de identificación (cualquier modo).
 // Cada respuesta se guarda al momento: si sales a mitad, no pierdes lo hecho.
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { EJEMPLARES, ejemplar, fotosJugables } from '../content';
-import { useProgressStore } from '../store/useProgressStore';
+import { CATALOGO, ejemplar, ejemplaresDesbloqueados, ejemplaresPorIds, fotosJugables, mundo, nodoRuta } from '../content';
+import { superados, useProgressStore } from '../store/useProgressStore';
 import { claveDia } from '../logic/daily';
 import { nivelDesdeXp } from '../logic/levels';
 import { crearRng } from '../logic/rng';
-import { crearPregunta, crearSesion, SEGUNDOS_VELOZ, type Contexto } from '../logic/session';
+import { crearExamen, crearPregunta, crearSesion, crearSesionLista, peorDominados, SEGUNDOS_VELOZ, type Contexto } from '../logic/session';
+import { planificarSesion, TAMANO_SESION } from '../logic/sessionPlan';
 import { xpFinSesion, xpPorRespuesta } from '../logic/xp';
 import { comprobarEscrito } from '../logic/answerMatch';
 import type { ModoJuego, Pregunta, Respuesta } from '../types/game';
+import type { Ejemplar } from '../types/content';
 import { cargarIndice } from './useNameIndex';
 
 export type Fase = 'cargando' | 'pregunta' | 'feedback' | 'fin' | 'vacia';
 
+/** De dónde viene la sesión. */
+export type OrigenSesion =
+  | { tipo: 'libre'; modo: ModoJuego }
+  | { tipo: 'bloque'; clave: string; modo: ModoJuego }
+  | { tipo: 'leccion'; id: string }
+  | { tipo: 'repaso-ruta'; id: string }
+  | { tipo: 'examen'; mundo: string }
+  | { tipo: 'refuerzo'; ids: string[] };
+
+/** Resultado para la ruta (se muestra en el resumen). */
+export interface ResultadoRuta { aciertos: number; total: number; aprobado?: boolean }
+
 export interface EstadoPartida {
   modo: ModoJuego;
+  origen: OrigenSesion;
+  /** Repasos de la ruta y exámenes: cada ejemplar se pregunta una vez, sin segunda oportunidad. */
+  sinReintentos: boolean;
+  resultado: ResultadoRuta | null;
   fase: Fase;
   preguntas: Pregunta[];
   i: number;
@@ -33,13 +51,17 @@ export interface EstadoPartida {
   finVeloz: number | null;
 }
 
-const inicial = (modo: ModoJuego): EstadoPartida => ({
-  modo, fase: 'cargando', preguntas: [], i: 0, respuestas: [], combo: 0, comboMax: 0, xpSesion: 0,
+const modoDe = (o: OrigenSesion): ModoJuego => (o.tipo === 'libre' || o.tipo === 'bloque' ? o.modo : 'opcion-multiple');
+
+const inicial = (origen: OrigenSesion): EstadoPartida => ({
+  modo: modoDe(origen), origen, sinReintentos: origen.tipo === 'repaso-ruta' || origen.tipo === 'examen', resultado: null, fase: 'cargando', preguntas: [], i: 0, respuestas: [], combo: 0, comboMax: 0, xpSesion: 0,
   xpUltima: 0, subioNivelUltima: false, practica: false, descubiertos: [], nivelInicial: 1, xpFin: 0, finVeloz: null,
 });
 
-export function useGameSession(modo: ModoJuego) {
-  const [st, setSt] = useState<EstadoPartida>(() => inicial(modo));
+export function useGameSession(origen: OrigenSesion) {
+  const [st, setSt] = useState<EstadoPartida>(() => inicial(origen));
+  const modo = modoDe(origen);
+  const claveOrigen = JSON.stringify(origen);
   // Copia síncrona del estado para los manejadores (se actualiza siempre a través de commit).
   const ref = useRef(st);
   const commit = useCallback((nuevo: EstadoPartida) => { ref.current = nuevo; setSt(nuevo); }, []);
@@ -52,24 +74,58 @@ export function useGameSession(modo: ModoJuego) {
       if (!vivo) return;
       const s = useProgressStore.getState();
       const hoy = claveDia();
+      const o = JSON.parse(claveOrigen) as OrigenSesion;
+      const activos = ejemplaresDesbloqueados(superados(s.ruta));
       ctx.current = {
         progreso: s.progreso,
         indice,
         porId: new Map(indice.map((x) => [x.id, x])),
         rng: crearRng(Date.now()),
         ocultas: new Set(s.fotosOcultas),
-        activos: EJEMPLARES,
+        // Fotos para "Elegir la foto": de lo desbloqueado; si hace falta, del catálogo.
+        activos: activos.length >= 4 ? activos : CATALOGO,
       };
-      const { preguntas, practica } = crearSesion(EJEMPLARES, ctx.current, hoy, modo, s.estadisticas.porDia[hoy]?.nuevos ?? 0);
+      const c = ctx.current;
+      let preguntas: Pregunta[] = [];
+      let practica = false;
+      if (o.tipo === 'libre') {
+        ({ preguntas, practica } = crearSesion(activos, c, hoy, o.modo));
+      } else if (o.tipo === 'bloque') {
+        // Estudio libre: un bloque del catálogo (disciplina o disciplina|grupo), con el plan de repaso.
+        const [cat, album] = o.clave.split('|');
+        const lista = CATALOGO.filter((e) => e.categoria === cat && (!album || e.album === album));
+        c.activos = lista.length >= 4 ? lista : c.activos;
+        const plan = planificarSesion(lista, s.progreso, hoy, TAMANO_SESION);
+        let elegidos: Ejemplar[] = ejemplaresPorIds(plan.ejemplares);
+        if (!elegidos.length) practica = true;
+        // Siempre una sesión completa si el bloque da para ello: se rellena con lo menos dominado.
+        if (elegidos.length < TAMANO_SESION) {
+          const ya = new Set(elegidos.map((e) => e.id));
+          elegidos = [...elegidos, ...peorDominados(lista.filter((e) => !ya.has(e.id)), c, TAMANO_SESION - elegidos.length)];
+        }
+        preguntas = crearSesionLista(elegidos, c, [o.modo], { pendiente: !practica });
+      } else if (o.tipo === 'leccion') {
+        // Lección: cada ejemplar dos veces, primero reconociendo el nombre y luego eligiendo su foto.
+        const info = nodoRuta(o.id);
+        preguntas = info ? crearSesionLista(ejemplaresPorIds(info.nodo.ejemplares), c, ['opcion-multiple', 'elegir-foto']) : [];
+      } else if (o.tipo === 'repaso-ruta') {
+        const info = nodoRuta(o.id);
+        preguntas = info ? crearSesionLista(peorDominados(ejemplaresPorIds(info.nodo.ejemplares), c, TAMANO_SESION), c, ['opcion-multiple']) : [];
+      } else if (o.tipo === 'examen') {
+        const m = mundo(o.mundo);
+        preguntas = m ? crearExamen(m.submundos.map((sm) => ({ ejemplares: ejemplaresPorIds(sm.nodos.filter((n) => n.tipo === 'leccion').flatMap((n) => n.ejemplares)) })), c, m.examen.preguntas) : [];
+      } else {
+        preguntas = crearSesionLista(ejemplaresPorIds(o.ids).slice(0, TAMANO_SESION), c, ['opcion-multiple']);
+      }
       t0.current = performance.now();
       commit({
-        ...inicial(modo), fase: preguntas.length ? 'pregunta' : 'vacia', preguntas, practica,
+        ...inicial(o), fase: preguntas.length ? 'pregunta' : 'vacia', preguntas, practica,
         nivelInicial: nivelDesdeXp(s.perfil.xp).nivel,
         finVeloz: modo === 'veloz' ? performance.now() + SEGUNDOS_VELOZ * 1000 : null,
       });
     });
     return () => { vivo = false; };
-  }, [commit, modo]);
+  }, [commit, modo, claveOrigen]);
 
   const terminar = useCallback(() => {
     const s = ref.current;
@@ -77,10 +133,20 @@ export function useGameSession(modo: ModoJuego) {
     const primeras = s.respuestas.filter((r) => !r.reintento);
     const perfecta = s.modo !== 'veloz' && primeras.length > 0 && primeras.every((r) => r.ok);
     const xpFin = s.respuestas.length ? xpFinSesion(perfecta) : 0;
-    useProgressStore.getState().registrarSesion({
+    const store = useProgressStore.getState();
+    store.registrarSesion({
       perfecta, xp: xpFin, veloz: s.modo === 'veloz' ? primeras.filter((r) => r.ok).length : undefined,
     });
-    commit({ ...s, fase: 'fin', xpFin, xpSesion: s.xpSesion + xpFin });
+    // Ruta: registrar la lección, el repaso o el examen. Nunca se pierde nada por fallar.
+    let resultado: ResultadoRuta | null = null;
+    const aciertos = primeras.filter((r) => r.ok).length;
+    if (s.origen.tipo === 'leccion' || s.origen.tipo === 'repaso-ruta') {
+      store.completarNodo(s.origen.id, aciertos, primeras.length);
+      resultado = { aciertos, total: primeras.length };
+    } else if (s.origen.tipo === 'examen') {
+      resultado = { aciertos, total: primeras.length, aprobado: store.registrarExamen(s.origen.mundo, aciertos, primeras.length) };
+    }
+    commit({ ...s, fase: 'fin', xpFin, xpSesion: s.xpSesion + xpFin, resultado });
   }, [commit]);
 
   /** @param valor id de la opción elegida o, en "escribir", el texto escrito. */
@@ -109,7 +175,7 @@ export function useGameSession(modo: ModoJuego) {
     });
 
     let preguntas = s.preguntas;
-    if (!ok && !q.reintento && q.modo !== 'veloz') {
+    if (!ok && !q.reintento && q.modo !== 'veloz' && !s.sinReintentos) {
       // Lo fallado vuelve al final de la sesión, con otra foto si la hay.
       ctx.current.progreso = useProgressStore.getState().progreso;
       const otra = crearPregunta(e, ctx.current, { modo: q.modo, reintento: true, pendiente: q.pendiente, evitarImagen: q.imagen.id, n: s.i });
