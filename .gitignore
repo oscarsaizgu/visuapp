@@ -22,8 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# Fotos del catálogo (material fotográfico de terceros).
-# NO se suben mientras el repositorio sea público. Se regeneran con:
-#   npm run import-catalog -- <ruta a Visu-Oposicion>
-/public/img/
