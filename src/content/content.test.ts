@@ -4,8 +4,10 @@ import { CATALOGO, RUTA, categoriasCon, ejemplaresDesbloqueados, idsDeMundo } fr
 describe('catálogo completo', () => {
   it('están los 3.132 ejemplares importados y todos tienen fotos de ficha', () => {
     expect(CATALOGO).toHaveLength(3132);
-    expect(RUTA.catalogo).toMatchObject({ ejemplares: 3132, fotos: 9657 });
-    expect(CATALOGO.reduce((n, e) => n + e.imagenes.length, 0)).toBeLessThanOrEqual(9657);
+    // 9.657 fotos del catálogo original + las externas con licencia añadidas en la curación.
+    expect(RUTA.catalogo.ejemplares).toBe(3132);
+    expect(RUTA.catalogo.fotos).toBeGreaterThanOrEqual(9657);
+    expect(CATALOGO.reduce((n, e) => n + e.imagenes.length, 0)).toBeLessThanOrEqual(RUTA.catalogo.fotos);
     for (const e of CATALOGO) expect(e.imagenes.length, e.id).toBeGreaterThan(0);
   });
   it('todo ejemplar de la ruta tiene al menos una foto para jugar', () => {
@@ -13,7 +15,7 @@ describe('catálogo completo', () => {
     for (const m of RUTA.mundos) for (const id of idsDeMundo(m)) expect(porId.get(id)!.imagenes.some((i) => i.juego), id).toBe(true);
   });
   it('ninguna foto que da pistas, rotulada o ilustración se usa para jugar', () => {
-    const bloqueantes = ['da-pistas', 'rotulada', 'ilustracion', 'calidad'];
+    const bloqueantes = ['da-pistas', 'rotulada', 'ilustracion', 'calidad', 'otra-especie', 'sin-contenido', 'archivo-danado', 'taxon-dudoso'];
     for (const e of CATALOGO)
       for (const i of e.imagenes)
         if (i.marcas.some((m) => bloqueantes.includes(m))) expect(i.juego, i.id).toBe(false);

@@ -29,9 +29,9 @@ describe('respuesta escrita', () => {
   it('tolerancia según longitud', () => {
     expect([tolerancia(4), tolerancia(8), tolerancia(20)]).toEqual([0, 1, 2]);
   });
-  it('acepta científico o común, sin tildes/mayúsculas y con erratas pequeñas', () => {
+  it('pide el nombre científico: sin tildes/mayúsculas y con erratas pequeñas; el común no vale', () => {
     expect(comprobarEscrito('chioglossa lusitanica', salamandra)).toMatchObject({ ok: true, exacto: true });
-    expect(comprobarEscrito('SALAMANDRA RABILARGA', salamandra)).toMatchObject({ ok: true, exacto: true });
+    expect(comprobarEscrito('SALAMANDRA RABILARGA', salamandra)).toMatchObject({ ok: false, comun: true, esperado: 'Chioglossa lusitanica' });
     expect(comprobarEscrito('Chioglosa lusitanica', salamandra)).toMatchObject({ ok: true, exacto: false, esperado: 'Chioglossa lusitanica' });
     expect(comprobarEscrito('Salamandra salamandra', salamandra).ok).toBe(false);
     expect(comprobarEscrito('   ', salamandra).ok).toBe(false);

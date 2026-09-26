@@ -70,7 +70,16 @@ function Partida({ origen, onOtra }: { origen: OrigenSesion; onOtra: () => void 
     else if (esFoto) { const x = ejemplar(respuesta.elegida); elegida = x && opcionDesdeEjemplar(x); }
     else elegida = pregunta.opciones.find((o) => o.id === respuesta.elegida);
   }
-  const nota = respuesta?.casi ? `Aceptado con una errata. Se escribe: ${opcionDesdeEjemplar(e).texto}.` : undefined;
+  // La nutria solo aparece en momentos puntuales: al llegar a 5 o 10 seguidas, o al segundo fallo seguido.
+  const [previa, antes] = [st.respuestas.at(-2), st.respuestas.at(-3)];
+  const segundoFalloSeguido = !!respuesta && !respuesta.ok && !!previa && !previa.ok && (!antes || antes.ok);
+  const nutria = !respuesta || st.modo === 'veloz' ? undefined
+    : respuesta.ok && (st.combo === 5 || st.combo === 10) ? { pose: 'celebra' as const, texto: `¡${st.combo} seguidas! Ya no adivinas: reconoces.` }
+      : segundoFalloSeguido ? { pose: 'animo' as const, texto: 'Dos seguidas: es normal mientras aprendes. Antes de responder, busca los rasgos clave de la ficha.' }
+        : undefined;
+  const nota = respuesta?.comun
+    ? `Ese es el nombre común. Aquí se pide el científico: ${opcionDesdeEjemplar(e).texto}.`
+    : respuesta?.casi ? `Aceptado con una errata. Se escribe: ${opcionDesdeEjemplar(e).texto}.` : undefined;
 
   return (
     <div className={`${styles.page} ${respuesta && st.modo !== 'veloz' ? styles.withSheet : ''}`}>
@@ -121,6 +130,8 @@ function Partida({ origen, onOtra }: { origen: OrigenSesion; onOtra: () => void 
           etiquetaElegida={esEscribir ? 'Escribiste' : 'Marcaste'}
           entradaElegida={respuesta.ok || esEscribir ? undefined : entrada(respuesta.elegida)}
           nota={nota}
+          credito={pregunta.imagen.credito}
+          nutria={nutria}
           xp={st.xpUltima}
           combo={st.combo}
           subioNivel={st.subioNivelUltima}

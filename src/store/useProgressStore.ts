@@ -26,6 +26,8 @@ export interface RespuestaJuego {
   fotosJugables: number;
   modo: string;
   combo: number;
+  /** Si falló: el ejemplar que eligió en su lugar (opción o foto). */
+  confundidoCon?: string;
 }
 
 /** Aviso para celebrar en pantalla (insignia o reto). */
@@ -39,6 +41,8 @@ export interface ProgressState {
   estadisticas: Estadisticas;
   logros: Logros;
   ruta: ProgresoRuta;
+  /** Nombres que confundes: ejemplar → { ejemplar que elegiste en su lugar → veces }. Los repasos los usan como distractores. */
+  confusiones: Record<string, Record<string, number>>;
   /** Cola de celebraciones pendientes de mostrar (no se guarda). */
   celebraciones: Celebracion[];
   registrarRespuesta: (r: RespuestaJuego) => { xp: number; subioNivel: boolean };
@@ -75,7 +79,7 @@ export const RUTA_INICIAL: ProgresoRuta = { lecciones: {}, repasos: {}, examenes
 /** Mundos superados (para saber qué está desbloqueado). */
 export const superados = (r: ProgresoRuta) => Object.fromEntries(Object.entries(r.examenes).filter(([, x]) => x.superado).map(([id]) => [id, true]));
 
-type Guardable = Pick<ProgressState, 'perfil' | 'progreso' | 'fotosOcultas' | 'estadisticas' | 'logros' | 'ruta'>;
+type Guardable = Pick<ProgressState, 'perfil' | 'progreso' | 'fotosOcultas' | 'estadisticas' | 'logros' | 'ruta' | 'confusiones'>;
 
 /**
  * Tras cualquier cambio: comprueba insignias y retos nuevos, suma la XP de los retos
@@ -129,7 +133,16 @@ export function migrarProgreso(persisted: unknown, version: number): Guardable {
     estadisticas: version < 2 || !p.estadisticas ? estadisticasDesdeV1(perfil, progreso) : p.estadisticas,
     logros: p.logros ?? LOGROS_INICIALES,
     ruta: p.ruta ?? RUTA_INICIAL,
+    // v3 → v4: confusiones entre nombres.
+    confusiones: p.confusiones ?? {},
   };
+}
+
+/** Suma una confusión (máximo 8 por ejemplar, se quedan las más frecuentes). */
+export function sumarConfusion(c: Record<string, Record<string, number>>, id: string, con: string): Record<string, Record<string, number>> {
+  const actual = { ...(c[id] ?? {}), [con]: (c[id]?.[con] ?? 0) + 1 };
+  const top = Object.fromEntries(Object.entries(actual).sort((a, b) => b[1] - a[1]).slice(0, 8));
+  return { ...c, [id]: top };
 }
 
 export const useProgressStore = create<ProgressState>()(
@@ -141,6 +154,7 @@ export const useProgressStore = create<ProgressState>()(
       estadisticas: estadisticasVacias(),
       logros: LOGROS_INICIALES,
       ruta: RUTA_INICIAL,
+      confusiones: {},
       celebraciones: [],
       registrarRespuesta: (r) => {
         const hoy = claveDia();
@@ -162,7 +176,9 @@ export const useProgressStore = create<ProgressState>()(
             nuevo: cuentaParaCaja && (!antes || antes.vecesVisto === 0),
           }),
         };
-        set({ progreso: base.progreso, perfil: base.perfil, estadisticas: base.estadisticas, ...conLogros(base) });
+        const confusiones = !r.ok && r.confundidoCon && r.confundidoCon !== r.ejemplarId
+          ? sumarConfusion(s.confusiones, r.ejemplarId, r.confundidoCon) : s.confusiones;
+        set({ progreso: base.progreso, perfil: base.perfil, estadisticas: base.estadisticas, confusiones, ...conLogros(base) });
         return { xp, subioNivel };
       },
       registrarSesion: ({ perfecta, xp, veloz }) => {
@@ -246,18 +262,19 @@ export const useProgressStore = create<ProgressState>()(
           estadisticas: st.estadisticas ?? estadisticasDesdeV1({ ...PERFIL_INICIAL, ...st.perfil }, st.progreso),
           logros: st.logros ?? LOGROS_INICIALES,
           ruta: st.ruta ?? RUTA_INICIAL,
+          confusiones: st.confusiones ?? {},
           celebraciones: [],
         });
         get().revisarLogros(true);
         return true;
       },
-      reiniciar: () => set({ perfil: PERFIL_INICIAL, progreso: {}, fotosOcultas: [], estadisticas: estadisticasVacias(), logros: LOGROS_INICIALES, ruta: RUTA_INICIAL, celebraciones: [] }),
+      reiniciar: () => set({ perfil: PERFIL_INICIAL, progreso: {}, fotosOcultas: [], estadisticas: estadisticasVacias(), logros: LOGROS_INICIALES, ruta: RUTA_INICIAL, confusiones: {}, celebraciones: [] }),
     }),
     {
       name: 'visu-game:progreso',
-      version: 3,
+      version: 4,
       storage: createJSONStorage(() => localStorage),
-      partialize: (s): Guardable => ({ perfil: s.perfil, progreso: s.progreso, fotosOcultas: s.fotosOcultas, estadisticas: s.estadisticas, logros: s.logros, ruta: s.ruta }),
+      partialize: (s): Guardable => ({ perfil: s.perfil, progreso: s.progreso, fotosOcultas: s.fotosOcultas, estadisticas: s.estadisticas, logros: s.logros, ruta: s.ruta, confusiones: s.confusiones }),
       migrate: migrarProgreso,
     },
   ),

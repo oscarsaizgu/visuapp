@@ -10,19 +10,18 @@ interface Props {
 }
 
 /**
- * Etiqueta de espécimen: nombre principal y nombre científico SIEMPRE en líneas
- * separadas, con tipografía y color distintos.
+ * Etiqueta de espécimen. Si hay nombre científico, es lo que se aprende: va en grande y en
+ * cursiva, y el nombre común queda debajo como apoyo. Siempre en líneas separadas.
  */
 export function SpecimenLabel({ nombre, kicker, size = 'md', invert = false }: Props) {
-  const principalCientifico = nombre.formato === 'cientifico';
-  const secundario = !principalCientifico && nombre.cientifico && nombre.cientifico !== nombre.principal
-    ? nombre.cientifico
-    : undefined;
+  const cientifico = nombre.formato === 'cientifico' ? nombre.principal : nombre.cientifico;
+  const grande = cientifico ?? nombre.principal;
+  const apoyo = cientifico && nombre.principal !== cientifico ? nombre.principal : undefined;
   return (
     <div className={`${styles.label} ${styles[size]} ${invert ? styles.invert : ''}`}>
       {kicker && <span className={styles.kicker}>{kicker}</span>}
-      <span className={`${styles.principal} ${principalCientifico ? 'sci' : ''}`}>{nombre.principal}</span>
-      {secundario && <span className={`${styles.secundario} sci`}>{secundario}</span>}
+      <span className={`${styles.principal} ${cientifico ? 'sci' : ''}`}>{grande}</span>
+      {apoyo && <span className={styles.secundario}>{apoyo}</span>}
     </div>
   );
 }

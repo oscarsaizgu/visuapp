@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, CheckCircle, Flag, Sparkle, XCircle } from '@phosphor-icons/react';
-import type { Ejemplar } from '../../types/content';
+import type { Credito, Ejemplar } from '../../types/content';
 import type { EntradaIndice, Opcion } from '../../types/game';
 import { SpecimenLabel } from '../specimen/SpecimenLabel';
 import { CATEGORIA_POR_ID } from '../../content/categories';
 import { clasificacion, comparacion } from '../../logic/feedback';
 import { bonusCombo, XP } from '../../logic/xp';
+import { NutriaDice } from '../nutria/NutriaDice';
+import type { PoseNutria } from '../nutria/Nutria';
 import styles from './FeedbackSheet.module.css';
 
 interface Props {
@@ -22,6 +24,10 @@ interface Props {
   etiquetaElegida?: string;
   /** Aviso extra (p. ej. acierto con errata en "escribir"). */
   nota?: string;
+  /** Crédito de la foto de la pregunta (fotos con licencia libre). */
+  credito?: Credito;
+  /** Mensaje puntual de la nutria (racha o fallos seguidos). */
+  nutria?: { pose: PoseNutria; texto: string };
   onSiguiente: () => void;
   onOcultarFoto: () => void;
 }
@@ -55,6 +61,8 @@ export function FeedbackSheet(p: Props) {
 
         {p.nota && <p className={styles.nota}>{p.nota}</p>}
 
+        {p.nutria && <NutriaDice pose={p.nutria.pose} size={60}>{p.nutria.texto}</NutriaDice>}
+
         <dl className={styles.why}>
           {!p.ok && p.elegida && (
             <div>
@@ -68,6 +76,12 @@ export function FeedbackSheet(p: Props) {
           {e.rasgos && <div><dt>Rasgos clave</dt><dd>{e.rasgos}</dd></div>}
           <div><dt>Clasificación</dt><dd>{clasificacion(e)}</dd></div>
         </dl>
+
+        {p.credito && (
+          <p className={styles.credit}>
+            Foto: {p.credito.autor} · {p.credito.url ? <a href={p.credito.url} target="_blank" rel="noreferrer">{p.credito.licencia}</a> : p.credito.licencia} · {p.credito.fuente}
+          </p>
+        )}
 
         {!p.ok && !p.reintento && <p className={styles.again}>Te lo volveré a preguntar al final de la sesión.</p>}
 

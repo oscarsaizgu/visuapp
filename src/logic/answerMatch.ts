@@ -28,11 +28,27 @@ export interface ResultadoEscrito {
   exacto: boolean;
   /** Nombre aceptado más cercano a lo escrito. */
   esperado: string;
+  /** Ha escrito el nombre común cuando se pedía el científico. */
+  comun?: boolean;
 }
 
+/** Nombres comunes de un ejemplar con nombre científico (no valen como respuesta escrita). */
+function nombresComunes(e: Ejemplar): Set<string> {
+  if (!e.nombre.cientifico) return new Set();
+  const comunes = [e.nombre.comun, e.nombre.formato === 'comun' ? e.nombre.principal : undefined];
+  return new Set(comunes.filter((x): x is string => !!x && limpiar(x) !== limpiar(e.nombre.cientifico!)).map(limpiar));
+}
+
+/**
+ * En biología se pide el NOMBRE CIENTÍFICO: el común no cuenta como acierto (se avisa).
+ * Donde no hay nombre científico (microscopía, geología...), vale cualquier nombre aceptado.
+ */
 export function comprobarEscrito(texto: string, e: Ejemplar): ResultadoEscrito {
   const escrito = limpiar(texto);
-  const nombres = [...new Set([e.nombre.principal, e.nombre.cientifico ?? '', ...(e.nombre.variantes ?? []), ...e.aceptados].filter(Boolean))];
+  const comunes = nombresComunes(e);
+  const todos = [...new Set([e.nombre.principal, e.nombre.cientifico ?? '', ...(e.nombre.variantes ?? []), ...e.aceptados].filter(Boolean))];
+  const nombres = todos.filter((n) => !comunes.has(limpiar(n)));
+  const esComun = [...comunes].some((c) => distancia(escrito, c) <= tolerancia(c.length));
   let mejor = { nombre: nombres[0], d: Infinity };
   for (const nombre of nombres) {
     const d = distancia(escrito, limpiar(nombre));
@@ -40,5 +56,6 @@ export function comprobarEscrito(texto: string, e: Ejemplar): ResultadoEscrito {
   }
   if (!escrito) return { ok: false, exacto: false, esperado: e.nombre.cientifico ?? e.nombre.principal };
   const ok = mejor.d <= tolerancia(limpiar(mejor.nombre).length);
+  if (!ok && esComun) return { ok: false, exacto: false, esperado: e.nombre.cientifico!, comun: true };
   return { ok, exacto: mejor.d === 0, esperado: mejor.nombre };
 }

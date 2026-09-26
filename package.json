@@ -10,7 +10,10 @@
     "preview": "vite preview",
     "test": "vitest run",
     "content": "node scripts/build-content.mjs",
-    "import-catalog": "node scripts/import-catalog.mjs"
+    "import-catalog": "node scripts/import-catalog.mjs",
+    "build:distribuible": "node scripts/build-distribuible.mjs",
+    "audit-images": "python3 scripts/audit-images.py",
+    "fetch-external": "python3 scripts/fetch-external.py"
   },
   "dependencies": {
     "@fontsource-variable/fraunces": "^5.3.0",

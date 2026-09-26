@@ -18,6 +18,8 @@ export interface EntradaIndice {
   f?: 1;
   /** 1 = prioridad A */
   p?: 1;
+  /** Ejemplares que nunca se usan como distractor de este (content/curation/name-review.json). */
+  nd?: string[];
 }
 
 export type ModoJuego = 'opcion-multiple' | 'escribir' | 'elegir-foto' | 'veloz' | 'repaso';
@@ -54,6 +56,8 @@ export interface Respuesta {
   elegida: string;
   /** En "escribir": acierto con alguna errata. */
   casi?: boolean;
+  /** En "escribir": escribió el nombre común en vez del científico. */
+  comun?: boolean;
   ok: boolean;
   xp: number;
   reintento: boolean;

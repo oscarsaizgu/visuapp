@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Barbell, Star, Trophy } from '@phosphor-icons/react';
+import { ArrowRight, Barbell, Star } from '@phosphor-icons/react';
 import type { EstadoPartida } from '../../hooks/useGameSession';
 import { mundo, nodoRuta, RUTA } from '../../content';
 import { CATEGORIA_POR_ID } from '../../content/categories';
 import { estrellas } from '../../logic/route';
 import type { NodoRuta } from '../../types/content';
+import { Nutria } from '../nutria/Nutria';
 import styles from './RouteResult.module.css';
 
 const enlaceNodo = (n: NodoRuta) => (n.tipo === 'leccion' ? `/leccion/${n.id}` : `/jugar/sesion?nodo=${n.id}`);
@@ -23,7 +24,7 @@ export function RouteResult({ st }: { st: EstadoPartida }) {
     const siguiente = m && RUTA.mundos[m.numero];
     return (
       <section className={`${styles.box} ${r.aprobado ? styles.ok : styles.pending}`}>
-        <Trophy size={34} weight="duotone" aria-hidden="true" />
+        <Nutria pose={r.aprobado ? 'medalla' : 'animo'} size={92} />
         <h2>{r.aprobado ? `¡Mundo ${m?.numero} superado!` : 'Todavía no'}</h2>
         <p>{pct}% de aciertos · se necesita un {Math.round(RUTA.config.aprobado * 100)}%.</p>
         <p className={styles.note}>{r.aprobado

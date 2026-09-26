@@ -59,3 +59,4 @@
 .bloqueado { opacity: 0.55; }
 .review .nodeInner { background: color-mix(in srgb, var(--bio) 8%, var(--card)); }
 @media (max-width: 420px) { .thumbs { display: none; } }
+.examNutria { grid-column: 1 / -1; }

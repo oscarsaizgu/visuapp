@@ -1,0 +1,137 @@
+{
+ "_leeme": "Fotos externas elegidas a mano para la curación. Solo Wikimedia Commons con licencia libre. scripts/fetch-external.py las descarga y comprueba la licencia. Las decisiones de uso (principal, identificación, ficha) van en image-review.json.",
+ "fotos": [
+  {
+   "ejemplarId": "rana-temporaria",
+   "commons": "File:Grasfrosch-Rana-temporaria-side.jpg",
+   "taxonFuente": "European Common Frog or European Common Brown Frog Rana temporaria, Family: Ranidae, Location: Germany, Ulm, Eggingen",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "rana-temporaria",
+   "commons": "File:European Common Frog Rana temporaria.jpg",
+   "taxonFuente": "The Common Frog (Rana temporaria) also known as the European Common Frog or European Common Brown Frog",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "rana-temporaria",
+   "commons": "File:Rana temporaria Val Zebrù 02.jpg",
+   "taxonFuente": "Rana temporaria, val Zebrù (Lombardy, Italy)",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "mustela-nivalis",
+   "commons": "File:Mustela nivalis -British Wildlife Centre-4.jpg",
+   "taxonFuente": "Least Weasel (Mustela nivalis) at the British Wildlife Centre, Surrey, England - photograph taken Sunday 17. August 2008.",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "mustela-nivalis",
+   "commons": "File:Mustela nivalis 234942199.jpg",
+   "taxonFuente": "Least Weasel (Mustela nivalis)",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "mustela-nivalis",
+   "commons": "File:Mustela nivalis 190378205.jpg",
+   "taxonFuente": "Least Weasel (Mustela nivalis)",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "hyla-arborea",
+   "commons": "File:Hyla arborea - rzekotka drzewna2.jpg",
+   "taxonFuente": "Hyla arborea. Digital photo taken in the beginning of June 2006 in Mazovia (Poland).",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "hyla-arborea",
+   "commons": "File:Laubfrosch (Hyla arborea).jpg",
+   "taxonFuente": "European tree frog (Hyla arborea) in the nature reserve \"Weiherkette Oberreichenbach\" (Landkreis Fürth, Bavaria, Germany)",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "hyla-arborea",
+   "commons": "File:Europese boomkikker - common tree frog - Hyla arborea 2.jpg",
+   "taxonFuente": "Common Tree Frog (Hyla arborea) at night in the Hungarian village of Rábapordány - Hungary",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "colias-croceus",
+   "commons": "File:Clouded yellow (Colias croceus) female Italy.jpg",
+   "taxonFuente": "Clouded yellow (Colias croceus) female, Campania, Italy",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "colias-croceus",
+   "commons": "File:Clouded yellow (Colias croceus) male.jpg",
+   "taxonFuente": "Clouded yellow (Colias croceus) male, Rushbeds Wood, Oxfordshire",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "colias-croceus",
+   "commons": "File:Clouded yellow Colias croceus Ichkeul.jpg",
+   "taxonFuente": "Clouded yellow (Colias croceus) at Ichkeul National Park",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "colias-croceus",
+   "commons": "File:(MHNT) Colias croceus f. helice - Wyzyna, Okolice Polska - female dorsal.jpg",
+   "taxonFuente": "Colias croceus f. helice - Dorsal side",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "abies-alba",
+   "commons": "File:Abies-alba Zapfen-1526.jpg",
+   "taxonFuente": "European Silver Fir (Abies alba) Young tree bearing verdant cones. Habitat is Bad Lausick in Saxony, Germany.",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "abies-alba",
+   "commons": "File:Abies alba R1.JPG",
+   "taxonFuente": "Abies alba cones",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "abies-alba",
+   "commons": "File:Abies alba eix de la pinya.jpg",
+   "taxonFuente": "Abies alba cones after scales have fallen off",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "abies-alba",
+   "commons": "File:Abies alba P26.jpg",
+   "taxonFuente": "Abies alba (habitat: Pieniny (Nowa Góra (Poland))",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "agaricus-arvensis",
+   "commons": "File:Agaricus arvensis 1292544.jpg",
+   "taxonFuente": "For more information about this, see the observation page at Mushroom Observer.",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "agaricus-arvensis",
+   "commons": "File:Gewone anijschampignon (Agaricus arvensis). 14-10-2020 (d.j.b.).jpg",
+   "taxonFuente": "Agaricus arvensis, horse mushroom Location De Famberhorst. Focus stack of 14 photos.",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "agaricus-arvensis",
+   "commons": "File:Agaricus arvensis 9.jpg",
+   "taxonFuente": "Agaricus arvensis",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "roca-travertino",
+   "commons": "File:Travertine hot spring deposit.jpg",
+   "taxonFuente": "Variety of limestone (sedimentary rock), from a hot spring deposit of Calcium Carbonate in Montana, USA",
+   "fecha": "2026-09-26"
+  },
+  {
+   "ejemplarId": "roca-travertino",
+   "commons": "File:Travertine rock face - geograph.org.uk - 7914814.jpg",
+   "taxonFuente": "Travertine rock face",
+   "fecha": "2026-09-26"
+  }
+ ]
+}

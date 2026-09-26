@@ -84,6 +84,8 @@ export function useGameSession(origen: OrigenSesion) {
         ocultas: new Set(s.fotosOcultas),
         // Fotos para "Elegir la foto": de lo desbloqueado; si hace falta, del catálogo.
         activos: activos.length >= 4 ? activos : CATALOGO,
+        // Los repasos insisten en los nombres que confundes.
+        confusiones: o.tipo === 'repaso-ruta' || o.tipo === 'refuerzo' || (o.tipo === 'libre' && o.modo === 'repaso') ? s.confusiones : undefined,
       };
       const c = ctx.current;
       let preguntas: Pregunta[] = [];
@@ -158,10 +160,12 @@ export function useGameSession(origen: OrigenSesion) {
     const e = ejemplar(q.ejemplarId)!;
     let ok = valor === q.ejemplarId;
     let casi = false;
+    let comun = false;
     if (q.modo === 'escribir') {
       const r = comprobarEscrito(valor, e);
       ok = r.ok;
       casi = r.ok && !r.exacto;
+      comun = !!r.comun;
     }
     const combo = ok ? s.combo + 1 : 0;
     const store = useProgressStore.getState();
@@ -172,6 +176,7 @@ export function useGameSession(origen: OrigenSesion) {
       cuentaParaCaja: q.modo !== 'veloz',
       xp: xpPorRespuesta({ ok, reintento: q.reintento, pendiente: q.pendiente, combo, modo: q.modo }),
       fotosJugables: fotosJugables(e).length, modo: q.modo, combo,
+      ...(!ok && q.modo !== 'escribir' ? { confundidoCon: valor } : {}),
     });
 
     let preguntas = s.preguntas;
@@ -191,7 +196,7 @@ export function useGameSession(origen: OrigenSesion) {
       xpUltima: xp,
       subioNivelUltima: subioNivel,
       descubiertos: eraDescubierto || s.descubiertos.includes(e.id) ? s.descubiertos : [...s.descubiertos, e.id],
-      respuestas: [...s.respuestas, { clave: q.clave, ejemplarId: e.id, elegida: valor, casi, ok, xp, reintento: q.reintento, ms }],
+      respuestas: [...s.respuestas, { clave: q.clave, ejemplarId: e.id, elegida: valor, casi, ...(comun ? { comun } : {}), ok, xp, reintento: q.reintento, ms }],
     });
   }, [commit, terminar]);
 

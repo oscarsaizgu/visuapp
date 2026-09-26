@@ -8,9 +8,21 @@
     <meta name="theme-color" content="#101613" media="(prefers-color-scheme: dark)" />
     <meta name="description" content="visu-game: aprende a identificar el material del VISU de Biología y Geología jugando." />
     <title>visu-game</title>
+    <style>
+      /* Pantalla de carga mientras se lee el catálogo (React la sustituye al arrancar). */
+      body { margin: 0; background: #f5f0e6; }
+      .arranque { min-height: 100dvh; display: grid; place-content: center; gap: 14px; justify-items: center; font-family: system-ui, sans-serif; color: #17251f; }
+      .arranque b { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 16px; background: #17251f; color: #f5f0e6; font: italic 700 28px Georgia, serif; }
+      .arranque span { font-size: 14px; font-weight: 600; color: #7a857e; }
+      @media (prefers-color-scheme: dark) {
+        body { background: #101613; }
+        .arranque { color: #eef2ea; }
+        .arranque b { background: #eef2ea; color: #101613; }
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><div class="arranque" role="status"><b aria-hidden="true">v</b><span>Abriendo el cuaderno de campo…</span></div></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

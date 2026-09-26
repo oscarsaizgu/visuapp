@@ -7,6 +7,7 @@ import { estadoNodo, estrellas, mundoCompleto, progresoMundo, progresoSubmundo, 
 import type { CategoriaId, Mundo } from '../../types/content';
 import { SpecimenImage } from '../../components/specimen/SpecimenImage';
 import { NotFoundPage } from '../sections';
+import { NutriaDice } from '../../components/nutria/NutriaDice';
 import styles from './Route.module.css';
 
 function Barra({ hechos, total }: { hechos: number; total: number }) {
@@ -40,6 +41,11 @@ export function RoutePage() {
           supera su examen final para abrir el siguiente. Primero lo que más cae en el VISU.
         </p>
       </header>
+      {!Object.values(ruta.lecciones).some((l) => l.completada) && (
+        <NutriaDice pose="saludo">
+          ¡Hola! Te acompaño por la ruta. En cada lección primero <b>aprendes</b> los ejemplares y luego los <b>identificas</b>. Sin prisas: puedes hacer todas las que quieras.
+        </NutriaDice>
+      )}
       <ul className={styles.worlds}>
         {visibles.map((m) => {
           const abierto = abiertos.some((x) => x.id === m.id);
@@ -126,6 +132,11 @@ export function WorldPage() {
               {examen && <p className={styles.muted}>{examen.superado ? `Superado · mejor nota ${Math.round(examen.mejor * 100)}%` : `${examen.intentos} ${examen.intentos === 1 ? 'intento' : 'intentos'} · mejor nota ${Math.round(examen.mejor * 100)}%`}</p>}
               {!completo && <p className={styles.muted}>Se abre al completar todas las disciplinas ({completos}/{m.submundos.length}).</p>}
             </div>
+            {completo && !examen?.superado && (
+              <NutriaDice pose="lupa" size={64} invert className={styles.examNutria}>
+                Mezcla todo el mundo y sin pistas. Si no sale, no pierdes nada: lo repites cuando quieras.
+              </NutriaDice>
+            )}
             {completo && <Link to={`/jugar/sesion?examen=${m.id}`} className={styles.go}><Play size={18} weight="fill" aria-hidden="true" /> {examen?.superado ? 'Repetir' : examen ? 'Intentar de nuevo' : 'Hacer el examen'}</Link>}
           </section>
         </>

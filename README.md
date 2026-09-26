@@ -23,17 +23,46 @@ content/base/          ← generado por el importador (no editar a mano)
   specimens.json         3.132 ejemplares con el esquema propio de visu-game
   images.json            registro de 9.657 fotos (medidas, origen, marcas)
 content/curation/      ← decisiones propias; el importador nunca las toca
-  image-review.json      fotos que dan pistas, rotuladas, de mala calidad…
+  image-review.json      curación de fotos: papel (principal/identificación/ficha/excluida), marcas y motivo
+  name-review.json       revisión de nombres: discrepancias registradas (no corregidas) y pares que no se usan como distractor
+  external-sources.json  fotos externas elegidas (Wikimedia Commons)
+  external-images.json   las mismas con su procedencia completa (lo genera fetch-external)
   specimen-fixes.json    correcciones y añadidos por ejemplar
   custom-images.json     fotos propias (archivos en public/img/propias/)
   packs/piloto.json      los 40 ejemplares revisados que forman el Mundo 1
   ruta.json              reglas de la ruta (tamaño de mundo, lecciones, examen)
+content/audit/          auditoría técnica automática de las fotos (audit-images)
 src/content/generated/ ← lo que carga la app (npm run content)
 ```
 
 - `npm run import-catalog -- <ruta>`: regenera `content/base` y copia las fotos byte a byte (`--sin-fotos` para no copiarlas).
 - `npm run content`: combina base + curación y genera `catalogo.json` (los 3.132 ejemplares), `ruta.json` (mundos y lecciones) y `name-index.json`. Avisa si una revisión apunta a algo que no existe y comprueba que ningún ejemplar se queda fuera de la ruta.
-- Una foto marcada `da-pistas`, `rotulada`, `ilustracion` o `calidad` se muestra en la ficha, pero **nunca se usa para preguntar**.
+- Una foto marcada `da-pistas`, `rotulada`, `ilustracion`, `calidad`, `taxon-dudoso`, `otra-especie`, `sin-contenido` o `archivo-danado` **nunca se usa para preguntar**, diga lo que diga su papel.
+
+## Curación de fotos y nombres
+
+El objetivo es la asociación **foto → organismo → nombre científico**. Una foto bonita que no ayuda a identificar no sirve para jugar.
+
+- **Papel de cada foto** (`image-review.json`):
+  - `principal`: la de APRENDER; va la primera en la lección y en la ficha.
+  - `identificacion`: se usa para preguntar.
+  - `ficha`: útil para estudiar (esquemas, rótulos, puestas…), pero no para preguntar.
+  - `excluida`: no se muestra.
+  - Cada decisión lleva su motivo.
+- **Rotación**: para preguntar se usan las fotos de identificación, no la principal, y cada modo (Identifica, Repaso, Veloz, Escribir) empieza por una distinta. Se aprende el organismo, no una foto.
+- **Procedencia y licencia**:
+  - Las 9.657 fotos del catálogo original no documentan autor ni licencia (el propio origen las describe como material de terceros), así que quedan como **licencia no verificada**.
+  - Las externas (solo Wikimedia Commons con CC0, CC BY, CC BY-SA o dominio público) guardan URL, autor, licencia, fecha, taxón de origen y cambios. Su crédito se muestra en la ficha y tras responder.
+- **Versión distribuible**: `npm run build:distribuible` genera `dist-distribuible/` solo con fotos de licencia verificada, más un `CREDITOS.txt`. No toca el contenido normal.
+- **Nombres**:
+  - `name-review.json` registra las posibles discrepancias (sinónimos, taxonomía, categoría) con su fuente, **sin corregir el catálogo**.
+  - Solo se aplica una cosa en el juego: los pares con dos respuestas defendibles nunca salen como distractor el uno del otro.
+- **Nombre científico primero**: en biología la etiqueta muestra el científico en grande y el común como apoyo. En Escribir solo vale el científico; si escribes el común, se avisa.
+- **Herramientas**:
+  - `npm run audit-images`: mide resolución, nitidez, exposición y texto (OCR, opcional) y busca duplicados por huella perceptual. Solo lee. Necesita Python con Pillow, numpy e imagehash, y tesseract para el OCR.
+  - `npm run fetch-external`: descarga las fotos de `external-sources.json` y rechaza las que no tengan licencia libre.
+  - `/curacion` (enlace en Progreso → Ajustes): revisión visual de todo lo anterior.
+- **Estado**: piloto de 29 ejemplares de las 8 disciplinas. El resto del catálogo sigue con las reglas automáticas de antes.
 
 ## Tres capas
 
@@ -79,7 +108,18 @@ src/content/generated/ ← lo que carga la app (npm run content)
 - **Insignias** (`src/content/achievements.ts`): cada una es un dato con su forma de medir el progreso. Se comprueban tras cada acción y al abrir la app.
 - **Retos diarios** (`src/logic/challenges.ts`): 3 al día, estables por fecha, +30 XP cada uno.
 - **Plan de repaso:** prioriza el retraso relativo al intervalo de la caja y los olvidos. Sin límite diario: se puede avanzar tanto como se quiera.
-- El progreso se guarda con versión (`version: 3`) y migra automáticamente desde la versión anterior.
+- El progreso se guarda con versión (`version: 4`) y migra automáticamente desde las anteriores.
+- **Confusiones**: si eliges un nombre en lugar de otro, se apunta. Los repasos usan esos nombres como distractores.
+
+## La nutria
+
+Es la compañera de campo: una ilustración propia en SVG (`src/components/nutria/`) con seis poses. Solo aparece en momentos puntuales y nunca bloquea:
+- en la ruta, mientras no has completado ninguna lección;
+- al empezar las primeras lecciones, para explicar la mecánica;
+- con el examen disponible;
+- al segundo fallo seguido;
+- al llegar a 5 o 10 aciertos seguidos;
+- al aprobar o suspender un examen de mundo.
 
 ## Estudiar
 
@@ -109,4 +149,4 @@ En desarrollo, `?demo` rellena progreso ficticio para revisar la interfaz y `?de
 
 ## Aviso sobre las fotos
 
-Las fotografías son de terceros y no tienen licencia libre. Este repositorio **no debe incluirlas mientras sea público** (`public/img/` está en `.gitignore`).
+Las fotografías del catálogo original son de terceros y su licencia no está verificada. En la rama de trabajo se subieron a `public/img/` por decisión del propietario del repositorio. Mientras el repositorio sea público, esas fotos quedan expuestas: conviene ponerlo en privado o usar la versión distribuible. Las fotos de `public/img/ext/` tienen licencia libre verificada (ver `content/curation/external-images.json`).

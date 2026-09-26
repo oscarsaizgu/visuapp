@@ -1,0 +1,467 @@
+{
+ "_leeme": "Generado por scripts/fetch-external.py a partir de external-sources.json. No editar a mano.",
+ "imagenes": [
+  {
+   "id": "rana-temporaria-ext1",
+   "ejemplarId": "rana-temporaria",
+   "archivo": "/img/ext/rana-temporaria/1.webp",
+   "ancho": 1280,
+   "alto": 900,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Grasfrosch-Rana-temporaria-side.jpg",
+    "titulo": "File:Grasfrosch-Rana-temporaria-side.jpg",
+    "autor": "Holger Krisp",
+    "licencia": "CC BY 3.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by/3.0",
+    "taxonFuente": "European Common Frog or European Common Brown Frog Rana temporaria, Family: Ranidae, Location: Germany, Ulm, Eggingen",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "rana-temporaria-ext2",
+   "ejemplarId": "rana-temporaria",
+   "archivo": "/img/ext/rana-temporaria/2.webp",
+   "ancho": 1280,
+   "alto": 800,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:European_Common_Frog_Rana_temporaria.jpg",
+    "titulo": "File:European Common Frog Rana temporaria.jpg",
+    "autor": "Richard Bartz, Munich aka Makro Freak Image:MFB.jpg",
+    "licencia": "CC BY-SA 2.5",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "taxonFuente": "The Common Frog (Rana temporaria) also known as the European Common Frog or European Common Brown Frog",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "rana-temporaria-ext3",
+   "ejemplarId": "rana-temporaria",
+   "archivo": "/img/ext/rana-temporaria/3.webp",
+   "ancho": 1280,
+   "alto": 960,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Rana_temporaria_Val_Zebr%C3%B9_02.jpg",
+    "titulo": "File:Rana temporaria Val Zebrù 02.jpg",
+    "autor": "Syrio",
+    "licencia": "CC BY-SA 4.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taxonFuente": "Rana temporaria, val Zebrù (Lombardy, Italy)",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "mustela-nivalis-ext1",
+   "ejemplarId": "mustela-nivalis",
+   "archivo": "/img/ext/mustela-nivalis/1.webp",
+   "ancho": 1280,
+   "alto": 1094,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Mustela_nivalis_-British_Wildlife_Centre-4.jpg",
+    "titulo": "File:Mustela nivalis -British Wildlife Centre-4.jpg",
+    "autor": "Keven Law",
+    "licencia": "CC BY-SA 2.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "taxonFuente": "Least Weasel (Mustela nivalis) at the British Wildlife Centre, Surrey, England - photograph taken Sunday 17. August 2008.",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "mustela-nivalis-ext2",
+   "ejemplarId": "mustela-nivalis",
+   "archivo": "/img/ext/mustela-nivalis/2.webp",
+   "ancho": 1280,
+   "alto": 960,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Mustela_nivalis_234942199.jpg",
+    "titulo": "File:Mustela nivalis 234942199.jpg",
+    "autor": "gwynmwilliams",
+    "licencia": "CC BY 4.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by/4.0",
+    "taxonFuente": "Least Weasel (Mustela nivalis)",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "mustela-nivalis-ext3",
+   "ejemplarId": "mustela-nivalis",
+   "archivo": "/img/ext/mustela-nivalis/3.webp",
+   "ancho": 1280,
+   "alto": 853,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Mustela_nivalis_190378205.jpg",
+    "titulo": "File:Mustela nivalis 190378205.jpg",
+    "autor": "Михаил Голомысов",
+    "licencia": "CC BY 4.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by/4.0",
+    "taxonFuente": "Least Weasel (Mustela nivalis)",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "hyla-arborea-ext1",
+   "ejemplarId": "hyla-arborea",
+   "archivo": "/img/ext/hyla-arborea/1.webp",
+   "ancho": 1013,
+   "alto": 683,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Hyla_arborea_-_rzekotka_drzewna2.jpg",
+    "titulo": "File:Hyla arborea - rzekotka drzewna2.jpg",
+    "autor": "Original uploader was RobertC1301 at pl.wikipedia",
+    "licencia": "CC BY-SA 3.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "taxonFuente": "Hyla arborea. Digital photo taken in the beginning of June 2006 in Mazovia (Poland).",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "hyla-arborea-ext2",
+   "ejemplarId": "hyla-arborea",
+   "archivo": "/img/ext/hyla-arborea/2.webp",
+   "ancho": 1280,
+   "alto": 960,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Laubfrosch_(Hyla_arborea).jpg",
+    "titulo": "File:Laubfrosch (Hyla arborea).jpg",
+    "autor": "THAWonderland",
+    "licencia": "CC BY-SA 4.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taxonFuente": "European tree frog (Hyla arborea) in the nature reserve \"Weiherkette Oberreichenbach\" (Landkreis Fürth, Bavaria, Germany)",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "hyla-arborea-ext3",
+   "ejemplarId": "hyla-arborea",
+   "archivo": "/img/ext/hyla-arborea/3.webp",
+   "ancho": 1280,
+   "alto": 874,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Europese_boomkikker_-_common_tree_frog_-_Hyla_arborea_2.jpg",
+    "titulo": "File:Europese boomkikker - common tree frog - Hyla arborea 2.jpg",
+    "autor": "Bouke ten Cate",
+    "licencia": "CC BY 4.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by/4.0",
+    "taxonFuente": "Common Tree Frog (Hyla arborea) at night in the Hungarian village of Rábapordány - Hungary",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "colias-croceus-ext1",
+   "ejemplarId": "colias-croceus",
+   "archivo": "/img/ext/colias-croceus/1.webp",
+   "ancho": 1280,
+   "alto": 853,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Clouded_yellow_(Colias_croceus)_female_Italy.jpg",
+    "titulo": "File:Clouded yellow (Colias croceus) female Italy.jpg",
+    "autor": "Charles J. Sharp",
+    "licencia": "CC BY-SA 4.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taxonFuente": "Clouded yellow (Colias croceus) female, Campania, Italy",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "colias-croceus-ext2",
+   "ejemplarId": "colias-croceus",
+   "archivo": "/img/ext/colias-croceus/2.webp",
+   "ancho": 1280,
+   "alto": 853,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Clouded_yellow_(Colias_croceus)_male.jpg",
+    "titulo": "File:Clouded yellow (Colias croceus) male.jpg",
+    "autor": "Charles J. Sharp",
+    "licencia": "CC BY-SA 4.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taxonFuente": "Clouded yellow (Colias croceus) male, Rushbeds Wood, Oxfordshire",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "colias-croceus-ext3",
+   "ejemplarId": "colias-croceus",
+   "archivo": "/img/ext/colias-croceus/3.webp",
+   "ancho": 1280,
+   "alto": 853,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Clouded_yellow_Colias_croceus_Ichkeul.jpg",
+    "titulo": "File:Clouded yellow Colias croceus Ichkeul.jpg",
+    "autor": "El Golli Mohamed",
+    "licencia": "CC BY-SA 4.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taxonFuente": "Clouded yellow (Colias croceus) at Ichkeul National Park",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "colias-croceus-ext4",
+   "ejemplarId": "colias-croceus",
+   "archivo": "/img/ext/colias-croceus/4.webp",
+   "ancho": 1280,
+   "alto": 954,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:(MHNT)_Colias_croceus_f._helice_-_Wyzyna,_Okolice_Polska_-_female_dorsal.jpg",
+    "titulo": "File:(MHNT) Colias croceus f. helice - Wyzyna, Okolice Polska - female dorsal.jpg",
+    "autor": "Didier Descouens",
+    "licencia": "CC BY-SA 4.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taxonFuente": "Colias croceus f. helice - Dorsal side",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "abies-alba-ext1",
+   "ejemplarId": "abies-alba",
+   "archivo": "/img/ext/abies-alba/1.webp",
+   "ancho": 1280,
+   "alto": 853,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Abies-alba_Zapfen-1526.jpg",
+    "titulo": "File:Abies-alba Zapfen-1526.jpg",
+    "autor": "Mars 2002",
+    "licencia": "CC BY-SA 3.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "taxonFuente": "European Silver Fir (Abies alba) Young tree bearing verdant cones. Habitat is Bad Lausick in Saxony, Germany.",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "abies-alba-ext2",
+   "ejemplarId": "abies-alba",
+   "archivo": "/img/ext/abies-alba/2.webp",
+   "ancho": 1280,
+   "alto": 960,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Abies_alba_R1.JPG",
+    "titulo": "File:Abies alba R1.JPG",
+    "autor": "Jerzy Opioła",
+    "licencia": "CC BY-SA 3.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "taxonFuente": "Abies alba cones",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "abies-alba-ext3",
+   "ejemplarId": "abies-alba",
+   "archivo": "/img/ext/abies-alba/3.webp",
+   "ancho": 1280,
+   "alto": 960,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Abies_alba_eix_de_la_pinya.jpg",
+    "titulo": "File:Abies alba eix de la pinya.jpg",
+    "autor": "Gerarcalis",
+    "licencia": "CC BY-SA 4.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taxonFuente": "Abies alba cones after scales have fallen off",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "abies-alba-ext4",
+   "ejemplarId": "abies-alba",
+   "archivo": "/img/ext/abies-alba/4.webp",
+   "ancho": 1280,
+   "alto": 1024,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Abies_alba_P26.jpg",
+    "titulo": "File:Abies alba P26.jpg",
+    "autor": "Jerzy Opioła",
+    "licencia": "CC BY-SA 4.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taxonFuente": "Abies alba (habitat: Pieniny (Nowa Góra (Poland))",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "agaricus-arvensis-ext1",
+   "ejemplarId": "agaricus-arvensis",
+   "archivo": "/img/ext/agaricus-arvensis/1.webp",
+   "ancho": 1280,
+   "alto": 854,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Agaricus_arvensis_1292544.jpg",
+    "titulo": "File:Agaricus arvensis 1292544.jpg",
+    "autor": "This image was created by user Richard Daniel (RichardDaniel) at Mushroom Observer, a source for mycological images.You can contact this user here.",
+    "licencia": "CC BY-SA 3.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "taxonFuente": "For more information about this, see the observation page at Mushroom Observer.",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "agaricus-arvensis-ext2",
+   "ejemplarId": "agaricus-arvensis",
+   "archivo": "/img/ext/agaricus-arvensis/2.webp",
+   "ancho": 1280,
+   "alto": 1280,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Gewone_anijschampignon_(Agaricus_arvensis)._14-10-2020_(d.j.b.).jpg",
+    "titulo": "File:Gewone anijschampignon (Agaricus arvensis). 14-10-2020 (d.j.b.).jpg",
+    "autor": "Dominicus Johannes Bergsma",
+    "licencia": "CC BY-SA 4.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taxonFuente": "Agaricus arvensis, horse mushroom Location De Famberhorst. Focus stack of 14 photos.",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "agaricus-arvensis-ext3",
+   "ejemplarId": "agaricus-arvensis",
+   "archivo": "/img/ext/agaricus-arvensis/3.webp",
+   "ancho": 1280,
+   "alto": 897,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Agaricus_arvensis_9.jpg",
+    "titulo": "File:Agaricus arvensis 9.jpg",
+    "autor": "Allar Antson",
+    "licencia": "CC BY-SA 4.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taxonFuente": "Agaricus arvensis",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "roca-travertino-ext1",
+   "ejemplarId": "roca-travertino",
+   "archivo": "/img/ext/roca-travertino/1.webp",
+   "ancho": 960,
+   "alto": 1280,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Travertine_hot_spring_deposit.jpg",
+    "titulo": "File:Travertine hot spring deposit.jpg",
+    "autor": "Bobjgalindo",
+    "licencia": "CC BY-SA 4.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "taxonFuente": "Variety of limestone (sedimentary rock), from a hot spring deposit of Calcium Carbonate in Montana, USA",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  },
+  {
+   "id": "roca-travertino-ext2",
+   "ejemplarId": "roca-travertino",
+   "archivo": "/img/ext/roca-travertino/2.webp",
+   "ancho": 1024,
+   "alto": 768,
+   "origen": "externa",
+   "marcas": [],
+   "procedencia": {
+    "fuente": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Travertine_rock_face_-_geograph.org.uk_-_7914814.jpg",
+    "titulo": "File:Travertine rock face - geograph.org.uk - 7914814.jpg",
+    "autor": "Oliver Dixon",
+    "licencia": "CC BY-SA 2.0",
+    "licenciaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "taxonFuente": "Travertine rock face",
+    "fechaIncorporacion": "2026-09-26",
+    "cambios": "Redimensionada a 1280 px y convertida a WebP",
+    "distribuible": true
+   }
+  }
+ ]
+}

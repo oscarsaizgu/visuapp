@@ -182,6 +182,9 @@ export function ProgressPage() {
           </button>
         </div>
         {aviso && <p className={styles.aviso} role="status">{aviso}</p>}
+        <p className={styles.note}>
+          <Link to="/curacion">Curación de fotos</Link>: qué foto se usa para aprender y cuál para preguntar, por qué y de dónde sale.
+        </p>
       </section>
     </div>
   );

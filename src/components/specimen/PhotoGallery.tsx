@@ -18,6 +18,8 @@ export function PhotoGallery({ imagenes, alt }: { imagenes: Imagen[]; alt: strin
   const actual = imagenes[i];
   if (!actual) return null;
   const rotulada = actual.marcas.some((m) => m === 'rotulada' || m === 'da-pistas');
+  const soloEstudio = rotulada || actual.uso === 'ficha';
+  const c = actual.credito;
   return (
     <div className={styles.gallery}>
       <div className={styles.stage}>
@@ -25,10 +27,15 @@ export function PhotoGallery({ imagenes, alt }: { imagenes: Imagen[]; alt: strin
           <span className={styles.count}>{i + 1} / {imagenes.length}</span>
         </QuestionPhoto>
       </div>
-      {(pie(actual) || rotulada) && (
+      {(pie(actual) || soloEstudio || c) && (
         <p className={styles.caption}>
           {pie(actual)}
-          {rotulada && <span className={styles.tag}>Con rótulos · solo para estudiar</span>}
+          {soloEstudio && <span className={styles.tag}>{rotulada ? 'Con rótulos · solo para estudiar' : 'Solo para estudiar'}</span>}
+          {c && (
+            <span className={styles.credit}>
+              Foto: {c.autor} · {c.url ? <a href={c.url} target="_blank" rel="noreferrer">{c.licencia}</a> : c.licencia} · {c.fuente}
+            </span>
+          )}
         </p>
       )}
       {imagenes.length > 1 && (

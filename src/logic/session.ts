@@ -18,6 +18,16 @@ export interface Contexto {
   ocultas: Set<string>;
   /** Ejemplares activos (para las fotos de "Elegir la foto"). */
   activos: Ejemplar[];
+  /** Solo en repasos: nombres que confundes, para ponerlos como distractores. */
+  confusiones?: Record<string, Record<string, number>>;
+}
+
+/** Hasta 2 ejemplares que has confundido con este, los más frecuentes primero. */
+function confundidos(e: Ejemplar, ctx: Contexto): EntradaIndice[] {
+  const c = ctx.confusiones?.[e.id];
+  if (!c) return [];
+  return Object.entries(c).sort((a, b) => b[1] - a[1]).map(([id]) => ctx.porId.get(id))
+    .filter((x): x is EntradaIndice => !!x).slice(0, 2);
 }
 
 /** Partida Veloz: preguntas de sobra para que siempre se acabe por tiempo, no por falta de preguntas. */
@@ -26,7 +36,8 @@ export const SEGUNDOS_VELOZ = 90;
 
 /** Tres fotos de otros ejemplares activos, a ser posible del mismo grupo o categoría. */
 function fotosDistractoras(e: Ejemplar, ctx: Contexto): OpcionFoto[] {
-  const candidatos = ctx.activos.filter((x) => x.id !== e.id && x.nombre.principal !== e.nombre.principal);
+  const evitar = new Set(ctx.porId.get(e.id)?.nd ?? []);
+  const candidatos = ctx.activos.filter((x) => x.id !== e.id && !evitar.has(x.id) && x.nombre.principal !== e.nombre.principal);
   const orden = (x: Ejemplar) => (x.album === e.album ? 0 : x.categoria === e.categoria ? 1 : 2);
   const ordenados = barajar(candidatos, ctx.rng).sort((a, b) => orden(a) - orden(b));
   const out: OpcionFoto[] = [];
@@ -44,7 +55,7 @@ export function crearPregunta(
   opts: { modo: ModoJuego; reintento: boolean; pendiente: boolean; evitarImagen?: string; n?: number; cajaDistractores?: number },
 ): Pregunta | undefined {
   const p = ctx.progreso[e.id];
-  const imagen = elegirFoto(e, p, ctx.rng, ctx.ocultas, opts.evitarImagen);
+  const imagen = elegirFoto(e, p, ctx.rng, ctx.ocultas, opts.evitarImagen, opts.modo);
   const entrada = ctx.porId.get(e.id);
   if (!imagen || !entrada) return undefined;
   const base = {
@@ -61,7 +72,7 @@ export function crearPregunta(
     if (otras.length < 3) return undefined;
     return { ...base, opciones: [], fotos: barajar([{ id: e.id, imagen }, ...otras], ctx.rng) };
   }
-  const distractores = elegirDistractores(entrada, ctx.indice, opts.cajaDistractores ?? p?.caja ?? 0, ctx.rng);
+  const distractores = elegirDistractores(entrada, ctx.indice, opts.cajaDistractores ?? p?.caja ?? 0, ctx.rng, 3, confundidos(e, ctx));
   return { ...base, opciones: barajar([opcionDesdeEjemplar(e), ...distractores.map(opcionDesdeIndice)], ctx.rng) };
 }
 

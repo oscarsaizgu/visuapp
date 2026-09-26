@@ -8,6 +8,7 @@ import { estadoNodo } from '../../logic/route';
 import { PhotoGallery } from '../../components/specimen/PhotoGallery';
 import { SpecimenLabel } from '../../components/specimen/SpecimenLabel';
 import { NotFoundPage } from '../sections';
+import { NutriaDice } from '../../components/nutria/NutriaDice';
 import type { Ejemplar } from '../../types/content';
 import styles from './Lesson.module.css';
 
@@ -50,6 +51,8 @@ export function LessonPage() {
   const estado = estadoNodo(info.submundo, info.indice, ruta);
   const numero = info.submundo.nodos.slice(0, info.indice + 1).filter((n) => n.tipo === 'leccion').length;
   const aprendida = !!ruta.lecciones[id]?.aprendida;
+  // La nutria explica la mecánica solo en las primeras lecciones.
+  const novato = Object.values(ruta.lecciones).filter((l) => l.aprendida).length < 3;
 
   if (estado === 'bloqueado') {
     return (
@@ -78,6 +81,12 @@ export function LessonPage() {
       <ol className={styles.dots} aria-label={`Ejemplar ${i + 1} de ${lista.length}`}>
         {lista.map((x, k) => <li key={x.id} className={k === i ? styles.dotOn : k < i ? styles.dotDone : ''}><button type="button" onClick={() => setI(k)} aria-label={`Ejemplar ${k + 1}`} /></li>)}
       </ol>
+
+      {i === 0 && !aprendida && novato && (
+        <NutriaDice pose="explica">
+          Mira bien estas fotos y fíjate en el nombre científico. Luego te preguntaré con <b>otras fotos</b>: así aprendes el organismo, no una foto.
+        </NutriaDice>
+      )}
 
       <article key={e.id} className={styles.card}>
         <div className={styles.media}><PhotoGallery imagenes={e.imagenes} alt={e.nombre.principal} /></div>

@@ -34,11 +34,14 @@ export function elegirDistractores(
   caja: number,
   rng: Rng,
   n = 3,
+  /** Se ponen primero si son válidos (p. ej. los nombres que el jugador confunde). */
+  preferidos: EntradaIndice[] = [],
 ): EntradaIndice[] {
   const textoOk = opcionDesdeIndice(correcto).texto.toLowerCase();
   const niveles: EntradaIndice[][] = [[], [], [], []];
+  const noDistractor = new Set(correcto.nd ?? []);
   for (const x of indice) {
-    if (x.id === correcto.id || x.c !== correcto.c || mismaEspecie(x, correcto)) continue;
+    if (x.id === correcto.id || x.c !== correcto.c || mismaEspecie(x, correcto) || noDistractor.has(x.id)) continue;
     if (opcionDesdeIndice(x).texto.toLowerCase() === textoOk) continue;
     niveles[cercania(x, correcto)].push(x);
   }
@@ -53,6 +56,10 @@ export function elegirDistractores(
     textos.add(t);
     elegidos.push(x);
   };
+  for (const x of preferidos) {
+    if (x.id === correcto.id || x.c !== correcto.c || mismaEspecie(x, correcto) || noDistractor.has(x.id)) continue;
+    tomar(x);
+  }
   const cupo = cupos(caja);
   ordenados.forEach((g, i) => {
     let tomados = 0;

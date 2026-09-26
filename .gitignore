@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Versión distribuible (npm run build:distribuible)
+.distribuible/
+dist-distribuible/

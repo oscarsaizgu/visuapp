@@ -15,6 +15,7 @@ import { ProgressPage } from '../pages/ProgressPage';
 import { NotFoundPage } from '../pages/sections';
 import { LessonPage } from '../pages/route/LessonPage';
 import { RoutePage, WorldPage, SubworldPage } from '../pages/route/RoutePages';
+import { CurationPage } from '../pages/CurationPage';
 
 export const router = createBrowserRouter([
   {
@@ -41,6 +42,7 @@ export const router = createBrowserRouter([
           { path: '/coleccion', element: <CollectionPage /> },
           { path: '/coleccion/:categoria', element: <CategoryCollectionPage /> },
           { path: '/progreso', element: <ProgressPage /> },
+          { path: '/curacion', element: <CurationPage /> },
           { path: '*', element: <NotFoundPage /> },
         ],
       },

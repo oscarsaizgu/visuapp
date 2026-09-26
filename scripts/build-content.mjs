@@ -5,6 +5,11 @@
 //   (cuáles sirven para jugar y cuáles solo para estudiar).
 // - ruta.json: la ruta de aprendizaje Mundo → Submundo → Lección/Repaso → Examen (solo ids).
 // - name-index.json: índice ligero de todo el catálogo, para generar distractores.
+// - curacion.json: detalle de los ejemplares ya curados (todas sus fotos, con uso, motivo y
+//   procedencia) y de la revisión de nombres, para la página /curacion.
+//
+// Opción --distribuible: solo usa fotos con licencia verificada (procedencia.distribuible).
+// La usa scripts/build-distribuible.mjs; no hace falta llamarla a mano.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -15,7 +20,16 @@ const warnings = [];
 
 const specimens = readJson('content/base/specimens.json');
 const baseImages = readJson('content/base/images.json');
-const review = readJson('content/curation/image-review.json').imagenes;
+const DISTRIBUIBLE = process.argv.includes('--distribuible');
+const argOut = process.argv.indexOf('--out');
+const OUT_DIR = argOut > 0 ? path.resolve(process.argv[argOut + 1]) : path.join(ROOT, 'src/content/generated');
+const reviewFile = readJson('content/curation/image-review.json');
+const review = reviewFile.imagenes;
+const revisionEjemplares = reviewFile.ejemplares || {};
+const nameReview = readJson('content/curation/name-review.json');
+const external = readJson('content/curation/external-images.json').imagenes;
+const auditPath = path.join(ROOT, 'content/audit/fotos-auditoria.json');
+const audit = fs.existsSync(auditPath) ? JSON.parse(fs.readFileSync(auditPath, 'utf8')) : null;
 const fixes = readJson('content/curation/specimen-fixes.json').ejemplares;
 const custom = readJson('content/curation/custom-images.json').imagenes;
 
@@ -24,34 +38,61 @@ const packs = fs.readdirSync(packDir).filter((f) => f.endsWith('.json'))
   .map((f) => readJson(`content/curation/packs/${f}`));
 
 const byId = new Map(specimens.map((s) => [s.id, s]));
-const images = new Map([...baseImages, ...custom].map((i) => [i.id, i]));
+const images = new Map([...baseImages, ...custom, ...external].map((i) => [i.id, i]));
 
 for (const id of Object.keys(review)) if (!images.has(id)) warnings.push(`image-review: imagen desconocida ${id}`);
 for (const id of Object.keys(fixes)) if (!byId.has(id)) warnings.push(`specimen-fixes: ejemplar desconocido ${id}`);
 
-// Fotos propias: se añaden a su ejemplar.
-for (const img of custom) {
+// Fotos propias y externas (con licencia): se añaden a su ejemplar.
+for (const img of [...custom, ...external]) {
   const s = byId.get(img.ejemplarId);
   if (s) s.imagenes = [...s.imagenes, img.id];
   else warnings.push(`custom-images: ejemplar desconocido ${img.ejemplarId}`);
 }
 
-const NO_JUEGO = new Set(['da-pistas', 'rotulada', 'ilustracion', 'calidad']);
+const NO_JUEGO = new Set(['da-pistas', 'rotulada', 'ilustracion', 'calidad', 'otra-especie', 'sin-contenido', 'archivo-danado', 'taxon-dudoso']);
+const USOS = ['principal', 'identificacion', 'ficha', 'excluida'];
+for (const [id, r] of Object.entries(review)) if (r.uso && !USOS.includes(r.uso)) warnings.push(`image-review: uso desconocido '${r.uso}' en ${id}`);
+
+/** Procedencia de una foto. Las del catálogo original no documentan autor ni licencia. */
+function procedencia(base) {
+  if (base.procedencia) return base.procedencia;
+  if (base.origen === 'propia') return { fuente: 'Foto propia', autor: base.autor, licencia: base.licencia, distribuible: !!base.licencia };
+  const lote = /(^|\/)lote\//.test(base.rutaOriginal || '');
+  const geo = /(^|\/)geo\//.test(base.rutaOriginal || '');
+  return {
+    fuente: lote ? 'Visu-Oposicion · lote MaterialVinted' : geo ? 'Visu-Oposicion · geología y microscopía' : 'Visu-Oposicion · núcleo',
+    licencia: 'no-verificada', distribuible: false,
+  };
+}
 
 function resolveImage(id) {
   const base = images.get(id);
   const r = review[id] || {};
   const marcas = [...new Set([...(base.marcas || []), ...(r.marcas || [])])];
-  const excluida = r.estado === 'excluida';
-  const juego = !excluida && (r.usoEnJuego ?? !marcas.some((m) => NO_JUEGO.has(m)));
+  const proc = procedencia(base);
+  const excluida = r.uso === 'excluida' || r.estado === 'excluida' || (DISTRIBUIBLE && !proc.distribuible);
+  const porUso = r.uso ? r.uso === 'principal' || r.uso === 'identificacion' : undefined;
+  const bloqueo = marcas.find((m) => NO_JUEGO.has(m));
+  if (porUso && bloqueo) warnings.push(`image-review: ${id} tiene uso '${r.uso}' pero la marca '${bloqueo}' impide preguntar con ella`);
+  // Una marca que bloquea (da pistas, rotulada, taxón dudoso...) manda siempre sobre el uso.
+  const juego = !excluida && !bloqueo && (porUso ?? r.usoEnJuego ?? true);
   const ficha = !excluida && (r.usoEnFicha ?? true);
   const out = { id, archivo: base.archivo, ancho: base.ancho, alto: base.alto, marcas, juego, ficha };
+  if (r.uso && r.uso !== 'excluida') out.uso = r.uso;
   for (const k of ['vista', 'fuente', 'deExamen', 'pie', 'autor', 'licencia']) if (base[k]) out[k] = base[k];
+  if (proc.distribuible) out.credito = { autor: proc.autor || 'Autor desconocido', licencia: proc.licencia, url: proc.url || '', fuente: proc.fuente };
   return out;
 }
 
+// Orden de las fotos: la principal (aprender) primero, luego las de identificar y al final las de ficha.
+const RANGO = { principal: 0, identificacion: 1 };
+const rango = (i) => RANGO[i.uso] ?? (i.juego ? 2 : 3);
+
 const size = (i) => Math.max(i.ancho, i.alto);
 function pickCover(imgs) {
+  const principal = imgs.find((i) => i.uso === 'principal');
+  if (principal) return principal.id;
   const ok = imgs.filter((i) => i.juego);
   const pool = ok.length ? ok : imgs.filter((i) => i.ficha);
   // La portada prefiere fotos grandes y apaisadas: lucen mejor en tarjetas.
@@ -63,12 +104,18 @@ function pickCover(imgs) {
 
 // ---------- Catálogo completo (todos los ejemplares, con fotos resueltas) ----------
 
-const catalogo = specimens.map((s) => {
+const catalogoCompleto = specimens.map((s) => {
   const merged = { ...s, ...(fixes[s.id] || {}) };
-  const imgs = merged.imagenes.map(resolveImage).filter((i) => i.ficha);
+  const imgs = merged.imagenes.map(resolveImage).filter((i) => i.ficha)
+    .map((img, n) => ({ img, n })).sort((a, b) => rango(a.img) - rango(b.img) || a.n - b.n).map((x) => x.img);
+  if (revisionEjemplares[s.id] && imgs.filter((i) => i.uso === 'principal').length !== 1 && !DISTRIBUIBLE) {
+    warnings.push(`curación: ${s.id} está revisado pero no tiene exactamente una foto principal`);
+  }
   delete merged.origen;
   return { ...merged, imagenes: imgs, portada: pickCover(imgs) };
 });
+// En la versión distribuible, un ejemplar sin ninguna foto con licencia verificada no se incluye.
+const catalogo = DISTRIBUIBLE ? catalogoCompleto.filter((e) => e.imagenes.length) : catalogoCompleto;
 const porId = new Map(catalogo.map((e) => [e.id, e]));
 const jugable = (e) => e.imagenes.some((i) => i.juego);
 
@@ -172,13 +219,14 @@ if (!packRuta) warnings.push(`ruta: no existe el pack ${ruta.primerMundo}`);
 {
   const xs = (packRuta?.ejemplares ?? []).map((id) => {
     const e = porId.get(id);
-    if (!e) warnings.push(`ruta: ejemplar desconocido ${id}`);
-    else if (!jugable(e)) warnings.push(`ruta: ${e.id} no tiene fotos para jugar`);
+    // En la versión distribuible es normal que falten: solo quedan los que tienen fotos con licencia.
+    if (!e) { if (!DISTRIBUIBLE) warnings.push(`ruta: ejemplar desconocido ${id}`); }
+    else if (!jugable(e) && !DISTRIBUIBLE) warnings.push(`ruta: ${e.id} no tiene fotos para jugar`);
     return e && jugable(e) ? e : null;
   }).filter(Boolean);
   const porCat = {};
   for (const e of ordenar(xs)) { (porCat[e.categoria] ??= []).push(e); enRuta.add(e.id); }
-  mundos.push(hacerMundo(1, porCat));
+  if (xs.length) mundos.push(hacerMundo(1, porCat));
 }
 const restantes = {};
 for (const e of ordenar(catalogo.filter((e) => !enRuta.has(e.id) && jugable(e)))) (restantes[e.categoria] ??= []).push(e);
@@ -211,19 +259,61 @@ const fueraDeRuta = catalogo.filter((e) => !enRuta.has(e.id)).map((e) => e.id);
 
 // ---------- Índice ligero para distractores ----------
 
-const nameIndex = specimens.map((s) => {
+// Pares que nunca se ponen como distractor el uno del otro (ver content/curation/name-review.json).
+const noDistractor = new Map();
+for (const { par } of nameReview.noDistractor) {
+  for (const id of par) if (!byId.has(id)) warnings.push(`name-review: ejemplar desconocido ${id}`);
+  const [a, b] = par;
+  (noDistractor.get(a) ?? noDistractor.set(a, new Set()).get(a)).add(b);
+  (noDistractor.get(b) ?? noDistractor.set(b, new Set()).get(b)).add(a);
+}
+for (const d of nameReview.discrepancias) for (const id of d.ejemplares) if (!byId.has(id)) warnings.push(`name-review: ejemplar desconocido ${id}`);
+
+// ---------- Curación: detalle para revisar (página /curacion) ----------
+
+const auditoria = new Map((audit?.fotos || []).map((f) => [f.id, f]));
+// Herramienta interna: en la versión distribuible no se incluye (enseña fotos sin licencia verificada).
+const curacion = {
+  ejemplares: DISTRIBUIBLE ? [] : Object.entries(revisionEjemplares).filter(([id]) => byId.has(id)).map(([id, rev]) => {
+    const s = byId.get(id);
+    const fotos = s.imagenes.map((iid) => {
+      const base = images.get(iid);
+      const r = review[iid] || {};
+      const a = auditoria.get(iid);
+      const f = { id: iid, archivo: base.archivo, ancho: base.ancho, alto: base.alto, uso: r.uso || 'sin-decidir', marcas: r.marcas || [], motivo: r.motivo || '', procedencia: procedencia(base) };
+      if (a && !a.error) f.auditoria = { nitidez: a.nitidez, texto: a.texto ?? null };
+      if (a?.error) f.auditoria = { error: a.error };
+      return f;
+    }).sort((x, y) => USOS.indexOf(x.uso) - USOS.indexOf(y.uso));
+    return { id, nombre: s.nombre, categoria: s.categoria, album: s.album, ...rev, fotos };
+  }),
+  nombres: nameReview,
+  resumen: {
+    fotos: images.size,
+    externas: external.length,
+    licenciaVerificada: [...images.values()].filter((i) => procedencia(i).distribuible).length,
+    duplicadosEntreEjemplares: (DISTRIBUIBLE ? [] : audit?.duplicados || []).filter((d) => !d.mismoEjemplar)
+      .map((d) => ({ a: d.a, b: d.b, ea: images.get(d.a)?.ejemplarId, eb: images.get(d.b)?.ejemplarId })),
+    auditadas: audit?.fotos.length ?? 0,
+  },
+};
+
+const enCatalogo = new Set(catalogo.map((e) => e.id));
+const nameIndex = specimens.filter((s) => enCatalogo.has(s.id)).map((s) => {
   const x = { id: s.id, c: s.categoria, a: s.album, n: s.nombre.principal };
   if (s.nombre.cientifico && s.nombre.cientifico !== s.nombre.principal) x.sci = s.nombre.cientifico;
   if (s.taxonomia?.familia) x.fam = s.taxonomia.familia;
   if (s.taxonomia?.genero) x.gen = s.taxonomia.genero;
   if (s.nombre.formato === 'cientifico') x.f = 1;
   if (s.prioridad === 'A') x.p = 1;
+  const nd = noDistractor.get(s.id);
+  if (nd) x.nd = [...nd];
   return x;
 });
 
 // ---------- Salida ----------
 
-const outDir = path.join(ROOT, 'src/content/generated');
+const outDir = OUT_DIR;
 fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(path.join(outDir, 'catalogo.json'), JSON.stringify(catalogo) + '\n');
 fs.writeFileSync(path.join(outDir, 'ruta.json'), JSON.stringify({
@@ -233,11 +323,13 @@ fs.writeFileSync(path.join(outDir, 'ruta.json'), JSON.stringify({
   mundos,
 }, null, 1) + '\n');
 fs.writeFileSync(path.join(outDir, 'name-index.json'), JSON.stringify(nameIndex) + '\n');
+fs.writeFileSync(path.join(outDir, 'curacion.json'), JSON.stringify(curacion) + '\n');
 const antiguo = path.join(outDir, 'game-content.json');
 if (fs.existsSync(antiguo)) fs.unlinkSync(antiguo); // sustituido por catalogo.json + ruta.json
 
 const lecciones = mundos.flatMap((m) => m.submundos.flatMap((sm) => sm.nodos)).filter((n) => n.tipo === 'leccion').length;
-console.log(`Catálogo: ${catalogo.length} ejemplares · ${images.size} fotos`);
+if (DISTRIBUIBLE) console.log(`Versión distribuible (solo fotos con licencia verificada) → ${path.relative(ROOT, outDir)}`);
+console.log(`Catálogo: ${catalogo.length} ejemplares · ${catalogo.reduce((n, e) => n + e.imagenes.length, 0)} fotos visibles de ${images.size}`);
 console.log(`Ruta: ${mundos.length} mundos · ${lecciones} lecciones · ${enRuta.size} ejemplares en ruta · fuera de ruta (sin foto para jugar): ${fueraDeRuta.length}`);
 for (const w of warnings) console.warn('⚠', w);
 if (warnings.length) process.exitCode = 1;

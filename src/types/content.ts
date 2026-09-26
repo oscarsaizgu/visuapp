@@ -32,7 +32,13 @@ export interface Imagen {
   pie?: string;
   autor?: string;
   licencia?: string;
+  /** Papel de la foto según la curación: principal (aprender), identificación o solo ficha. */
+  uso?: 'principal' | 'identificacion' | 'ficha';
+  /** Solo en fotos con licencia verificada. Sin crédito = licencia no verificada. */
+  credito?: Credito;
 }
+
+export interface Credito { autor: string; licencia: string; url: string; fuente: string }
 
 export interface Taxonomia {
   reino?: string; filo?: string; clase?: string; orden?: string; familia?: string; genero?: string;

@@ -1,27 +1,1220 @@
 {
- "_leeme": "Decisiones manuales sobre fotos. Clave = id de imagen. El importador nunca pisa este archivo. marcas: da-pistas (muestra el nombre o lo delata), rotulada (letras/flechas/leyendas), ilustracion, calidad (recorte o toma poco útil). Por defecto, una foto con da-pistas, rotulada, ilustracion o calidad no se usa para jugar, pero sí en la ficha.",
- "revisadas": ["piloto"],
+ "_leeme": "Curación manual de fotos. imagenes[id].uso: principal (la que se ve al APRENDER y en la ficha), identificacion (se usa para preguntar), ficha (solo en la ficha: útil para estudiar, no para preguntar), excluida (no se muestra). marcas: da-pistas, rotulada, ilustracion, calidad, marca-agua, duplicada, taxon-dudoso, otra-especie, sin-contenido, archivo-danado, poco-diagnostica, baja-resolucion, borde. motivo: por qué. ejemplares[id]: estado de revisión del ejemplar. Una foto sin \"uso\" se decide por sus marcas (da-pistas, rotulada, ilustracion o calidad = no se pregunta).",
+ "revisadas": [
+  "piloto (pack del Mundo 1, revisión ligera)",
+  "piloto de curación 2026-09-26 (29 ejemplares, revisión completa)"
+ ],
  "imagenes": {
-  "castanea-sativa-5": { "marcas": ["da-pistas"], "nota": "Nombre científico impreso abajo" },
-  "adiantum-capillus-veneris-5": { "marcas": ["da-pistas"], "nota": "Pliego de herbario con etiqueta" },
-  "asplenium-trichomanes-5": { "marcas": ["da-pistas"], "nota": "Pliego de herbario con etiqueta" },
-  "asplenium-trichomanes-6": { "marcas": ["da-pistas"], "nota": "Nombre científico impreso abajo" },
-  "bifurcaria-bifurcata-5": { "marcas": ["ilustracion"] },
-  "lucanus-cervus-2": { "marcas": ["rotulada"], "nota": "Larva con partes rotuladas" },
-  "lissotriton-boscai-3": { "marcas": ["calidad"], "nota": "Ejemplar conservado, poco reconocible" },
-  "sardina-pilchardus-6": { "marcas": ["ilustracion", "rotulada"] },
-  "micro-colenquima-1": { "marcas": ["da-pistas", "rotulada"], "nota": "Rótulo 'Colénquima angular'" },
-  "micro-colenquima-2": { "marcas": ["da-pistas", "rotulada"] },
-  "micro-colenquima-3": { "marcas": ["da-pistas", "rotulada"] },
-  "micro-colenquima-4": { "marcas": ["da-pistas", "rotulada"] },
-  "micro-colenquima-5": { "marcas": ["da-pistas", "rotulada"] },
-  "micro-higado-1": { "marcas": ["calidad", "rotulada"], "nota": "Página completa con texto" },
-  "micro-musculo-estriado-esqueletico-1": { "marcas": ["rotulada"], "nota": "Leyendas 'Estrías', 'Núcleos'" },
-  "roca-granodiorita-6": { "marcas": ["da-pistas"], "nota": "Cartel 'GRANODIORITA'" },
-  "roca-gneis-1": { "marcas": ["da-pistas"], "nota": "Cartel 'GNEIS'" },
-  "fosil-nummulites-2": { "marcas": ["calidad"], "nota": "Recorte estrecho" },
-  "fosil-nummulites-6": { "marcas": ["da-pistas"], "nota": "Título 'G. Nummulites'" },
-  "fosil-exogyra-1": { "marcas": ["da-pistas"], "nota": "Etiqueta de colección con el nombre" },
-  "geomorf-circo-glaciar-4": { "marcas": ["rotulada"], "nota": "Topónimos rotulados" }
+  "castanea-sativa-5": {
+   "uso": "ficha",
+   "marcas": [
+    "da-pistas"
+   ],
+   "motivo": "Pie de foto con \"Castanea sativa Mill.\"."
+  },
+  "adiantum-capillus-veneris-5": {
+   "marcas": [
+    "da-pistas"
+   ],
+   "nota": "Pliego de herbario con etiqueta"
+  },
+  "asplenium-trichomanes-5": {
+   "marcas": [
+    "da-pistas"
+   ],
+   "nota": "Pliego de herbario con etiqueta"
+  },
+  "asplenium-trichomanes-6": {
+   "marcas": [
+    "da-pistas"
+   ],
+   "nota": "Nombre científico impreso abajo"
+  },
+  "bifurcaria-bifurcata-5": {
+   "uso": "ficha",
+   "marcas": [
+    "ilustracion"
+   ],
+   "motivo": "Lámina ilustrada."
+  },
+  "lucanus-cervus-2": {
+   "marcas": [
+    "rotulada"
+   ],
+   "nota": "Larva con partes rotuladas"
+  },
+  "lissotriton-boscai-3": {
+   "marcas": [
+    "calidad"
+   ],
+   "nota": "Ejemplar conservado, poco reconocible"
+  },
+  "sardina-pilchardus-6": {
+   "marcas": [
+    "ilustracion",
+    "rotulada"
+   ]
+  },
+  "micro-colenquima-1": {
+   "marcas": [
+    "da-pistas",
+    "rotulada"
+   ],
+   "nota": "Rótulo 'Colénquima angular'"
+  },
+  "micro-colenquima-2": {
+   "marcas": [
+    "da-pistas",
+    "rotulada"
+   ]
+  },
+  "micro-colenquima-3": {
+   "marcas": [
+    "da-pistas",
+    "rotulada"
+   ]
+  },
+  "micro-colenquima-4": {
+   "marcas": [
+    "da-pistas",
+    "rotulada"
+   ]
+  },
+  "micro-colenquima-5": {
+   "marcas": [
+    "da-pistas",
+    "rotulada"
+   ]
+  },
+  "micro-higado-1": {
+   "marcas": [
+    "calidad",
+    "rotulada"
+   ],
+   "nota": "Página completa con texto"
+  },
+  "micro-musculo-estriado-esqueletico-1": {
+   "marcas": [
+    "rotulada"
+   ],
+   "nota": "Leyendas 'Estrías', 'Núcleos'"
+  },
+  "roca-granodiorita-6": {
+   "uso": "ficha",
+   "marcas": [
+    "da-pistas"
+   ],
+   "motivo": "Cartel \"GRANODIORITA\"."
+  },
+  "roca-gneis-1": {
+   "marcas": [
+    "da-pistas"
+   ],
+   "nota": "Cartel 'GNEIS'"
+  },
+  "fosil-nummulites-2": {
+   "marcas": [
+    "calidad"
+   ],
+   "nota": "Recorte estrecho"
+  },
+  "fosil-nummulites-6": {
+   "marcas": [
+    "da-pistas"
+   ],
+   "nota": "Título 'G. Nummulites'"
+  },
+  "fosil-exogyra-1": {
+   "uso": "ficha",
+   "marcas": [
+    "da-pistas"
+   ],
+   "motivo": "Etiqueta \"Exogyra flabellata\"."
+  },
+  "geomorf-circo-glaciar-4": {
+   "marcas": [
+    "rotulada"
+   ],
+   "nota": "Topónimos rotulados"
+  },
+  "rana-temporaria-ext1": {
+   "uso": "principal",
+   "marcas": [],
+   "motivo": "Vista lateral completa: antifaz oscuro, tímpano y pliegues dorsolaterales. Licencia libre."
+  },
+  "rana-temporaria-ext2": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Lateral nítida. Es el original en Commons de rana-temporaria-4 (sin la banda negra añadida)."
+  },
+  "rana-temporaria-ext3": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Ejemplar oscuro sobre roca: variación de color útil."
+  },
+  "rana-temporaria-1": {
+   "uso": "identificacion",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Vista dorsal completa y nítida; logo pequeño de asturnatura."
+  },
+  "rana-temporaria-4": {
+   "uso": "excluida",
+   "marcas": [
+    "borde",
+    "duplicada"
+   ],
+   "motivo": "Copia de rana-temporaria-ext2 con una banda negra añadida; se usa el original con licencia."
+  },
+  "rana-temporaria-2": {
+   "uso": "ficha",
+   "marcas": [
+    "poco-diagnostica"
+   ],
+   "motivo": "Rana pequeña entre ramas: difícil de identificar."
+  },
+  "rana-temporaria-3": {
+   "uso": "ficha",
+   "marcas": [
+    "poco-diagnostica"
+   ],
+   "motivo": "Puesta con embriones: no permite identificar la especie."
+  },
+  "rana-temporaria-5": {
+   "uso": "ficha",
+   "marcas": [
+    "rotulada"
+   ],
+   "motivo": "Esquema rotulado de caracteres (antifaz, tímpano, pliegues): muy útil para aprender, no para preguntar."
+  },
+  "rana-temporaria-6": {
+   "uso": "ficha",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Primer plano de la cabeza con \"© Borja Gómez Prado\" sobreimpreso."
+  },
+  "aglais-io-1": {
+   "uso": "principal",
+   "marcas": [
+    "duplicada"
+   ],
+   "motivo": "Única foto; correcta. Es la misma que inachis-io-2 (mismo taxón con dos nombres)."
+  },
+  "inachis-io-1": {
+   "uso": "principal",
+   "marcas": [],
+   "motivo": "Anverso completo con los ocelos característicos."
+  },
+  "inachis-io-2": {
+   "uso": "identificacion",
+   "marcas": [
+    "duplicada"
+   ],
+   "motivo": "Misma foto que aglais-io-1."
+  },
+  "hyla-arborea-ext1": {
+   "uso": "principal",
+   "marcas": [],
+   "motivo": "Lateral: banda oscura lateral completa y almohadillas digitales. Polonia (dentro del área de H. arborea)."
+  },
+  "hyla-arborea-ext2": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Sobre flores de endrino; Baviera."
+  },
+  "hyla-arborea-ext3": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Juvenil sobre fondo negro; Hungría."
+  },
+  "hyla-arborea-1": {
+   "uso": "ficha",
+   "marcas": [
+    "duplicada",
+    "marca-agua"
+   ],
+   "motivo": "\"www.naturfoto.cz © Jiří Bohdal\" sobreimpreso; misma foto que hyla-molleri-4."
+  },
+  "hyla-arborea-2": {
+   "uso": "ficha",
+   "marcas": [
+    "calidad"
+   ],
+   "motivo": "Escaneo de un impreso con trama visible."
+  },
+  "hyla-molleri-1": {
+   "uso": "principal",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Ejemplar entero con la banda lateral; asturnatura (España, dentro del área de H. molleri)."
+  },
+  "hyla-molleri-2": {
+   "uso": "identificacion",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Ejemplar verde claro sobre hojas."
+  },
+  "hyla-molleri-3": {
+   "uso": "identificacion",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Ejemplar sobre rama; algo pequeño en el encuadre."
+  },
+  "hyla-molleri-5": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Sobre un dedo; algo blanda de foco."
+  },
+  "hyla-molleri-4": {
+   "uso": "excluida",
+   "marcas": [
+    "duplicada",
+    "taxon-dudoso"
+   ],
+   "motivo": "Misma foto que hyla-arborea-1, de una web checa: probablemente H. arborea."
+  },
+  "mustela-nivalis-ext1": {
+   "uso": "principal",
+   "marcas": [],
+   "motivo": "Cuerpo entero, cola corta sin punta negra (clave frente al armiño)."
+  },
+  "mustela-nivalis-ext2": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Cola corta visible, sin punta negra."
+  },
+  "mustela-nivalis-ext3": {
+   "uso": "ficha",
+   "marcas": [
+    "taxon-dudoso"
+   ],
+   "motivo": "Aspecto atípico (cara blanca); etiquetada como M. nivalis en origen, pendiente de verificar."
+  },
+  "mustela-nivalis-1": {
+   "uso": "ficha",
+   "marcas": [
+    "marca-agua",
+    "poco-diagnostica"
+   ],
+   "motivo": "Animal pequeño y lejano entre matorral."
+  },
+  "mustela-nivalis-2": {
+   "uso": "ficha",
+   "marcas": [
+    "taxon-dudoso"
+   ],
+   "motivo": "No se ve la cola completa: no se puede descartar el armiño."
+  },
+  "mustela-nivalis-3": {
+   "uso": "ficha",
+   "marcas": [
+    "taxon-dudoso"
+   ],
+   "motivo": "No se ve la cola completa: no se puede descartar el armiño."
+  },
+  "mustela-nivalis-4": {
+   "uso": "ficha",
+   "marcas": [
+    "duplicada",
+    "ilustracion",
+    "rotulada"
+   ],
+   "motivo": "Dibujo comparativo armiño/comadreja: útil para aprender. Repetido en mustela-erminea-2."
+  },
+  "colias-croceus-ext1": {
+   "uso": "principal",
+   "marcas": [],
+   "motivo": "Hembra: borde negro con manchas amarillas en el anverso."
+  },
+  "colias-croceus-ext2": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Macho, reverso con la mancha discal plateada."
+  },
+  "colias-croceus-ext3": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Reverso sobre cardo."
+  },
+  "colias-croceus-ext4": {
+   "uso": "ficha",
+   "marcas": [],
+   "motivo": "Hembra de la forma blanca helice (ejemplar de museo): variación que conviene conocer, pero confunde para preguntar."
+  },
+  "colias-croceus-1": {
+   "uso": "excluida",
+   "marcas": [
+    "duplicada",
+    "otra-especie"
+   ],
+   "motivo": "Solo se ven flores de Lotus corniculatus, no hay mariposa. Misma foto que lotus-corniculatus-1."
+  },
+  "colias-croceus-2": {
+   "uso": "ficha",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Lámina de colección ♂/♀ (\"© Josef Dvořák\"); el macho se ve más amarillo que el naranja típico: verificar."
+  },
+  "sepia-officinalis-1": {
+   "uso": "principal",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Dos ejemplares enteros sobre el fondo; firma pequeña."
+  },
+  "sepia-officinalis-4": {
+   "uso": "identificacion",
+   "marcas": [
+    "borde",
+    "marca-agua"
+   ],
+   "motivo": "Lateral perfecta (aleta, pupila en W); \"© Phillip Colla\" y marco negro."
+  },
+  "sepia-officinalis-2": {
+   "uso": "ficha",
+   "marcas": [],
+   "motivo": "Puesta (\"uvas de mar\"): para aprender."
+  },
+  "sepia-officinalis-3": {
+   "uso": "excluida",
+   "marcas": [
+    "duplicada",
+    "sin-contenido"
+   ],
+   "motivo": "No es una foto: textura beige vacía (la misma que agaricus-arvensis-1)."
+  },
+  "abies-alba-ext4": {
+   "uso": "principal",
+   "marcas": [],
+   "motivo": "Piñas erectas maduras sobre la rama (carácter del género Abies)."
+  },
+  "abies-alba-ext1": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Árbol joven con piñas erectas verdes."
+  },
+  "abies-alba-ext2": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Piñas erectas verdes de cerca."
+  },
+  "abies-alba-ext3": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Ejes de las piñas tras caer las escamas (\"candelabros\"): exclusivo de Abies."
+  },
+  "abies-alba-4": {
+   "uso": "identificacion",
+   "marcas": [
+    "baja-resolucion"
+   ],
+   "motivo": "Yema y acículas con bandas estomáticas; solo 250 px."
+  },
+  "abies-alba-1": {
+   "uso": "ficha",
+   "marcas": [
+    "rotulada"
+   ],
+   "motivo": "Composición con rótulos: conos masculinos, femeninos y piñas."
+  },
+  "abies-alba-2": {
+   "uso": "ficha",
+   "marcas": [
+    "poco-diagnostica"
+   ],
+   "motivo": "Porte en paisaje: poco diagnóstico frente a Picea."
+  },
+  "abies-alba-3": {
+   "uso": "excluida",
+   "marcas": [
+    "da-pistas",
+    "sin-contenido"
+   ],
+   "motivo": "No es una foto: tira de texto \"FAM. PINACEAE GEN. ABIES\"."
+  },
+  "lotus-corniculatus-5": {
+   "uso": "principal",
+   "marcas": [],
+   "motivo": "Umbela de flores y hojas en el mismo encuadre."
+  },
+  "lotus-corniculatus-1": {
+   "uso": "identificacion",
+   "marcas": [
+    "duplicada",
+    "marca-agua"
+   ],
+   "motivo": "Flores de cerca (\"© Iñigo\"). También aparece, por error, en colias-croceus-1."
+  },
+  "lotus-corniculatus-2": {
+   "uso": "identificacion",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Flores; al fondo hay otra planta."
+  },
+  "lotus-corniculatus-6": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Flores de cerca; algo blanda."
+  },
+  "lotus-corniculatus-3": {
+   "uso": "ficha",
+   "marcas": [
+    "poco-diagnostica"
+   ],
+   "motivo": "Solo hojas y desenfocada."
+  },
+  "lotus-corniculatus-4": {
+   "uso": "ficha",
+   "marcas": [
+    "poco-diagnostica"
+   ],
+   "motivo": "Prado lejano."
+  },
+  "bifurcaria-bifurcata-2": {
+   "uso": "principal",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Talo en charca: ramificación dicótoma visible."
+  },
+  "bifurcaria-bifurcata-1": {
+   "uso": "identificacion",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Ápices con conceptáculos; \"© asturnatura.com\"."
+  },
+  "bifurcaria-bifurcata-3": {
+   "uso": "identificacion",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Talo denso; \"© asturnatura.com\"."
+  },
+  "bifurcaria-bifurcata-4": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Talo entero."
+  },
+  "castanea-sativa-4": {
+   "uso": "principal",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Hoja aserrada y erizo juntos: lo más diagnóstico; \"© asturnatura.com\"."
+  },
+  "castanea-sativa-3": {
+   "uso": "identificacion",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Hojas lanceoladas aserradas."
+  },
+  "castanea-sativa-1": {
+   "uso": "ficha",
+   "marcas": [
+    "poco-diagnostica"
+   ],
+   "motivo": "Porte del árbol."
+  },
+  "castanea-sativa-2": {
+   "uso": "ficha",
+   "marcas": [
+    "poco-diagnostica"
+   ],
+   "motivo": "Tronco con hiedra."
+  },
+  "castanea-sativa-6": {
+   "uso": "ficha",
+   "marcas": [
+    "calidad"
+   ],
+   "motivo": "Copa en flor; escaneo."
+  },
+  "agaricus-arvensis-ext1": {
+   "uso": "principal",
+   "marcas": [],
+   "motivo": "Sombrero blanco, láminas grises-rosadas, anillo y pie: los caracteres del género."
+  },
+  "agaricus-arvensis-ext2": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Ejemplar joven; sombrero y pie."
+  },
+  "agaricus-arvensis-ext3": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Sombrero y pie con anillo."
+  },
+  "agaricus-arvensis-5": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Sombrero y láminas pardas."
+  },
+  "agaricus-arvensis-2": {
+   "uso": "ficha",
+   "marcas": [
+    "da-pistas"
+   ],
+   "motivo": "Lleva \"Agaricus arvensis\" impreso."
+  },
+  "agaricus-arvensis-3": {
+   "uso": "ficha",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Marca de agua enorme en el centro."
+  },
+  "agaricus-arvensis-4": {
+   "uso": "ficha",
+   "marcas": [
+    "da-pistas",
+    "rotulada"
+   ],
+   "motivo": "Ficha técnica con nombre, esporas y medidas: para aprender."
+  },
+  "agaricus-arvensis-1": {
+   "uso": "excluida",
+   "marcas": [
+    "duplicada",
+    "sin-contenido"
+   ],
+   "motivo": "No es una foto: textura beige vacía."
+  },
+  "amanita-muscaria-2": {
+   "uso": "principal",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Dos ejemplares: verrugas, láminas, anillo y pie."
+  },
+  "amanita-muscaria-1": {
+   "uso": "identificacion",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Ejemplar joven."
+  },
+  "amanita-muscaria-3": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Con primordios."
+  },
+  "amanita-muscaria-4": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Grupo."
+  },
+  "amanita-muscaria-5": {
+   "uso": "identificacion",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Anillo visible; crédito diminuto."
+  },
+  "boletus-edulis-1": {
+   "uso": "principal",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Grupo: sombrero pardo, poros claros y pie reticulado."
+  },
+  "boletus-edulis-4": {
+   "uso": "identificacion",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Fecha impresa en la esquina."
+  },
+  "boletus-edulis-5": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Ejemplar entre musgo."
+  },
+  "boletus-edulis-6": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Grupo con uno viejo de poros amarillo-verdosos."
+  },
+  "boletus-edulis-2": {
+   "uso": "ficha",
+   "marcas": [
+    "duplicada"
+   ],
+   "motivo": "Otra toma casi igual que la 1: no aporta variedad."
+  },
+  "boletus-edulis-3": {
+   "uso": "ficha",
+   "marcas": [],
+   "motivo": "Detalle del retículo del pie: para aprender."
+  },
+  "micro-retina-2": {
+   "uso": "principal",
+   "marcas": [],
+   "motivo": "Capas de la retina (H-E), limpia."
+  },
+  "micro-retina-3": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Vista circular del ocular con puntero; capas y coroides."
+  },
+  "micro-retina-1": {
+   "uso": "ficha",
+   "marcas": [
+    "da-pistas",
+    "rotulada"
+   ],
+   "motivo": "Lámina de atlas titulada \"RETINA Y COROIDES\"."
+  },
+  "micro-retina-5": {
+   "uso": "ficha",
+   "marcas": [
+    "rotulada"
+   ],
+   "motivo": "Capas numeradas: para aprender."
+  },
+  "micro-retina-4": {
+   "uso": "excluida",
+   "marcas": [
+    "archivo-danado"
+   ],
+   "motivo": "El archivo está dañado (tampoco se abre en el origen)."
+  },
+  "micro-pulmon-2": {
+   "uso": "principal",
+   "marcas": [],
+   "motivo": "Alvéolos y bronquiolo."
+  },
+  "micro-pulmon-3": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Alvéolos."
+  },
+  "micro-pulmon-1": {
+   "uso": "ficha",
+   "marcas": [
+    "da-pistas",
+    "rotulada"
+   ],
+   "motivo": "Lámina de atlas titulada \"PULMÓN\"."
+  },
+  "micro-bronquio-2": {
+   "uso": "principal",
+   "marcas": [],
+   "motivo": "Bronquio con cartílago y epitelio plegado."
+  },
+  "micro-bronquio-1": {
+   "uso": "ficha",
+   "marcas": [
+    "da-pistas",
+    "duplicada",
+    "rotulada"
+   ],
+   "motivo": "Es la misma lámina que micro-pulmon-1, titulada \"PULMÓN\": en esta ficha induce a error."
+  },
+  "mineral-azurita-2": {
+   "uso": "principal",
+   "marcas": [],
+   "motivo": "Agregados azul intenso."
+  },
+  "mineral-azurita-1": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Prismas azules sobre matriz blanca; escaneo de libro, pero nítido."
+  },
+  "mineral-azurita-5": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Cristales tabulares; dibujo cristalográfico pequeño."
+  },
+  "mineral-azurita-3": {
+   "uso": "ficha",
+   "marcas": [
+    "poco-diagnostica"
+   ],
+   "motivo": "Bandeado azul-verde-blanco: mezcla poco típica."
+  },
+  "mineral-azurita-4": {
+   "uso": "ficha",
+   "marcas": [
+    "duplicada"
+   ],
+   "motivo": "Azurita sobre malaquita (misma foto que mineral-malaquita-3): ambas respuestas serían correctas."
+  },
+  "mineral-malaquita-2": {
+   "uso": "principal",
+   "marcas": [],
+   "motivo": "Bandeado verde clásico."
+  },
+  "mineral-malaquita-1": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Esférula fibrosa verde oscuro."
+  },
+  "mineral-malaquita-5": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Penachos aciculares verdes (verificar: otros minerales de cobre son parecidos)."
+  },
+  "mineral-malaquita-3": {
+   "uso": "ficha",
+   "marcas": [
+    "duplicada"
+   ],
+   "motivo": "Azurita sobre malaquita (misma foto que mineral-azurita-4)."
+  },
+  "mineral-malaquita-4": {
+   "uso": "ficha",
+   "marcas": [
+    "taxon-dudoso"
+   ],
+   "motivo": "Bandeado pálido poco típico de malaquita."
+  },
+  "mineral-azufre-3": {
+   "uso": "principal",
+   "marcas": [],
+   "motivo": "Drusa de cristales bipiramidales amarillos."
+  },
+  "mineral-azufre-1": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Escaneo con un dibujo cristalográfico pequeño; nítido."
+  },
+  "mineral-azufre-2": {
+   "uso": "identificacion",
+   "marcas": []
+  },
+  "mineral-azufre-4": {
+   "uso": "identificacion",
+   "marcas": []
+  },
+  "roca-diorita-1": {
+   "uso": "principal",
+   "marcas": [],
+   "motivo": "Muestra de mano \"sal y pimienta\", fondo blanco."
+  },
+  "roca-diorita-3": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Grano grueso con escala de 1 cm."
+  },
+  "roca-diorita-2": {
+   "uso": "ficha",
+   "marcas": [
+    "da-pistas"
+   ],
+   "motivo": "Cartel \"DIORITA\"."
+  },
+  "roca-diorita-4": {
+   "uso": "ficha",
+   "marcas": [],
+   "motivo": "Diorita orbicular: variedad llamativa, poco representativa."
+  },
+  "roca-diorita-6": {
+   "uso": "ficha",
+   "marcas": [
+    "da-pistas"
+   ],
+   "motivo": "Diapositiva \"ROCA DIORITA\"."
+  },
+  "roca-diorita-5": {
+   "uso": "excluida",
+   "marcas": [
+    "duplicada",
+    "taxon-dudoso"
+   ],
+   "motivo": "La misma foto está asignada a diorita y a granodiorita."
+  },
+  "roca-granodiorita-2": {
+   "uso": "principal",
+   "marcas": [],
+   "motivo": "Muestra de mano, fondo blanco."
+  },
+  "roca-granodiorita-1": {
+   "uso": "identificacion",
+   "marcas": []
+  },
+  "roca-granodiorita-3": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Textura de cerca."
+  },
+  "roca-granodiorita-4": {
+   "uso": "ficha",
+   "marcas": [
+    "taxon-dudoso"
+   ],
+   "motivo": "Tonos pardos poco típicos: verificar."
+  },
+  "roca-granodiorita-5": {
+   "uso": "excluida",
+   "marcas": [
+    "duplicada",
+    "taxon-dudoso"
+   ],
+   "motivo": "La misma foto está asignada a diorita y a granodiorita."
+  },
+  "roca-travertino-ext1": {
+   "uso": "principal",
+   "marcas": [],
+   "motivo": "Muestra de mano porosa (depósito de fuente termal)."
+  },
+  "roca-travertino-2": {
+   "uso": "identificacion",
+   "marcas": [
+    "duplicada"
+   ],
+   "motivo": "Bloque con porosidad y escala; repetida en geomorf-terrazas-travertinicas-4, donde no corresponde."
+  },
+  "roca-travertino-ext2": {
+   "uso": "ficha",
+   "marcas": [
+    "poco-diagnostica"
+   ],
+   "motivo": "Afloramiento cubierto de musgo."
+  },
+  "roca-travertino-1": {
+   "uso": "ficha",
+   "marcas": [
+    "da-pistas"
+   ],
+   "motivo": "Lleva \"Travertino\" escrito."
+  },
+  "fosil-carcharodon-3": {
+   "uso": "principal",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Diente triangular ancho con bourlette. Pendiente: el catálogo incluye aquí el megalodon (ver revisión de nombres)."
+  },
+  "fosil-carcharodon-5": {
+   "uso": "ficha",
+   "marcas": [
+    "da-pistas"
+   ],
+   "motivo": "Misma pieza con el texto \"G. Carcharodon (Carcharodon megalodon)\"."
+  },
+  "fosil-carcharodon-1": {
+   "uso": "excluida",
+   "marcas": [
+    "duplicada",
+    "taxon-dudoso"
+   ],
+   "motivo": "Diente estrecho y liso, sin sierra: no encaja con Carcharodon. Misma foto que fosil-lamna-2."
+  },
+  "fosil-carcharodon-2": {
+   "uso": "excluida",
+   "marcas": [
+    "calidad"
+   ],
+   "motivo": "Muy borrosa."
+  },
+  "fosil-carcharodon-4": {
+   "uso": "excluida",
+   "marcas": [
+    "duplicada",
+    "taxon-dudoso"
+   ],
+   "motivo": "Varios dientes de morfologías distintas; misma foto que fosil-isurus-2."
+  },
+  "fosil-lamna-2": {
+   "uso": "principal",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Diente de cúspide estrecha y lisa. Verificar: identificar un diente aislado hasta género con una sola foto es poco fiable."
+  },
+  "fosil-lamna-1": {
+   "uso": "ficha",
+   "marcas": [
+    "da-pistas",
+    "ilustracion"
+   ],
+   "motivo": "Rótulo \"G. Lamna\" y dibujo."
+  },
+  "fosil-exogyra-3": {
+   "uso": "principal",
+   "marcas": [],
+   "motivo": "Valva con el umbo retorcido lateralmente."
+  },
+  "fosil-exogyra-2": {
+   "uso": "identificacion",
+   "marcas": []
+  },
+  "fosil-exogyra-4": {
+   "uso": "identificacion",
+   "marcas": []
+  },
+  "fosil-exogyra-5": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Con moneda de escala."
+  },
+  "fosil-exogyra-6": {
+   "uso": "identificacion",
+   "marcas": [
+    "duplicada"
+   ],
+   "motivo": "Tres vistas con la torsión en espiral; también asignada a gryphaea-arcuata-3 (encaja mejor con Exogyra: interpretación)."
+  },
+  "geomorf-bloque-erratico-1": {
+   "uso": "principal",
+   "marcas": [
+    "duplicada"
+   ],
+   "motivo": "Bloque aislado sobre roca pulida por el glaciar."
+  },
+  "geomorf-bloque-erratico-3": {
+   "uso": "identificacion",
+   "marcas": [
+    "duplicada"
+   ]
+  },
+  "geomorf-bloque-erratico-5": {
+   "uso": "identificacion",
+   "marcas": [
+    "duplicada"
+   ]
+  },
+  "geomorf-bloque-erratico-6": {
+   "uso": "identificacion",
+   "marcas": [
+    "duplicada"
+   ]
+  },
+  "geomorf-bloque-erratico-2": {
+   "uso": "ficha",
+   "marcas": [
+    "marca-agua"
+   ],
+   "motivo": "Bloques en fondo de valle: se confunde con morrena o caos de bloques."
+  },
+  "geomorf-bloque-erratico-4": {
+   "uso": "ficha",
+   "marcas": [],
+   "motivo": "Bloques sobre el hielo: se confunde con mesa glaciar."
+  },
+  "geomorf-colada-volcanica-3": {
+   "uso": "principal",
+   "marcas": [],
+   "motivo": "Campo de lava aa con conos al fondo."
+  },
+  "geomorf-colada-volcanica-4": {
+   "uso": "identificacion",
+   "marcas": [],
+   "motivo": "Colada en corte sobre suelo rubefactado, con escala."
+  },
+  "geomorf-colada-volcanica-1": {
+   "uso": "ficha",
+   "marcas": [
+    "da-pistas"
+   ],
+   "motivo": "Pie de foto \"Aa flow, Craters of the Moon\"."
+  },
+  "geomorf-colada-volcanica-2": {
+   "uso": "ficha",
+   "marcas": [
+    "duplicada"
+   ],
+   "motivo": "Superficie pahoehoe: responde mejor a \"lava cordada\"."
+  },
+  "geomorf-colada-volcanica-5": {
+   "uso": "ficha",
+   "marcas": [
+    "duplicada",
+    "marca-agua"
+   ],
+   "motivo": "Pahoehoe incandescente; \"© QT Luong\"."
+  },
+  "geomorf-colada-volcanica-6": {
+   "uso": "ficha",
+   "marcas": [
+    "poco-diagnostica"
+   ],
+   "motivo": "Almagre con escala: no muestra la colada."
+  }
+ },
+ "ejemplares": {
+  "rana-temporaria": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Con 3 fotos externas el ejemplar queda bien cubierto: principal lateral, dorsal y color oscuro."
+  },
+  "aglais-io": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Mismo taxón que inachis-io (sinónimo según GBIF). Nombre común en inglés. Ver revisión de nombres."
+  },
+  "inachis-io": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Sinónimo de Aglais io. Ver revisión de nombres."
+  },
+  "hyla-arborea": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Sin fotos propias aptas; 3 externas de dentro de su área. Casi indistinguible de H. molleri por foto."
+  },
+  "hyla-molleri": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Bien cubierto con fotos del catálogo."
+  },
+  "mustela-nivalis": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Las fotos del catálogo no dejan ver la cola (clave frente al armiño); principal externa."
+  },
+  "colias-croceus": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "La foto 1 del catálogo no tenía mariposa; ahora 3 externas de campo."
+  },
+  "sepia-officinalis": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Bien cubierto."
+  },
+  "abies-alba": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Principal externa; las del catálogo eran rótulos, paisaje o una tira de texto."
+  },
+  "lotus-corniculatus": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Bien cubierto."
+  },
+  "bifurcaria-bifurcata": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Bien cubierto."
+  },
+  "castanea-sativa": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Falta una foto limpia de hoja y erizo sin marca."
+  },
+  "agaricus-arvensis": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Solo 1 foto del catálogo servía; se añaden 3 externas europeas (se evitan las de California, donde el nombre es dudoso)."
+  },
+  "amanita-muscaria": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Bien cubierto."
+  },
+  "boletus-edulis": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Bien cubierto."
+  },
+  "micro-retina": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Bien cubierto."
+  },
+  "micro-pulmon": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Bien cubierto."
+  },
+  "micro-bronquio": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Solo 1 foto jugable."
+  },
+  "mineral-azurita": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Bien cubierto."
+  },
+  "mineral-malaquita": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Bien cubierto."
+  },
+  "mineral-azufre": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Bien cubierto."
+  },
+  "roca-diorita": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Bien cubierto."
+  },
+  "roca-granodiorita": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Bien cubierto."
+  },
+  "roca-travertino": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Se añade una muestra de mano externa."
+  },
+  "fosil-carcharodon": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Pendiente de revisión científica (megalodon ≠ Carcharodon). No se añaden fotos externas hasta decidirlo."
+  },
+  "fosil-lamna": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Solo 1 foto jugable y de identificación poco fiable."
+  },
+  "fosil-exogyra": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Bien cubierto."
+  },
+  "geomorf-bloque-erratico": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Fotos repetidas en roca-bloque-erratico (Rocas). Ver revisión de nombres."
+  },
+  "geomorf-colada-volcanica": {
+   "estado": "revisado",
+   "fecha": "2026-09-26",
+   "revision": "piloto de curación",
+   "nota": "Solo 2 fotos jugables."
+  }
  }
 }

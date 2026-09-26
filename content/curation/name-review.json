@@ -1,0 +1,67 @@
+{
+ "_leeme": "Revisión científica de nombres y taxonomía. El catálogo de Visu-Oposicion es la fuente de verdad: aquí NO se corrige nada, se registra para revisarlo. 'discrepancias' = posibles problemas con su fuente y estado. 'noDistractor' = pares que nunca se ponen como distractor el uno del otro porque ambas respuestas serían defendibles (es lo único que se aplica en el juego, y cada par dice por qué). Estados: pendiente | aceptado | descartado.",
+ "discrepancias": [
+  {
+   "ejemplares": ["inachis-io", "aglais-io"],
+   "tipo": "sinonimo",
+   "detalle": "Inachis io es sinónimo de Aglais io (GBIF: Inachis io, status SYNONYM → Aglais io (Linnaeus, 1758)). El catálogo tiene la misma especie dos veces y comparten una foto (aglais-io-1 = inachis-io-2).",
+   "propuesta": "Dejar un solo ejemplar (Aglais io) y aceptar 'Inachis io' como respuesta válida.",
+   "fuente": "https://www.gbif.org/species/5881450",
+   "estado": "pendiente"
+  },
+  {
+   "ejemplares": ["aglais-io"],
+   "tipo": "nombre-comun",
+   "detalle": "El nombre común está en inglés ('Peacock Butterfly'). En inachis-io, el mismo taxón aparece como 'Pavo real'.",
+   "propuesta": "Usar 'Pavo real' si se fusionan.",
+   "fuente": "catálogo",
+   "estado": "pendiente"
+  },
+  {
+   "ejemplares": ["hyla-arborea", "hyla-molleri"],
+   "tipo": "taxonomia",
+   "detalle": "Ambos nombres son válidos en GBIF. Las ranitas de San Antonio ibéricas se separaron de H. arborea como H. molleri, así que en Cantabria la especie es H. molleri. Tienen el mismo nombre común en el catálogo y no se distinguen de forma fiable por una foto. Compartían una foto (hyla-arborea-1 = hyla-molleri-4).",
+   "propuesta": "Decidir si se mantienen los dos ejemplares. Mientras tanto, no se ponen como distractor el uno del otro.",
+   "fuente": "https://www.gbif.org/species/2427580",
+   "estado": "pendiente"
+  },
+  {
+   "ejemplares": ["fosil-carcharodon"],
+   "tipo": "taxonomia",
+   "detalle": "El ejemplar acepta 'Carcharocles' y 'Otodus' como respuesta y sus fotos buenas (3 y 5) son de megalodon. El megalodon se clasifica hoy como Otodus megalodon (familia Otodontidae), no en Carcharodon (Lamnidae). La foto 5 del propio catálogo lo rotula 'Carcharodon megalodon' (nomenclatura antigua).",
+   "propuesta": "Decidir si el ejemplar es 'Carcharodon' (tiburón blanco fósil) o 'megalodon'. No se añaden fotos externas hasta decidirlo.",
+   "fuente": "GBIF: Carcharodon Smith, 1838 (Lamnidae)",
+   "estado": "pendiente"
+  },
+  {
+   "ejemplares": ["geomorf-bloque-erratico", "roca-bloque-erratico"],
+   "tipo": "categoria",
+   "detalle": "El mismo concepto aparece en Geomorfología y en Rocas, con 4 fotos idénticas. Un bloque errático es una forma o depósito glaciar, no un tipo de roca.",
+   "propuesta": "Revisar si roca-bloque-erratico debe seguir en Rocas.",
+   "fuente": "auditoría de duplicados",
+   "estado": "pendiente"
+  },
+  {
+   "ejemplares": ["fosil-exogyra", "gryphaea-arcuata"],
+   "tipo": "foto-compartida",
+   "detalle": "fosil-exogyra-6 = gryphaea-arcuata-3. La torsión lateral en espiral encaja con Exogyra (interpretación, no verificado por un especialista).",
+   "propuesta": "Revisar gryphaea-arcuata en la curación completa.",
+   "fuente": "auditoría de duplicados + revisión visual",
+   "estado": "pendiente"
+  },
+  {
+   "ejemplares": ["lotus-corniculatus"],
+   "tipo": "equivalencia",
+   "detalle": "El catálogo usa la familia Leguminosae y GBIF, Fabaceae. Son nombres equivalentes y válidos (nomen alternativum).",
+   "propuesta": "Ninguna.",
+   "fuente": "https://www.gbif.org/species/5357013",
+   "estado": "descartado"
+  }
+ ],
+ "noDistractor": [
+  { "par": ["inachis-io", "aglais-io"], "motivo": "Son la misma especie (sinónimo)." },
+  { "par": ["hyla-arborea", "hyla-molleri"], "motivo": "No se distinguen de forma fiable por una foto." },
+  { "par": ["micro-pulmon", "micro-bronquio"], "motivo": "La preparación de bronquio incluye tejido pulmonar: 'pulmón' también sería defendible." },
+  { "par": ["geomorf-bloque-erratico", "roca-bloque-erratico"], "motivo": "Mismo concepto y mismas fotos en dos categorías." }
+ ]
+}
